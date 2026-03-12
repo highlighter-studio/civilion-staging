@@ -14,7 +14,7 @@ Created in Shopify admin (not in theme code):
 |---|---|---|
 | `product_type` | `single_line_text` | e.g. "Oxford", "Chelsea", "Monaco", "Rome" |
 | `silhouette_image` | `file_reference` | Shoe diagram with measurement callouts |
-| `measurements` | `rich_text` | Formatted table of sizes with foot length, width, EU/UK/US conversions |
+| `measurements` | `rich_text` | Structured sizing content — headings, lists, and paragraphs with foot length, width, EU/UK/US conversions. Note: Shopify rich text does not support HTML tables; content should be formatted using headings and lists for each size |
 
 ### Product Metafield: `custom.size_guide`
 
@@ -39,7 +39,11 @@ Reuse the existing `ModalDialog` web component class and `product-popup-modal` C
 
 ### Placement
 
-Injected into `snippets/product-variant-picker.liquid`, inside the `<legend>` tag for the Size option.
+Injected into `snippets/product-variant-picker.liquid` in two locations:
+- **Button/pill picker** (`picker_type != 'dropdown'`): inside the `<legend>` tag for the Size option
+- **Dropdown picker** (`picker_type == 'dropdown'`): inside the `<label>` tag for the Size option
+
+Both paths render the same trigger markup.
 
 ### Conditions
 
@@ -54,7 +58,7 @@ The metaobject is assigned once at the top of the snippet, before the options lo
 {% assign size_guide_metaobject = product.metafields.custom.size_guide.value %}
 ```
 
-Inside the legend for the Size option:
+Shared trigger block (used in both legend and label contexts):
 
 ```liquid
 {% if option.name == 'Size' and size_guide_metaobject %}
@@ -66,9 +70,9 @@ Inside the legend for the Size option:
 
 Uses `<button>` inside `<modal-opener>` (not `<a>`) — semantically correct for dialog triggers and hooks into the existing `ModalDialog` JS automatically.
 
-### Legend Styling
+### Label Styling
 
-The legend gets `display: flex; justify-content: space-between` via a `:has(.size-guide-trigger)` selector so the link sits right-aligned. Only applies when the trigger is present — other option labels unaffected.
+The label/legend gets `display: flex; justify-content: space-between` via `:has(.size-guide-trigger)` selectors so the link sits right-aligned. Selectors target both `legend.form__label` (pill picker) and `label.form__label` (dropdown picker). Only applies when the trigger is present — other option labels unaffected.
 
 ## Modal Component
 
@@ -78,10 +82,10 @@ The legend gets `display: flex; justify-content: space-between` via a `:has(.siz
 {% assign size_guide = product.metafields.custom.size_guide.value %}
 {% if size_guide %}
 {{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
-<modal-dialog id="SizeGuideModal" class="product-popup-modal product-popup-modal-width-medium">
+<modal-dialog id="SizeGuideModal" class="product-popup-modal">
   <div role="dialog" aria-label="{{ size_guide.product_type.value }} Size Guide" aria-modal="true" class="product-popup-modal__content">
     <div class="modal-header">
-      <button id="SizeGuideModalClose" class="product-popup-modal__toggle" aria-label="Close">
+      <button id="ModalClose-SizeGuide" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
         {% render 'icon-close' %}
       </button>
       <span class="dialog-title">{{ size_guide.product_type.value }} Size Guide</span>
@@ -89,7 +93,8 @@ The legend gets `display: flex; justify-content: space-between` via a `:has(.siz
     <div class="product-popup-modal__content-info size-guide-modal__body">
       {% if size_guide.silhouette_image.value %}
         <div class="size-guide-modal__image">
-          {{ size_guide.silhouette_image.value | image_url: width: 800 | image_tag: loading: 'lazy' }}
+          {% assign sg_alt = size_guide.product_type.value | append: ' size guide diagram' %}
+          {{ size_guide.silhouette_image.value | image_url: width: 800 | image_tag: loading: 'lazy', alt: sg_alt }}
         </div>
       {% endif %}
       <div class="size-guide-modal__measurements">
@@ -103,15 +108,16 @@ The legend gets `display: flex; justify-content: space-between` via a `:has(.siz
 
 ### Key Decisions
 
-- Reuses `product-popup-modal` and `product-popup-modal-width-medium` classes for all existing modal CSS (centered desktop, slide-up mobile, sticky header, scrollable content)
+- Reuses `product-popup-modal` class for all existing modal CSS (centered desktop, slide-up mobile, sticky header, scrollable content). Uses the default (normal) width — no width modifier class needed
+- Close button ID follows the `ModalClose-` prefix pattern required by `ModalDialog` constructor (`id="ModalClose-SizeGuide"`)
 - Heading uses `product_type` value (e.g. "Oxford Size Guide")
-- Image renders at 800px width via `image_url` filter — appropriate for a diagram
-- Measurements rich text renders directly as HTML
+- Image renders at 800px width via `image_url` filter with descriptive alt text
+- Measurements rich text renders directly as HTML (headings, lists, paragraphs — not tables)
 - Entire snippet guarded by `{% if size_guide %}` — no output when metafield is empty
 
 ### Render Location
 
-Called from `snippets/product-variant-picker.liquid`, once, outside the options loop (after the fieldsets). Modal is position:fixed so source placement doesn't affect layout.
+Called from `snippets/product-variant-picker.liquid`, once, outside the options loop (after the fieldsets). Note: `ModalDialog.connectedCallback()` moves the element to `document.body` via `appendChild`, so it will be detached from the snippet's DOM context at runtime. This is expected and ensures correct stacking/z-index behavior.
 
 ## JavaScript & Accessibility
 
@@ -152,8 +158,9 @@ Only styles specific to size guide content. The modal shell uses existing `produ
   cursor: pointer;
 }
 
-/* Legend flex layout — only when trigger present */
-.product-form__input legend.form__label:has(.size-guide-trigger) {
+/* Label/legend flex layout — only when trigger present */
+.product-form__input legend.form__label:has(.size-guide-trigger),
+.product-form__input label.form__label:has(.size-guide-trigger) {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,16 +177,22 @@ Only styles specific to size guide content. The modal shell uses existing `produ
   height: auto;
 }
 
-/* Measurements table */
-.size-guide-modal__measurements table {
-  width: 100%;
-  border-collapse: collapse;
+/* Measurements rich text content */
+.size-guide-modal__measurements h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
-.size-guide-modal__measurements th,
-.size-guide-modal__measurements td {
-  padding: 0.8rem 1rem;
-  text-align: left;
+.size-guide-modal__measurements ul,
+.size-guide-modal__measurements ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+.size-guide-modal__measurements li {
+  padding: 0.3rem 0;
   border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+.size-guide-modal__measurements p {
+  margin-bottom: 0.8rem;
 }
 ```
 
