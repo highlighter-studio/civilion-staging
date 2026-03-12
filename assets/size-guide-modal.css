@@ -34,13 +34,25 @@
   height: auto;
 }
 
+/* Remove header divider */
+#SizeGuideModal .modal-header {
+  border-bottom: none;
+  box-shadow: none;
+}
+
 /* Fit description subheading */
 .size-guide-modal__fit-description {
   margin: 0;
   padding: 0.5rem 20px 1rem;
   font-size: 0.875em;
   color: rgba(var(--color-foreground), 0.7);
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+/* Constrain modal width on desktop */
+@media screen and (min-width: 750px) {
+  #SizeGuideModal .product-popup-modal__content {
+    max-width: 580px;
+  }
 }
 
 /* Measurements table */
@@ -51,7 +63,7 @@
 
 .size-guide-modal__measurements th,
 .size-guide-modal__measurements td {
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 0.75rem;
   text-align: left;
   border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
 }
