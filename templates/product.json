@@ -306,9 +306,12 @@
         "heading_ANbHVH",
         "button_rANMTy"
       ],
+      "custom_css": [
+        "h2 {font-size: 34px;}"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "content_width": "page-width-narrow",
+        "content_width": "page-width-medium",
         "content_horizontal_position": "center",
         "bg_image_darken": 0,
         "bg_image_blur": 0,
