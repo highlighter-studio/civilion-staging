@@ -30,7 +30,86 @@
         </div>
       {% endif %}
       {% assign measurements = size_guide.measurements.value %}
+      {% assign womens_measurements = size_guide.womens_measurements.value %}
+      {% assign product_gender = product.metafields.custom.product_gender.value %}
+      {% assign has_mens = false %}
+      {% assign has_womens = false %}
       {% if measurements.headers and measurements.rows %}
+        {% assign has_mens = true %}
+      {% endif %}
+      {% if womens_measurements.headers and womens_measurements.rows %}
+        {% assign has_womens = true %}
+      {% endif %}
+
+      {% if has_mens and has_womens %}
+        {%- comment -%} Tabbed interface — both gendered tables {%- endcomment -%}
+        {% assign womens_active = false %}
+        {% if product_gender == "Women's" %}
+          {% assign womens_active = true %}
+        {% endif %}
+        <div class="size-guide-modal__tabs" role="tablist">
+          <button class="size-guide-modal__tab{% unless womens_active %} size-guide-modal__tab--active{% endunless %}"
+                  data-tab="mens" type="button" role="tab"
+                  aria-selected="{% if womens_active %}false{% else %}true{% endif %}"
+                  aria-controls="sg-panel-mens"
+                  id="sg-tab-mens">Men's</button>
+          <button class="size-guide-modal__tab{% if womens_active %} size-guide-modal__tab--active{% endif %}"
+                  data-tab="womens" type="button" role="tab"
+                  aria-selected="{% if womens_active %}true{% else %}false{% endif %}"
+                  aria-controls="sg-panel-womens"
+                  id="sg-tab-womens">Women's</button>
+        </div>
+        <div class="size-guide-modal__tab-panel" data-panel="mens"
+             role="tabpanel" id="sg-panel-mens" aria-labelledby="sg-tab-mens"
+             {% if womens_active %}hidden{% endif %}>
+          <div class="size-guide-modal__measurements">
+            <table>
+              <thead>
+                <tr>
+                  {% for header in measurements.headers %}
+                    <th>{{ header }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in measurements.rows %}
+                  <tr>
+                    {% for cell in row %}
+                      <td>{{ cell }}</td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="size-guide-modal__tab-panel" data-panel="womens"
+             role="tabpanel" id="sg-panel-womens" aria-labelledby="sg-tab-womens"
+             {% unless womens_active %}hidden{% endunless %}>
+          <div class="size-guide-modal__measurements">
+            <table>
+              <thead>
+                <tr>
+                  {% for header in womens_measurements.headers %}
+                    <th>{{ header }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in womens_measurements.rows %}
+                  <tr>
+                    {% for cell in row %}
+                      <td>{{ cell }}</td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <script src="{{ 'size-guide-tabs.js' | asset_url }}" defer="defer"></script>
+      {% elsif has_mens %}
+        {%- comment -%} Single table — men's only (backwards compatible) {%- endcomment -%}
         <div class="size-guide-modal__measurements">
           <table>
             <thead>
@@ -42,6 +121,28 @@
             </thead>
             <tbody>
               {% for row in measurements.rows %}
+                <tr>
+                  {% for cell in row %}
+                    <td>{{ cell }}</td>
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% elsif has_womens %}
+        {%- comment -%} Single table — women's only {%- endcomment -%}
+        <div class="size-guide-modal__measurements">
+          <table>
+            <thead>
+              <tr>
+                {% for header in womens_measurements.headers %}
+                  <th>{{ header }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in womens_measurements.rows %}
                 <tr>
                   {% for cell in row %}
                     <td>{{ cell }}</td>
