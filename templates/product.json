@@ -143,6 +143,27 @@
             "content": "<p>Add a summary about your returns policy and if required include a link to your full information.</p>",
             "page": ""
           }
+        },
+        "icon_grid_6dazna": {
+          "type": "icon_grid",
+          "settings": {
+            "icon_alignment": "left",
+            "icon_layout": "stacked",
+            "icon_text_max_width": 200,
+            "icon_size_mobile": 36,
+            "icon_size_desktop": 36,
+            "grid_columns_mobile": 2,
+            "grid_columns_desktop": "auto",
+            "grid_spacing_mobile": 24,
+            "grid_spacing_desktop": 24,
+            "icon_one_image": "shopify://shop_images/Civilion_BlkLogo_copy.png",
+            "icon_one_label": "test",
+            "icon_two_label": "",
+            "icon_three_label": "",
+            "icon_four_label": "",
+            "icon_five_label": "",
+            "icon_six_label": ""
+          }
         }
       },
       "block_order": [
@@ -158,7 +179,8 @@
         "inventory_zeVG83",
         "buy_buttons",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
-        "collapsible_tab_xVtpDM"
+        "collapsible_tab_xVtpDM",
+        "icon_grid_6dazna"
       ],
       "custom_css": [],
       "settings": {
