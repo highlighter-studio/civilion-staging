@@ -287,6 +287,7 @@
     <div class="product product-main-info-section align-{{ section.settings.info_txt_alignment }} vertical-align-{{ section.settings.text_section_vertical_position }}">
       <div class="product__info-container product-info-justify-{{ section.settings.text_section_position }}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if section.settings.enable_sticky_buttons %} sticky-buy-buttons sticky-buy-buttons--border-{{ section.settings.sticky_buttons_border }}{% endif %}">
                 
+        <script src="{{ 'product-page-swap.js' | asset_url }}" defer="defer"></script>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
