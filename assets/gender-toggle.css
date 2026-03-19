@@ -17,6 +17,13 @@
   }
 }
 
+.form__label-left {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
 .form__label-text {
   white-space: nowrap;
 }
@@ -25,7 +32,6 @@
   display: inline-flex;
   align-items: baseline;
   gap: 0.125rem;
-  margin-left: 0.5rem;
 }
 
 .gender-toggle-inline__pill {
