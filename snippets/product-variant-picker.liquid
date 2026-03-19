@@ -43,12 +43,32 @@
 
 {%- if block.settings.picker_type == 'button' or block.settings.picker_type == 'minimal' -%}
     <fieldset class="js product-form__input product-form__input--pill">
-      <legend class="form__label{% if labels == false %} visually-hidden{% endif %}">{{ option.name }}{% if block.settings.show_puncuation %}:{% endif %}
+      <legend class="form__label{% if labels == false %} visually-hidden{% endif %}">
+        <span class="form__label-text">{{ option.name }}{% if block.settings.show_puncuation %}:{% endif %}
         {% if thumbnail_variants contains option.name and show_variant_images and swatch_label_position == 'inline' %}
           <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
         {% endif %}
         {% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}
           <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
+        {% endif %}
+        </span>
+        {% if option.name == 'Size' %}
+          {%- assign product_gender = product.metafields.custom.product_gender.value -%}
+          {%- assign counterpart_list = product.metafields.custom.gender_counterpart.value -%}
+          {%- assign counterpart = counterpart_list | first -%}
+          {%- if product_gender != blank and counterpart != blank -%}
+            {%- if product_gender == "Women's" -%}
+              {%- assign active_label = "Women's" -%}
+              {%- assign inactive_label = "Men's" -%}
+            {%- else -%}
+              {%- assign active_label = "Men's" -%}
+              {%- assign inactive_label = "Women's" -%}
+            {%- endif -%}
+            <span class="gender-toggle-inline">
+              <span class="gender-toggle-inline__pill gender-toggle-inline__pill--active">{{ active_label }}</span>
+              <a href="{{ counterpart.url }}" class="gender-toggle-inline__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
+            </span>
+          {%- endif -%}
         {% endif %}
         {% if option.name == 'Size' and size_guide_metaobject %}
           <modal-opener data-modal="#SizeGuideModal">
