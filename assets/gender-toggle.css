@@ -1,10 +1,20 @@
 /* Gender Toggle — inline within Size variant picker label */
 
-/* Ensure the Size legend uses flex when gender toggle is present */
+/* Promote variant labels to heading font when gender toggle is present */
 .product-form__input legend.form__label:has(.gender-toggle-inline),
 .product-form__input label.form__label:has(.gender-toggle-inline) {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: calc(var(--font-ui-size-mobile) + 2px);
+}
+
+@media only screen and (min-width: 1025px) {
+  .product-form__input legend.form__label:has(.gender-toggle-inline),
+  .product-form__input label.form__label:has(.gender-toggle-inline) {
+    font-size: calc(var(--font-ui-size-desktop) + 2px);
+  }
 }
 
 .form__label-text {
@@ -13,7 +23,7 @@
 
 .gender-toggle-inline {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.125rem;
   margin-left: 0.5rem;
 }
@@ -22,27 +32,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 0.6rem;
-  font-size: inherit;
-  font-family: inherit;
-  letter-spacing: inherit;
+  padding: 0.15rem 0.45rem;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  font-size: 0.7em;
+  letter-spacing: 0.01em;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 999px;
   background: transparent;
-  color: rgba(var(--color-foreground), 0.55);
-  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  color: rgba(var(--color-foreground), 0.45);
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .gender-toggle-inline__pill--active {
-  color: rgb(var(--color-foreground));
-  border-color: rgb(var(--color-foreground));
+  color: rgba(var(--color-foreground), 0.85);
+  border-color: rgba(var(--color-foreground), 0.6);
   cursor: default;
 }
 
 .gender-toggle-inline__pill:not(.gender-toggle-inline__pill--active):hover {
-  color: rgba(var(--color-foreground), 0.85);
+  color: rgba(var(--color-foreground), 0.7);
   border-color: rgba(var(--color-foreground), 0.3);
 }
