@@ -58,16 +58,14 @@
             {%- assign counterpart_list = product.metafields.custom.gender_counterpart.value -%}
             {%- assign counterpart = counterpart_list | first -%}
             {%- if product_gender != blank and counterpart != blank -%}
-              {%- if product_gender == "Women's" -%}
-                {%- assign active_label = "Women's" -%}
-                {%- assign inactive_label = "Men's" -%}
-              {%- else -%}
-                {%- assign active_label = "Men's" -%}
-                {%- assign inactive_label = "Women's" -%}
-              {%- endif -%}
               <span class="gender-toggle-inline">
-                <span class="gender-toggle-inline__pill gender-toggle-inline__pill--active">{{ active_label }}</span>
-                <a href="{{ counterpart.url }}" class="gender-toggle-inline__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
+                {%- if product_gender == "Men's" -%}
+                  <span class="gender-toggle-inline__pill gender-toggle-inline__pill--active">Men's</span>
+                  <a href="{{ counterpart.url }}" class="gender-toggle-inline__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to Women's">Women's</a>
+                {%- else -%}
+                  <a href="{{ counterpart.url }}" class="gender-toggle-inline__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to Men's">Men's</a>
+                  <span class="gender-toggle-inline__pill gender-toggle-inline__pill--active">Women's</span>
+                {%- endif -%}
               </span>
             {%- endif -%}
           {% endif %}

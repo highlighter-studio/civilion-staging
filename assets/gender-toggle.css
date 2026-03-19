@@ -4,7 +4,7 @@
 .product-form__input legend.form__label:has(.gender-toggle-inline),
 .product-form__input label.form__label:has(.gender-toggle-inline) {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   font-family: var(--font-heading-family);
   font-weight: var(--font-heading-weight);
   font-size: calc(var(--font-ui-size-mobile) + 2px);
@@ -19,7 +19,7 @@
 
 .form__label-left {
   display: inline-flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 0.35rem;
   white-space: nowrap;
 }
@@ -30,7 +30,7 @@
 
 .gender-toggle-inline {
   display: inline-flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 0.125rem;
 }
 
