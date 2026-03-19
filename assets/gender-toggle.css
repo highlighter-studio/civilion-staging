@@ -1,41 +1,75 @@
-/* Gender Toggle — pill outline on active, plain text on inactive */
+/* Gender Toggle — inline within Size variant picker label */
 
-.gender-toggle {
-  border: none;
-  padding: 0;
-  margin: 0;
+/* Promote variant labels to heading font when gender toggle is present */
+.product-form__input legend.form__label:has(.gender-toggle-inline),
+.product-form__input label.form__label:has(.gender-toggle-inline) {
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-size: calc(var(--font-ui-size-mobile) + 2px);
 }
 
-.gender-toggle__pills {
+@media only screen and (min-width: 1025px) {
+  .product-form__input legend.form__label:has(.gender-toggle-inline),
+  .product-form__input label.form__label:has(.gender-toggle-inline) {
+    font-size: calc(var(--font-ui-size-desktop) + 2px);
+  }
+}
+
+.form__label-left {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.form__label-text {
+  white-space: nowrap;
+}
+
+/* Vertical separator between "Size" and toggle */
+.gender-toggle-inline__separator {
+  display: inline-block;
+  width: 1px;
+  height: 0.85em;
+  background: rgba(var(--color-foreground), 0.2);
+  margin-bottom: 0.1em;
+}
+
+.gender-toggle-inline {
+  display: inline-flex;
+  align-items: flex-end;
   gap: 0.25rem;
 }
 
-.gender-toggle__pill {
+.gender-toggle-inline__pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.875rem;
-  font-family: inherit;
-  letter-spacing: 0.02em;
+  padding: 0 0.1rem 0.15rem;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  font-size: 0.7em;
+  letter-spacing: 0.01em;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
-  border: 1.5px solid transparent;
-  border-radius: 999px;
+  border: none;
+  border-bottom: 1.5px solid transparent;
+  border-radius: 0;
   background: transparent;
-  color: rgba(var(--color-foreground), 0.65);
+  color: rgba(var(--color-foreground), 0.55);
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.gender-toggle__pill--active {
+.gender-toggle-inline__pill--active {
   color: rgb(var(--color-foreground));
-  border-color: rgb(var(--color-foreground));
+  border-bottom-color: rgb(var(--color-foreground));
   cursor: default;
 }
 
-.gender-toggle__pill:not(.gender-toggle__pill--active):hover {
-  color: rgba(var(--color-foreground), 0.85);
+.gender-toggle-inline__pill:not(.gender-toggle-inline__pill--active):hover {
+  color: rgba(var(--color-foreground), 0.8);
+  border-bottom-color: rgba(var(--color-foreground), 0.35);
 }
