@@ -50,6 +50,34 @@
   outline-offset: 2px;
 }
 
+/* Product image variant */
+.colorway-swatches-block--product-images {
+  gap: 8px;
+  max-width: 320px;
+}
+
+.colorway-swatches-block__swatch--product-image {
+  width: 100px;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid rgba(var(--color-foreground-rgb), 0.12);
+  padding: 0;
+  background: none;
+}
+
+.colorway-swatches-block__swatch--product-image img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.colorway-swatches-block__swatch--product-image:hover {
+  border-color: rgba(var(--color-foreground-rgb), 0.4);
+}
+
+.colorway-swatches-block__swatch--product-image.colorway-swatches-block__swatch--active {
+  border-color: rgba(var(--color-foreground-rgb), 1);
+}
+
 .colorway-swatches-block__type-label {
   display: block;
   font-size: 0.75rem;
