@@ -93,7 +93,7 @@
         "trans_header_color": "white",
         "backdrop_blur": true,
         "menu_icon_style": "two_line",
-        "drawer_list_system": "sliding",
+        "drawer_list_system": "accordions",
         "drawer_text_alignment": "left",
         "header_drawer_list_spacing": 16,
         "header_drawer_margin": 16,
