@@ -57,8 +57,8 @@
 }
 
 .colorway-swatches-block__swatch--product-image {
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 60px;
   border-radius: 6px;
   border: 1px solid rgba(var(--color-foreground-rgb), 0.12);
   padding: 4px;
