@@ -53,13 +53,13 @@
             "image_link": "",
             "text_position": "below-image",
             "text_color": "normal",
-            "heading": "",
+            "heading": "Test",
             "heading_size": "default-size",
             "heading_weight": "bold",
-            "sub_heading": "",
-            "badge": "",
-            "button_show": false,
-            "button_label": "",
+            "sub_heading": "Test",
+            "badge": "Test",
+            "button_show": true,
+            "button_label": "Test",
             "button_style": "solid"
           }
         }
