@@ -22,7 +22,7 @@
           {% endif %}
         </a>
         {% else %}
-        <button class="mob-parent-accordion-button" aria-expanded="false">
+        <button class="mob-parent-accordion-button active" aria-expanded="true">
           <div class="nav-drawer--collection-title">{{ link.title }}<span class="mob-parent-link-icon">{% if settings.accordion_icon == 'plus' %}{% render 'icon-plus' %}{% render 'icon-minus' %}{% else %}{% render 'icon-caret' %}{% endif %}</span></div>
         </button>
         {% endif %}
@@ -30,12 +30,12 @@
         {% else %}
 
         {% if section.settings.drawer_list_system == 'sliding' %}
-        <a class="mob-parent-button" href="{{ link.url }}">{{ link.title }}<span class="mob-parent-link-icon">{% render 'icon-caret' %}</span></a>  
+        <a class="mob-parent-button" href="{{ link.url }}">{{ link.title }}<span class="mob-parent-link-icon">{% render 'icon-caret' %}</span></a>
         {% else %}
-        <button class="mob-parent-accordion-button" aria-expanded="false">{{ link.title }}<span class="mob-parent-link-icon">{% if settings.accordion_icon == 'plus' %}{% render 'icon-plus' %}{% render 'icon-minus' %}{% else %}{% render 'icon-caret' %}{% endif %}</span></button>
-        {% endif %}               
-        {% endif %}   
-        <div class="mob-secondary-level-ul"{% if section.settings.drawer_list_system == 'accordions' %} aria-hidden="true"{% endif %}>
+        <button class="mob-parent-accordion-button active" aria-expanded="true">{{ link.title }}<span class="mob-parent-link-icon">{% if settings.accordion_icon == 'plus' %}{% render 'icon-plus' %}{% render 'icon-minus' %}{% else %}{% render 'icon-caret' %}{% endif %}</span></button>
+        {% endif %}
+        {% endif %}
+        <div class="mob-secondary-level-ul{% if section.settings.drawer_list_system == 'accordions' %} panel-open{% endif %}"{% if section.settings.drawer_list_system == 'accordions' %} aria-hidden="false"{% endif %}>
           <button class="nav-secondary-fo-back-button" tabindex="0" aria-label="{{ link.title }}">{% render 'icon-caret' %}{{ link.title }}</button>
         <ul class="nav-ul--secondary" role="list">
           {% if section.settings.menu_viewall_mobile and section.settings.menu_viewall_mobile_position == 'first' and link.url contains '/collections/' %}<li class="li-mobile-viewall"><a href="{{ link.url }}">{{ section.settings.menu_viewall_mobile_label }}</a></li>{% endif %}
