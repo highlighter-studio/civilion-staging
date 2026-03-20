@@ -53,18 +53,18 @@
         "image_card_CptkM6": {
           "type": "image_card",
           "settings": {
-            "grid_position": 4,
+            "grid_position": 5,
             "card_ratio": "square",
             "grid_colspan": "all",
             "card_ratio_desktop_fullwidth": "landscape-6x4",
             "grid_rowspan": "1",
             "match_media_height": true,
             "image": "shopify://shop_images/4399_wide_copy.jpg",
-            "caption": "Test Caption",
-            "heading": "Test Heading",
+            "caption": "",
+            "heading": "Lifestyle Heading",
             "heading_size": "h3",
-            "description": "Test DEscription",
-            "alignment": "center",
+            "description": "Some description to learn more.",
+            "alignment": "right",
             "text_position": "center",
             "text_vertical_spacing": 10,
             "text_padding": 10,
@@ -72,7 +72,7 @@
             "button_show": true,
             "button_label": "Test Button",
             "btn_style": "solid",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "bg_color": "#000000"
           }
         }
