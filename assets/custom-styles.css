@@ -1,2 +1,9 @@
 /* Additional or custom CSS */
 
+/* Civilion: Keep second-level accordion headings (Men's, Women's, Collections)
+   always visible inside the drawer. Luxe's accordion transition can cause
+   these headings to flash-then-vanish due to visibility/height race conditions. */
+.drawer-menu-style-accordions .mob-accordion-group-heading {
+  visibility: visible !important;
+  color: inherit !important;
+}
