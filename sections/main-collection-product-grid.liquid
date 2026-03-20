@@ -137,9 +137,12 @@
           {% assign no_filters_applied = true %}
           {% assign total_active_values = 0 %}
           {% for filter in collection.filters %}
-          {% assign total_active_values = total_active_values | plus: filter.active_values.size %}
+            {% comment %}Civilion: skip gender filter so creative layouts persist when gender is pre-filtered via nav{% endcomment %}
+            {% unless filter.param_name contains 'product_gender' %}
+              {% assign total_active_values = total_active_values | plus: filter.active_values.size %}
+            {% endunless %}
             {% if total_active_values > 0 %}
-            {% assign no_filters_applied = false %}
+              {% assign no_filters_applied = false %}
             {% endif %}
           {% endfor %}            
 
