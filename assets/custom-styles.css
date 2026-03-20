@@ -1,9 +1,2 @@
 /* Additional or custom CSS */
 
-/* Civilion: Mobile drawer accordions default-open
-   panel-open sets visibility but the base CSS keeps height:0.
-   This ensures server-rendered open panels show their content. */
-.drawer-menu-style-accordions .mob-secondary-level-ul.panel-open {
-  height: auto;
-  overflow: visible;
-}
