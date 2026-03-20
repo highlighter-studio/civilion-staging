@@ -124,7 +124,7 @@
         "nav_font_size_desktop": 12,
         "font_size_dropdown": 14,
         "font_size_dropdown_category_heading": 14,
-        "dd_image_ratio": "portrait",
+        "dd_image_ratio": "landscape",
         "dd_image_size": "medium",
         "feat_image_radius": 0,
         "images_p_level": false,
