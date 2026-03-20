@@ -966,18 +966,20 @@
                       {%- for cw_product in colorway_products -%}
                         {%- assign product_type = cw_product.metafields.custom.colorway_type | default: 'Color' -%}
                         {%- if use_product_images -%}
-                          {%- assign cw_image = cw_product.featured_image -%}
+                          {%- assign cw_image_url = cw_product | image_url: width: 200 -%}
+                          {%- assign cw_has_image = cw_product.featured_image -%}
                         {%- else -%}
-                          {%- assign cw_image = cw_product.metafields.custom.colorway_swatch.value -%}
+                          {%- assign cw_has_image = cw_product.metafields.custom.colorway_swatch.value -%}
+                          {%- assign cw_image_url = cw_has_image | image_url: width: 96 -%}
                         {%- endif -%}
-                        {%- if product_type == cw_type and cw_image != blank -%}
+                        {%- if product_type == cw_type and cw_has_image != blank -%}
                           {%- if cw_product.id == product.id -%}
                             <span class="colorway-swatches-block__swatch{% if use_product_images %} colorway-swatches-block__swatch--product-image{% endif %} colorway-swatches-block__swatch--active" aria-label="{{ cw_product.title }} (current)" aria-current="true">
-                              <img {%- if use_product_images -%}src="{{ cw_image | image_url: width: 200 }}"{%- else -%}src="{{ cw_image | image_url: width: 96 }}"{%- endif -%} alt="{{ cw_product.title }}" loading="lazy">
+                              <img src="{{ cw_image_url }}" alt="{{ cw_product.title }}" loading="lazy">
                             </span>
                           {%- else -%}
                             <a href="{{ cw_product.url }}" class="colorway-swatches-block__swatch{% if use_product_images %} colorway-swatches-block__swatch--product-image{% endif %}" data-product-url="{{ cw_product.url }}" aria-label="{{ cw_product.title }}">
-                              <img {%- if use_product_images -%}src="{{ cw_image | image_url: width: 200 }}"{%- else -%}src="{{ cw_image | image_url: width: 96 }}"{%- endif -%} alt="{{ cw_product.title }}" loading="lazy">
+                              <img src="{{ cw_image_url }}" alt="{{ cw_product.title }}" loading="lazy">
                             </a>
                           {%- endif -%}
                         {%- endif -%}
