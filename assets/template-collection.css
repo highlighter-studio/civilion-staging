@@ -635,3 +635,51 @@
 .product-grid-no-vertical-gap {
   grid-row-gap: 0;
 }
+
+/* ============================================
+   Civilion: Contained Banner Split Layout
+   Spec: docs/superpowers/specs/2026-03-20-product-discovery-design.md §2.1
+   Markup: sections/main-collection-banner.liquid (split_banner layout)
+   ============================================ */
+
+/* Warm off-white background for split banner */
+.collection-banner-card-banner {
+  --collection-hero-bg: #F5F0E8;
+  background-color: var(--collection-hero-bg);
+}
+
+/* Left text panel: generous padding, left-aligned */
+.collection-card-banner--text-card {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Serif heading for brand tone */
+.collection-banner-card-banner h1 {
+  font-family: var(--font-heading-family, Georgia, serif);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+/* Description: atmospheric copy, readable width */
+.collection-card-banner--text-card span {
+  max-width: 440px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* Right image: contained with slight border radius */
+.collection-card-banner--image-card img {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Mobile: stack with reduced padding */
+@media screen and (max-width: 899px) {
+  .collection-card-banner--text-card {
+    padding: 32px 20px;
+  }
+}

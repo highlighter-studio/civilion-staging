@@ -30,11 +30,11 @@
         {% else %}
 
         {% if section.settings.drawer_list_system == 'sliding' %}
-        <a class="mob-parent-button" href="{{ link.url }}">{{ link.title }}<span class="mob-parent-link-icon">{% render 'icon-caret' %}</span></a>  
+        <a class="mob-parent-button" href="{{ link.url }}">{{ link.title }}<span class="mob-parent-link-icon">{% render 'icon-caret' %}</span></a>
         {% else %}
         <button class="mob-parent-accordion-button" aria-expanded="false">{{ link.title }}<span class="mob-parent-link-icon">{% if settings.accordion_icon == 'plus' %}{% render 'icon-plus' %}{% render 'icon-minus' %}{% else %}{% render 'icon-caret' %}{% endif %}</span></button>
-        {% endif %}               
-        {% endif %}   
+        {% endif %}
+        {% endif %}
         <div class="mob-secondary-level-ul"{% if section.settings.drawer_list_system == 'accordions' %} aria-hidden="true"{% endif %}>
           <button class="nav-secondary-fo-back-button" tabindex="0" aria-label="{{ link.title }}">{% render 'icon-caret' %}{{ link.title }}</button>
         <ul class="nav-ul--secondary" role="list">
@@ -63,7 +63,7 @@
             {% else %}
             <a class="{% if section.settings.drawer_list_system == 'sliding' %}mob-parent-button{% else %}mob-accordion-group-heading{% endif %}" href="{{ childlink.url }}">{{ childlink.title }}<span class="mob-parent-link-icon">{% render 'icon-caret' %}</span></a> 
             {% endif %}
-            <div class="mob-third-level-ul">
+            <div class="mob-third-level-ul{% if section.settings.drawer_list_system == 'accordions' %} panel-open{% endif %}">
               <button class="nav-secondary-fo-back-button" tabindex="0" aria-label="{{ childlink.title }}">{% render 'icon-caret' %}{{ childlink.title }}</button>
               <ul class="nav-ul--tertiary" role="list">
                 {% if section.settings.menu_viewall_mobile and section.settings.menu_viewall_mobile_position == 'first' and childlink.url contains '/collections/' %}<li class="li-mobile-viewall"><a href="{{ childlink.url }}">{{ section.settings.menu_viewall_mobile_label }}</a></li>{% endif %}

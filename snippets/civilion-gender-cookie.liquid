@@ -1,0 +1,9 @@
+{% comment %}
+  Civilion Gender Cookie Loader
+  Loads gender cookie JS on collection pages.
+  Include in layout/theme.liquid or collection template.
+{% endcomment %}
+
+{% if template.name == 'collection' %}
+  <script src="{{ 'civilion-gender-cookie.js' | asset_url }}" defer></script>
+{% endif %}
