@@ -63,7 +63,7 @@
             {% else %}
             <a class="{% if section.settings.drawer_list_system == 'sliding' %}mob-parent-button{% else %}mob-accordion-group-heading{% endif %}" href="{{ childlink.url }}">{{ childlink.title }}<span class="mob-parent-link-icon">{% render 'icon-caret' %}</span></a> 
             {% endif %}
-            <div class="mob-third-level-ul">
+            <div class="mob-third-level-ul{% if section.settings.drawer_list_system == 'accordions' %} panel-open{% endif %}">
               <button class="nav-secondary-fo-back-button" tabindex="0" aria-label="{{ childlink.title }}">{% render 'icon-caret' %}{{ childlink.title }}</button>
               <ul class="nav-ul--tertiary" role="list">
                 {% if section.settings.menu_viewall_mobile and section.settings.menu_viewall_mobile_position == 'first' and childlink.url contains '/collections/' %}<li class="li-mobile-viewall"><a href="{{ childlink.url }}">{{ section.settings.menu_viewall_mobile_label }}</a></li>{% endif %}
