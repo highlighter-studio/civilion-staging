@@ -905,11 +905,22 @@
             {%- when 'colorway_swatches' -%}
             {%- liquid
               assign colorway_products = product.metafields.custom.colorway_group.value
+              assign display_style = block.settings.display_style | default: 'swatch'
+              assign use_product_images = false
+              if display_style == 'product_image'
+                assign use_product_images = true
+              endif
               assign valid_swatches = 0
               if colorway_products != blank
                 for cw_product in colorway_products
-                  if cw_product.metafields.custom.colorway_swatch.value != blank
-                    assign valid_swatches = valid_swatches | plus: 1
+                  if use_product_images
+                    if cw_product.featured_image != blank
+                      assign valid_swatches = valid_swatches | plus: 1
+                    endif
+                  else
+                    if cw_product.metafields.custom.colorway_swatch.value != blank
+                      assign valid_swatches = valid_swatches | plus: 1
+                    endif
                   endif
                 endfor
               endif
@@ -935,27 +946,38 @@
                   {%- assign type_has_valid = false -%}
                   {%- for cw_product in colorway_products -%}
                     {%- assign product_type = cw_product.metafields.custom.colorway_type | default: 'Color' -%}
-                    {%- if product_type == cw_type and cw_product.metafields.custom.colorway_swatch.value != blank -%}
-                      {%- assign type_has_valid = true -%}
-                      {%- break -%}
+                    {%- if use_product_images -%}
+                      {%- if product_type == cw_type and cw_product.featured_image != blank -%}
+                        {%- assign type_has_valid = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- else -%}
+                      {%- if product_type == cw_type and cw_product.metafields.custom.colorway_swatch.value != blank -%}
+                        {%- assign type_has_valid = true -%}
+                        {%- break -%}
+                      {%- endif -%}
                     {%- endif -%}
                   {%- endfor -%}
                   {%- if type_has_valid -%}
                     {%- if colorway_types_arr.size > 1 -%}
                       <span class="colorway-swatches-block__type-label">{{ cw_type }}</span>
                     {%- endif -%}
-                    <div class="colorway-swatches-block">
+                    <div class="colorway-swatches-block{% if use_product_images %} colorway-swatches-block--product-images{% endif %}">
                       {%- for cw_product in colorway_products -%}
                         {%- assign product_type = cw_product.metafields.custom.colorway_type | default: 'Color' -%}
-                        {%- assign swatch_image = cw_product.metafields.custom.colorway_swatch.value -%}
-                        {%- if product_type == cw_type and swatch_image != blank -%}
+                        {%- if use_product_images -%}
+                          {%- assign cw_image = cw_product.featured_image -%}
+                        {%- else -%}
+                          {%- assign cw_image = cw_product.metafields.custom.colorway_swatch.value -%}
+                        {%- endif -%}
+                        {%- if product_type == cw_type and cw_image != blank -%}
                           {%- if cw_product.id == product.id -%}
-                            <span class="colorway-swatches-block__swatch colorway-swatches-block__swatch--active" aria-label="{{ cw_product.title }} (current)" aria-current="true">
-                              <img src="{{ swatch_image | image_url: width: 96 }}" alt="{{ cw_product.title }}" width="44" height="44" loading="lazy">
+                            <span class="colorway-swatches-block__swatch{% if use_product_images %} colorway-swatches-block__swatch--product-image{% endif %} colorway-swatches-block__swatch--active" aria-label="{{ cw_product.title }} (current)" aria-current="true">
+                              <img {%- if use_product_images -%}src="{{ cw_image | image_url: width: 200 }}"{%- else -%}src="{{ cw_image | image_url: width: 96 }}"{%- endif -%} alt="{{ cw_product.title }}" loading="lazy">
                             </span>
                           {%- else -%}
-                            <a href="{{ cw_product.url }}" class="colorway-swatches-block__swatch" data-product-url="{{ cw_product.url }}" aria-label="{{ cw_product.title }}">
-                              <img src="{{ swatch_image | image_url: width: 96 }}" alt="{{ cw_product.title }}" width="44" height="44" loading="lazy">
+                            <a href="{{ cw_product.url }}" class="colorway-swatches-block__swatch{% if use_product_images %} colorway-swatches-block__swatch--product-image{% endif %}" data-product-url="{{ cw_product.url }}" aria-label="{{ cw_product.title }}">
+                              <img {%- if use_product_images -%}src="{{ cw_image | image_url: width: 200 }}"{%- else -%}src="{{ cw_image | image_url: width: 96 }}"{%- endif -%} alt="{{ cw_product.title }}" loading="lazy">
                             </a>
                           {%- endif -%}
                         {%- endif -%}
@@ -3104,7 +3126,18 @@
       "type": "colorway_swatches",
       "limit": 1,
       "name": "Colorway swatches",
-      "settings": []
+      "settings": [
+        {
+          "type": "select",
+          "id": "display_style",
+          "label": "Display style",
+          "options": [
+            { "value": "swatch", "label": "Round swatches" },
+            { "value": "product_image", "label": "Product images" }
+          ],
+          "default": "swatch"
+        }
+      ]
     },
     {
       "type": "gender_toggle",
