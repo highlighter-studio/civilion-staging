@@ -42,7 +42,7 @@ Layout: **Gender + Collections + Featured Image** (4-column)
 | Trainers | Trainers | Sale | "Shop Now" CTA |
 | Loafers | Loafers | Shop All → | |
 
-- Men's/Women's links carry gender filter params (e.g., `/collections/slides?filter.p.m.custom.gender=Men`)
+- Men's/Women's links carry gender filter params (e.g., `/collections/slides?filter.p.m.custom.product_gender=Men's`)
 - Collections column grows independently as catalog expands
 - Featured image pulled from collection featured image (Luxe native)
 - Implementation: Luxe's native mega menu via Shopify menu structure + dropdown panel width setting
@@ -204,7 +204,7 @@ Custom Shopify pages (`/pages/sport`, `/pages/leisure`) assembled from Luxe's mo
 
 - Each design exists as **two Shopify products**: one men's, one women's (for SEO)
 - Products are physically identical — only size ranges differ
-- Connected via metafield (e.g., `custom.gender`: "Men" / "Women") for filtering
+- Connected via metafield (e.g., `custom.product_gender`: "Men's" / "Women's") for filtering
 - PDP presents a unified experience with gender toggle swapping size ranges
 
 ### Collections
@@ -217,14 +217,14 @@ Custom Shopify pages (`/pages/sport`, `/pages/leisure`) assembled from Luxe's mo
 
 ### Metafields Required
 
-- `product.metafields.custom.gender` — "Men" / "Women" (for filtering + cookie logic)
+- `product.metafields.custom.gender` — "Men's" / "Women's" (for filtering + cookie logic)
 - Additional metafields as needed for future filters (material, activity, etc.)
 
 ### Navigation Menus (Shopify Admin)
 
 - **Main menu:** Shop (with nested Men's/Women's/Collections), Sport, Leisure, Journal, Story
-- **Men's submenu:** Slides, Sneakers, Trainers, Loafers (links carry `?filter.p.m.custom.gender=Men`)
-- **Women's submenu:** Same product types (links carry `?filter.p.m.custom.gender=Women`)
+- **Men's submenu:** Slides, Sneakers, Trainers, Loafers (links carry `?filter.p.m.custom.product_gender=Men's`)
+- **Women's submenu:** Same product types (links carry `?filter.p.m.custom.product_gender=Women's`)
 - **Collections submenu:** New Arrivals, Licensed Designs, Sale, Shop All
 - **Subcollection menus:** Created per-collection as needed in Shopify navigation
 

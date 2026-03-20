@@ -234,7 +234,7 @@ Create the gender cookie system that reads URL filter params, persists gender pr
 - Create: `assets/civilion-gender-cookie.js`
 - Create: `snippets/civilion-gender-cookie.liquid`
 
-**Context:** When a customer navigates via the mega menu (e.g., Men's > Slides), the URL contains `?filter.p.m.custom.gender=Men`. This JS snippet reads that param, stores it as a cookie, and on future collection page visits without the param, redirects or injects it. The Liquid snippet conditionally loads the JS on collection pages.
+**Context:** When a customer navigates via the mega menu (e.g., Men's > Slides), the URL contains `?filter.p.m.custom.product_gender=Men's`. This JS snippet reads that param, stores it as a cookie, and on future collection page visits without the param, redirects or injects it. The Liquid snippet conditionally loads the JS on collection pages.
 
 - [ ] **Step 1: Create the gender cookie JS**
 
@@ -250,7 +250,7 @@ Create `assets/civilion-gender-cookie.js`:
 (function() {
   const COOKIE_NAME = 'civilion_gender';
   const COOKIE_DAYS = 30;
-  const FILTER_PARAM = 'filter.p.m.custom.gender';
+  const FILTER_PARAM = 'filter.p.m.custom.product_gender';
 
   function getCookie(name) {
     const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -328,8 +328,8 @@ Read `layout/theme.liquid` and add the snippet include before the closing `</bod
 - [ ] **Step 4: Test gender cookie flow manually**
 
 Test sequence:
-1. Visit `/collections/slides?filter.p.m.custom.gender=Men` — verify cookie is set (check browser DevTools > Application > Cookies)
-2. Navigate to `/collections/sneakers` (no gender param) — verify redirect to `/collections/sneakers?filter.p.m.custom.gender=Men`
+1. Visit `/collections/slides?filter.p.m.custom.product_gender=Men's` — verify cookie is set (check browser DevTools > Application > Cookies)
+2. Navigate to `/collections/sneakers` (no gender param) — verify redirect to `/collections/sneakers?filter.p.m.custom.product_gender=Men's`
 3. Clear the cookie manually, visit `/collections/slides` — verify no redirect (no cookie, no param)
 
 - [ ] **Step 5: Commit**
@@ -402,15 +402,15 @@ Structure the main menu as follows:
 Main Menu
 ├── Shop
 │   ├── Men's
-│   │   ├── Slides → /collections/slides?filter.p.m.custom.gender=Men
-│   │   ├── Sneakers → /collections/sneakers?filter.p.m.custom.gender=Men
-│   │   ├── Trainers → /collections/trainers?filter.p.m.custom.gender=Men
-│   │   └── Loafers → /collections/loafers?filter.p.m.custom.gender=Men
+│   │   ├── Slides → /collections/slides?filter.p.m.custom.product_gender=Men's
+│   │   ├── Sneakers → /collections/sneakers?filter.p.m.custom.product_gender=Men's
+│   │   ├── Trainers → /collections/trainers?filter.p.m.custom.product_gender=Men's
+│   │   └── Loafers → /collections/loafers?filter.p.m.custom.product_gender=Men's
 │   ├── Women's
-│   │   ├── Slides → /collections/slides?filter.p.m.custom.gender=Women
-│   │   ├── Sneakers → /collections/sneakers?filter.p.m.custom.gender=Women
-│   │   ├── Trainers → /collections/trainers?filter.p.m.custom.gender=Women
-│   │   └── Loafers → /collections/loafers?filter.p.m.custom.gender=Women
+│   │   ├── Slides → /collections/slides?filter.p.m.custom.product_gender=Women's
+│   │   ├── Sneakers → /collections/sneakers?filter.p.m.custom.product_gender=Women's
+│   │   ├── Trainers → /collections/trainers?filter.p.m.custom.product_gender=Women's
+│   │   └── Loafers → /collections/loafers?filter.p.m.custom.product_gender=Women's
 │   └── Collections
 │       ├── New Arrivals → /collections/new-arrivals
 │       ├── Licensed Designs → /collections/licensed-designs
@@ -422,7 +422,7 @@ Main Menu
 └── Story → /pages/story
 ```
 
-**Note:** The `?filter.p.m.custom.gender=Men` param format must match the actual metafield namespace/key. Verify the exact param name after setting up the gender metafield (Task 7 Step 1). Shopify navigation supports full URLs with query params.
+**Note:** The `?filter.p.m.custom.product_gender=Men's` param format must match the actual metafield namespace/key. Verify the exact param name after setting up the gender metafield (Task 7 Step 1). Shopify navigation supports full URLs with query params.
 
 - [ ] **Step 2: Configure mega menu settings in theme editor**
 
@@ -450,19 +450,19 @@ In theme editor header section, add an image block:
 Go to Shopify Admin > Settings > Custom data > Products:
 - Add metafield definition:
   - Name: Gender
-  - Namespace and key: `custom.gender`
+  - Namespace and key: `custom.product_gender`
   - Type: Single line text (or Single option: "Men", "Women")
 - Set the value on each product ("Men" or "Women")
 
 - [ ] **Step 2: Enable gender metafield as storefront filter**
 
 Go to Shopify Admin > Online Store > Navigation > Collection and search filters:
-- Add `custom.gender` as a filter
+- Add `custom.product_gender` as a filter
 - This makes it available in the horizontal filter bar and as a URL filter param
 
 - [ ] **Step 3: Verify filter param format**
 
-Visit a collection page and use the filter UI to select a gender value. Check the URL to confirm the exact param format. It should be `filter.p.m.custom.gender=Men`. If the format differs, update:
+Visit a collection page and use the filter UI to select a gender value. Check the URL to confirm the exact param format. It should be `filter.p.m.custom.product_gender=Men's`. If the format differs, update:
 - Navigation menu links (Task 6 Step 1)
 - Gender cookie JS `FILTER_PARAM` constant (Task 4)
 
