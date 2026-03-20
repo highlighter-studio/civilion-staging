@@ -53,12 +53,13 @@
         "image_card_Ck3LyX": {
           "type": "image_card",
           "settings": {
-            "grid_position": 1,
+            "grid_position": 7,
             "card_ratio": "portrait-4x5",
             "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
             "grid_rowspan": "1",
             "match_media_height": false,
+            "image": "shopify://shop_images/4399_wide_copy.jpg",
             "caption": "",
             "heading": "",
             "heading_size": "h3",
