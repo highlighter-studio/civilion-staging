@@ -50,32 +50,6 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
-        "image_card_Ck3LyX": {
-          "type": "image_card",
-          "settings": {
-            "grid_position": 7,
-            "card_ratio": "portrait-4x5",
-            "grid_colspan": "auto",
-            "card_ratio_desktop_fullwidth": "landscape-21x9",
-            "grid_rowspan": "1",
-            "match_media_height": false,
-            "image": "shopify://shop_images/4399_wide_copy.jpg",
-            "caption": "",
-            "heading": "",
-            "heading_size": "h3",
-            "description": "",
-            "alignment": "center",
-            "text_position": "center",
-            "text_vertical_spacing": 10,
-            "text_padding": 10,
-            "url": "",
-            "button_show": false,
-            "button_label": "",
-            "btn_style": "solid",
-            "text_color": "#ffffff",
-            "bg_color": "#000000"
-          }
-        },
         "image_card_CptkM6": {
           "type": "image_card",
           "settings": {
@@ -104,7 +78,6 @@
         }
       },
       "block_order": [
-        "image_card_Ck3LyX",
         "image_card_CptkM6"
       ],
       "settings": {
