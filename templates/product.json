@@ -84,7 +84,9 @@
         },
         "colorway_swatches_iLdUWU": {
           "type": "colorway_swatches",
-          "settings": {}
+          "settings": {
+            "display_style": "product_image"
+          }
         },
         "099f936f-1f52-44f2-8d7b-0188fbd363d5": {
           "type": "quantity_selector",
