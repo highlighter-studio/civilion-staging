@@ -53,8 +53,9 @@
         "hero_buttons"
       ],
       "settings": {
-        "banner_size": "banner-style-large",
-        "overlay_level": 15,
+        "banner_size": "banner-style-medium",
+        "video_poster": "shopify://shop_images/4399_wide_copy.jpg",
+        "overlay_level": 10,
         "video_size": "100",
         "video_position": "center",
         "video_margin_mobile": 0,
@@ -145,7 +146,7 @@
         "editorial_break_3": {
           "type": "image_card",
           "settings": {
-            "grid_position": 16,
+            "grid_position": 12,
             "card_ratio": "landscape-16x9",
             "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
