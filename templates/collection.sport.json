@@ -38,8 +38,12 @@
             "padding_bottom": 0,
             "btn_one_show": true,
             "btn_one_txt": "Shop Sport",
+            "btn_one_link": "",
             "btn_one_style": "button--solid",
-            "btn_two_show": false
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
           }
         }
       },
@@ -98,6 +102,8 @@
       "settings": {
         "content_width": "page-width-narrow",
         "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
         "text_color": "fg-body",
         "bg_color": "bg-body",
         "padding_top": 80,
@@ -247,6 +253,7 @@
         "gallery_img_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/4399_wide_copy.jpg",
             "image_size": "full_width",
             "image_ratio": "landscape-16x9",
             "image_padding_mobile": 0,
@@ -258,41 +265,21 @@
         "gallery_img_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
             "image_size": "half_width",
             "image_ratio": "portrait",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 50,
-            "image_offset_horizontal": 0
-          }
-        },
-        "gallery_img_3": {
-          "type": "image",
-          "settings": {
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": -50,
-            "image_offset_horizontal": 0
-          }
-        },
-        "gallery_img_4": {
-          "type": "image",
-          "settings": {
-            "image_size": "half_width",
-            "image_ratio": "landscape",
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
             "image_offset_horizontal": 0
           }
         },
-        "gallery_img_5": {
+        "image_3GiQnq": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
             "image_size": "half_width",
-            "image_ratio": "portrait-4x6",
+            "image_ratio": "portrait",
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
@@ -303,9 +290,7 @@
       "block_order": [
         "gallery_img_1",
         "gallery_img_2",
-        "gallery_img_3",
-        "gallery_img_4",
-        "gallery_img_5"
+        "image_3GiQnq"
       ],
       "settings": {
         "section_label": "The Sport Edit",
@@ -315,6 +300,7 @@
         "hdr_alignment": "center",
         "header_style": "normal",
         "content_layout": "grid",
+        "arrow_style": "solid-inverted",
         "content_width": "page-width",
         "grid_spacing": "default-grid",
         "grid_columns_tablet": 2,
@@ -354,9 +340,13 @@
             "btn_color_scheme": "default",
             "button_width_mobile": "default",
             "btn_txt": "Shop Monaco",
+            "btn_link": "",
             "btn_style": "outline",
             "btn_two_enable": false,
-            "button_layout": "stacked"
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
           }
         }
       },
@@ -373,6 +363,7 @@
         "dt_image_width": 50,
         "card_spacing": 40,
         "image_ratio": "portrait",
+        "secondary_image_scale": "small",
         "txt_alignment": "left",
         "txt_vertical_alignment": "middle",
         "txt_padding_top_mobile": 20,
@@ -420,9 +411,13 @@
             "btn_color_scheme": "default",
             "button_width_mobile": "default",
             "btn_txt": "Shop Rome",
+            "btn_link": "",
             "btn_style": "outline",
             "btn_two_enable": false,
-            "button_layout": "stacked"
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
           }
         }
       },
@@ -439,6 +434,7 @@
         "dt_image_width": 50,
         "card_spacing": 40,
         "image_ratio": "portrait",
+        "secondary_image_scale": "small",
         "txt_alignment": "left",
         "txt_vertical_alignment": "middle",
         "txt_padding_top_mobile": 20,
@@ -486,9 +482,13 @@
             "btn_color_scheme": "default",
             "button_width_mobile": "default",
             "btn_txt": "Shop Oxford",
+            "btn_link": "",
             "btn_style": "outline",
             "btn_two_enable": false,
-            "button_layout": "stacked"
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
           }
         }
       },
@@ -505,6 +505,7 @@
         "dt_image_width": 50,
         "card_spacing": 40,
         "image_ratio": "portrait",
+        "secondary_image_scale": "small",
         "txt_alignment": "left",
         "txt_vertical_alignment": "middle",
         "txt_padding_top_mobile": 20,
@@ -529,6 +530,7 @@
         "leisure_card": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "description": "Relaxed luxury for every occasion",
             "button_label": "Explore Leisure"
           }
@@ -536,6 +538,7 @@
         "golf_card": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "description": "Course-ready performance",
             "button_label": "Discover Golf"
           }
@@ -547,6 +550,7 @@
       ],
       "settings": {
         "section_layout": "grid",
+        "arrow_style": "solid",
         "grid_layout_mobile": "1",
         "grid_layout_tablet": 2,
         "grid_layout_desktop": 2,
@@ -557,7 +561,14 @@
         "section_label": "",
         "heading": "Explore More",
         "heading_size": "h2",
+        "sub_heading": "",
         "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
         "card_layout": "overlay",
         "card_ratio": "landscape",
         "card_heading_visibility": "normal",
