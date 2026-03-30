@@ -255,7 +255,7 @@
           "type": "heading",
           "settings": {
             "heading": "The Monaco",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "shoe1_text": {
@@ -293,7 +293,8 @@
         "image_alignment": "left",
         "dt_image_width": 50,
         "card_spacing": 40,
-        "image_ratio": "portrait",
+        "image": "shopify://shop_images/Trainer-Navy-Pair.png",
+        "image_ratio": "landscape",
         "secondary_image_scale": "small",
         "txt_alignment": "left",
         "txt_vertical_alignment": "middle",
@@ -326,7 +327,7 @@
           "type": "heading",
           "settings": {
             "heading": "The Rome",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "shoe2_text": {
@@ -364,7 +365,8 @@
         "image_alignment": "right",
         "dt_image_width": 50,
         "card_spacing": 40,
-        "image_ratio": "portrait",
+        "image": "shopify://shop_images/Trainer-Navy-Pair.png",
+        "image_ratio": "landscape",
         "secondary_image_scale": "small",
         "txt_alignment": "left",
         "txt_vertical_alignment": "middle",
@@ -397,7 +399,7 @@
           "type": "heading",
           "settings": {
             "heading": "The Oxford",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "shoe3_text": {
@@ -435,7 +437,8 @@
         "image_alignment": "left",
         "dt_image_width": 50,
         "card_spacing": 40,
-        "image_ratio": "portrait",
+        "image": "shopify://shop_images/Trainer-Navy-Pair.png",
+        "image_ratio": "landscape",
         "secondary_image_scale": "small",
         "txt_alignment": "left",
         "txt_vertical_alignment": "middle",
