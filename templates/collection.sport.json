@@ -362,7 +362,7 @@
       "settings": {
         "section_size": "flexible",
         "content_width": "page-width",
-        "image_alignment": "right",
+        "image_alignment": "left",
         "dt_image_width": 50,
         "card_spacing": 40,
         "image": "shopify://shop_images/Trainer-Navy-Pair.png",
