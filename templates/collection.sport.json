@@ -101,7 +101,7 @@
         "editorial_break_1": {
           "type": "image_card",
           "settings": {
-            "grid_position": 4,
+            "grid_position": 5,
             "card_ratio": "landscape-16x9",
             "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
