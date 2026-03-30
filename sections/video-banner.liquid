@@ -168,9 +168,15 @@
 {% if section.settings.scroll_fade_effect %}<div class="bg-pane banner-overlay-fader"></div>{% endif %}
 <div class="video-banner--video">
 
-<div class="{{ section.id }}-video-banner-poster-only video-banner-poster-only">
+{%- liquid
+  assign poster_visible = false
+  if section.settings.video_url == null and section.settings.video_mob_url == null and section.settings.video_poster != blank
+    assign poster_visible = true
+  endif
+-%}
+<div class="{{ section.id }}-video-banner-poster-only video-banner-poster-only{% if poster_visible %} poster-visible{% endif %}">
 {% if section.settings.video_poster %}
-  {{ section.settings.video_poster | image_url: width: 1080 | image_tag: loading: 'lazy' }}
+  {{ section.settings.video_poster | image_url: width: 1920 | image_tag: loading: 'eager', fetchpriority: fetch_priority }}
 {% endif %}
 </div>
 
