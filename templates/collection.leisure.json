@@ -35,7 +35,7 @@
       "settings": {
         "banner_size": "banner-style-medium",
         "video_poster": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
-        "overlay_level": 5,
+        "overlay_level": 15,
         "video_size": "100",
         "video_position": "center",
         "video_margin_mobile": 0,
