@@ -461,16 +461,18 @@
         "leisure_card": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "description": "Relaxed luxury for every occasion",
-            "button_label": "Explore Leisure"
+            "collection": "tennis",
+            "image": "shopify://shop_images/cv-tennis-placeholder.jpg",
+            "description": "Court-ready performance",
+            "button_label": "Explore Tennis"
           }
         },
         "golf_card": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "description": "Course-ready performance",
+            "collection": "golf",
+            "image": "shopify://shop_images/ScottishOpenMcIlroy_Banner_W_copy.jpg",
+            "description": "From tee to green",
             "button_label": "Discover Golf"
           }
         }
