@@ -26,31 +26,11 @@
             "text": "<p>Performance luxury, engineered for movement.</p>",
             "text_size": "text-large"
           }
-        },
-        "hero_buttons": {
-          "type": "buttons",
-          "settings": {
-            "btn_layout": "inline",
-            "btn_alignment": "auto",
-            "btn_width_mobile": "auto",
-            "btn_color_scheme": "white",
-            "padding_top": 20,
-            "padding_bottom": 0,
-            "btn_one_show": true,
-            "btn_one_txt": "Shop Sport",
-            "btn_one_link": "",
-            "btn_one_style": "button--solid",
-            "btn_two_show": false,
-            "btn_two_txt": "Button text",
-            "btn_two_link": "",
-            "btn_two_style": "button--solid"
-          }
         }
       },
       "block_order": [
         "hero_heading",
-        "hero_text",
-        "hero_buttons"
+        "hero_text"
       ],
       "settings": {
         "banner_size": "banner-style-medium",
@@ -67,7 +47,7 @@
         "content_width": 60,
         "text_vertical_spacing": 10,
         "top_padding": 0,
-        "bottom_padding": 0,
+        "bottom_padding": 40,
         "fade_in_text": true,
         "scroll_fade_effect": true,
         "text_blend_effect": "none",
