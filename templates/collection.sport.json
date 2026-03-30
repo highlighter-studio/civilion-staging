@@ -122,7 +122,7 @@
           "settings": {
             "grid_position": 4,
             "card_ratio": "landscape-16x9",
-            "grid_colspan": "all",
+            "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
             "grid_rowspan": "1",
             "match_media_height": true,
@@ -172,10 +172,11 @@
           "settings": {
             "grid_position": 16,
             "card_ratio": "landscape-16x9",
-            "grid_colspan": "all",
+            "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
             "grid_rowspan": "1",
             "match_media_height": true,
+            "image": "shopify://shop_images/ScottishOpenMcIlroy_Banner_W_copy.jpg",
             "caption": "Performance Luxury",
             "heading": "From Tee to Green",
             "heading_size": "h2",
