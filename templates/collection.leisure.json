@@ -15,7 +15,7 @@
         "hero_heading": {
           "type": "heading",
           "settings": {
-            "heading": "Sport",
+            "heading": "Leisure",
             "heading_size": "hxxl",
             "txt_alignment": "inherit"
           }
@@ -34,7 +34,7 @@
       ],
       "settings": {
         "banner_size": "banner-style-medium",
-        "video_poster": "shopify://shop_images/4399_wide_copy.jpg",
+        "video_poster": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
         "overlay_level": 5,
         "video_size": "100",
         "video_position": "center",
