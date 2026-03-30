@@ -134,14 +134,27 @@
         {%- else -%}
           <div class="collection">
             <div class="loading-overlay"></div>
-          {% assign no_filters_applied = true %}
-          {% assign total_active_values = 0 %}
-          {% for filter in collection.filters %}
-          {% assign total_active_values = total_active_values | plus: filter.active_values.size %}
-            {% if total_active_values > 0 %}
-            {% assign no_filters_applied = false %}
-            {% endif %}
-          {% endfor %}            
+          {%- comment -%}Civilion: lifestyle templates (sport, leisure, etc.) always show editorial breaks — they ARE the template.
+          Standard collections hide breaks when non-gender filters applied (position mismatch concern).{%- endcomment -%}
+          {%- liquid
+            assign is_lifestyle_template = false
+            if template.suffix == 'sport' or template.suffix == 'leisure' or template.suffix == 'golf' or template.suffix == 'boating'
+              assign is_lifestyle_template = true
+            endif
+
+            assign no_filters_applied = true
+            unless is_lifestyle_template
+              assign total_active_values = 0
+              for filter in collection.filters
+                unless filter.param_name contains 'product_gender'
+                  assign total_active_values = total_active_values | plus: filter.active_values.size
+                endunless
+                if total_active_values > 0
+                  assign no_filters_applied = false
+                endif
+              endfor
+            endunless
+          -%}            
 
             <ul
               id="product-grid"
