@@ -1,0 +1,538 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "video-banner",
+      "blocks": {
+        "hero_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sport",
+            "heading_size": "hxxl",
+            "txt_alignment": "inherit"
+          }
+        },
+        "hero_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Performance luxury, engineered for movement.</p>",
+            "text_size": "text-large"
+          }
+        }
+      },
+      "block_order": [
+        "hero_heading",
+        "hero_text"
+      ],
+      "settings": {
+        "banner_size": "banner-style-medium",
+        "video_poster": "shopify://shop_images/4399_wide_copy.jpg",
+        "overlay_level": 5,
+        "video_size": "100",
+        "video_position": "center",
+        "video_margin_mobile": 0,
+        "video_margin_desktop": 0,
+        "enable_playback_pause": false,
+        "enable_audio": false,
+        "txt_position": "bottom_left",
+        "txt_alignment": "left",
+        "content_width": 60,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 40,
+        "fade_in_text": true,
+        "scroll_fade_effect": true,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "#000000"
+      }
+    },
+    "manifesto": {
+      "type": "rich-text",
+      "blocks": {
+        "manifesto_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Sport Collection",
+            "alignment": "center",
+            "opacity": 70
+          }
+        },
+        "manifesto_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From the court to the course, Civilion redefines what performance footwear feels like. Injection-moulded comfort meets luxury design — engineered for athletes who never compromise on style.</p>",
+            "text_size": "text-large",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "manifesto_caption",
+        "manifesto_text"
+      ],
+      "settings": {
+        "content_width": "page-width-narrow",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "editorial_break_1": {
+          "type": "image_card",
+          "settings": {
+            "grid_position": 5,
+            "card_ratio": "landscape-16x9",
+            "grid_colspan": "auto",
+            "card_ratio_desktop_fullwidth": "landscape-21x9",
+            "grid_rowspan": "1",
+            "match_media_height": true,
+            "image": "shopify://shop_images/cv-tennis-placeholder.jpg",
+            "caption": "",
+            "heading": "Built for the Court",
+            "heading_size": "h2",
+            "description": "Lightweight injection-moulded construction meets tournament-ready grip.",
+            "alignment": "center",
+            "text_position": "center",
+            "text_vertical_spacing": 10,
+            "text_padding": 10,
+            "url": "",
+            "button_show": false,
+            "button_label": "",
+            "btn_style": "solid",
+            "text_color": "#ffffff",
+            "bg_color": "#000000"
+          }
+        },
+        "editorial_break_3": {
+          "type": "image_card",
+          "settings": {
+            "grid_position": 11,
+            "card_ratio": "landscape-16x9",
+            "grid_colspan": "auto",
+            "card_ratio_desktop_fullwidth": "landscape-21x9",
+            "grid_rowspan": "1",
+            "match_media_height": true,
+            "image": "shopify://shop_images/ScottishOpenMcIlroy_Banner_W_copy.jpg",
+            "caption": "Performance Luxury",
+            "heading": "From Tee to Green",
+            "heading_size": "h2",
+            "description": "",
+            "alignment": "center",
+            "text_position": "center",
+            "text_vertical_spacing": 10,
+            "text_padding": 10,
+            "url": "",
+            "button_show": false,
+            "button_label": "",
+            "btn_style": "solid",
+            "text_color": "#ffffff",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "editorial_break_1",
+        "editorial_break_3"
+      ],
+      "settings": {
+        "products_per_page": 48,
+        "section_margins": "page-width",
+        "grid_spacing_horizontal": "normal",
+        "grid_spacing_vertical": "normal",
+        "columns_mobile": "2",
+        "columns_tablet": 3,
+        "columns_desktop": 3,
+        "enable_creative_layouts": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_price": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "editorial-gallery": {
+      "type": "section-media-collage",
+      "blocks": {
+        "gallery_img_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4399_wide_copy.jpg",
+            "image_size": "full_width",
+            "image_ratio": "landscape-16x9",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "gallery_img_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image_size": "half_width",
+            "image_ratio": "portrait",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_3GiQnq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image_size": "half_width",
+            "image_ratio": "portrait",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "gallery_img_1",
+        "gallery_img_2",
+        "image_3GiQnq"
+      ],
+      "settings": {
+        "section_label": "The Sport Edit",
+        "heading": "In Motion",
+        "heading_size": "h1",
+        "description": "<p>Performance captured. From first serve to final putt, Civilion moves with you.</p>",
+        "hdr_alignment": "center",
+        "header_style": "normal",
+        "content_layout": "grid",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width",
+        "grid_spacing": "default-grid",
+        "grid_columns_tablet": 2,
+        "grid_columns_desktop": 2,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "shoe-type-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "shoe1_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sport Collection"
+          }
+        },
+        "shoe1_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Monaco",
+            "heading_size": "h2"
+          }
+        },
+        "shoe1_text": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Born on the courts of the Riviera. The Monaco's low-profile silhouette and injection-moulded sole deliver all-day comfort whether you're playing a set or watching one.</p>",
+            "text_size": "std"
+          }
+        },
+        "shoe1_button": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Shop Monaco",
+            "btn_link": "",
+            "btn_style": "outline",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "shoe1_caption",
+        "shoe1_heading",
+        "shoe1_text",
+        "shoe1_button"
+      ],
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "left",
+        "dt_image_width": 50,
+        "card_spacing": 40,
+        "image": "shopify://shop_images/Trainer-Navy-Pair.png",
+        "image_ratio": "landscape",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 20,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 0,
+        "border_vertical": false,
+        "top_border": true,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "light"
+      }
+    },
+    "shoe-type-2": {
+      "type": "image-with-text",
+      "blocks": {
+        "shoe2_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sport Collection"
+          }
+        },
+        "shoe2_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Rome",
+            "heading_size": "h2"
+          }
+        },
+        "shoe2_text": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Refined versatility for the modern athlete. The Rome transitions seamlessly from the golf course to the clubhouse, with a clean silhouette that performs as well as it looks.</p>",
+            "text_size": "std"
+          }
+        },
+        "shoe2_button": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Shop Rome",
+            "btn_link": "",
+            "btn_style": "outline",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "shoe2_caption",
+        "shoe2_heading",
+        "shoe2_text",
+        "shoe2_button"
+      ],
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "right",
+        "dt_image_width": 50,
+        "card_spacing": 40,
+        "image": "shopify://shop_images/Trainer-Navy-Pair.png",
+        "image_ratio": "landscape",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 20,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 0,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "light"
+      }
+    },
+    "shoe-type-3": {
+      "type": "image-with-text",
+      "blocks": {
+        "shoe3_caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Sport Collection"
+          }
+        },
+        "shoe3_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Oxford",
+            "heading_size": "h2"
+          }
+        },
+        "shoe3_text": {
+          "type": "text",
+          "settings": {
+            "description": "<p>The shoe that started it all. The Oxford's classic lace-up design brings heritage craftsmanship to injection-moulded performance — where tradition meets innovation on every surface.</p>",
+            "text_size": "std"
+          }
+        },
+        "shoe3_button": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Shop Oxford",
+            "btn_link": "",
+            "btn_style": "outline",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "shoe3_caption",
+        "shoe3_heading",
+        "shoe3_text",
+        "shoe3_button"
+      ],
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "left",
+        "dt_image_width": 50,
+        "card_spacing": 40,
+        "image": "shopify://shop_images/Trainer-Navy-Pair.png",
+        "image_ratio": "landscape",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 20,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "light"
+      }
+    },
+    "cross-lifestyle": {
+      "type": "collection-cards",
+      "blocks": {
+        "leisure_card": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tennis",
+            "image": "shopify://shop_images/cv-tennis-placeholder.jpg",
+            "description": "Court-ready performance",
+            "button_label": "Explore Tennis"
+          }
+        },
+        "golf_card": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "golf",
+            "image": "shopify://shop_images/ScottishOpenMcIlroy_Banner_W_copy.jpg",
+            "description": "From tee to green",
+            "button_label": "Discover Golf"
+          }
+        }
+      },
+      "block_order": [
+        "leisure_card",
+        "golf_card"
+      ],
+      "settings": {
+        "section_layout": "grid",
+        "arrow_style": "solid",
+        "grid_layout_mobile": "1",
+        "grid_layout_tablet": 2,
+        "grid_layout_desktop": 2,
+        "grid_spacing_vertical": 20,
+        "grid_spacing_horizontal": "default",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "Explore More",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "card_layout": "overlay",
+        "card_ratio": "landscape",
+        "card_heading_visibility": "normal",
+        "card_heading_position": "center",
+        "card_heading_size": "h2",
+        "media_radius_top_only": false,
+        "show_card_buttons": true,
+        "cards_button_position": "bottom",
+        "cards_button_style": "button--outline",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": true,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "light"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "manifesto",
+    "product-grid",
+    "editorial-gallery",
+    "shoe-type-1",
+    "shoe-type-2",
+    "shoe-type-3",
+    "cross-lifestyle"
+  ]
+}
