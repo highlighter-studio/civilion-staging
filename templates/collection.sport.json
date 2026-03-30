@@ -142,31 +142,6 @@
             "bg_color": "#000000"
           }
         },
-        "editorial_break_2": {
-          "type": "image_card",
-          "settings": {
-            "grid_position": 10,
-            "card_ratio": "portrait-4x5",
-            "grid_colspan": "auto",
-            "card_ratio_desktop_fullwidth": "landscape-21x9",
-            "grid_rowspan": "1",
-            "match_media_height": false,
-            "caption": "",
-            "heading": "",
-            "heading_size": "h3",
-            "description": "",
-            "alignment": "center",
-            "text_position": "center",
-            "text_vertical_spacing": 10,
-            "text_padding": 10,
-            "url": "",
-            "button_show": false,
-            "button_label": "",
-            "btn_style": "solid",
-            "text_color": "#ffffff",
-            "bg_color": "#000000"
-          }
-        },
         "editorial_break_3": {
           "type": "image_card",
           "settings": {
@@ -192,38 +167,11 @@
             "text_color": "#ffffff",
             "bg_color": "#000000"
           }
-        },
-        "editorial_break_4": {
-          "type": "image_card",
-          "settings": {
-            "grid_position": 25,
-            "card_ratio": "portrait-4x5",
-            "grid_colspan": "auto",
-            "card_ratio_desktop_fullwidth": "landscape-21x9",
-            "grid_rowspan": "2",
-            "match_media_height": false,
-            "caption": "",
-            "heading": "",
-            "heading_size": "h3",
-            "description": "",
-            "alignment": "center",
-            "text_position": "bottom",
-            "text_vertical_spacing": 10,
-            "text_padding": 10,
-            "url": "",
-            "button_show": false,
-            "button_label": "",
-            "btn_style": "solid",
-            "text_color": "#ffffff",
-            "bg_color": "#000000"
-          }
         }
       },
       "block_order": [
         "editorial_break_1",
-        "editorial_break_2",
-        "editorial_break_3",
-        "editorial_break_4"
+        "editorial_break_3"
       ],
       "settings": {
         "products_per_page": 48,
