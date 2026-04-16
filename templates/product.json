@@ -85,7 +85,7 @@
         "colorway_swatches_iLdUWU": {
           "type": "colorway_swatches",
           "settings": {
-            "display_style": "product_image"
+            "display_style": "swatch"
           }
         },
         "099f936f-1f52-44f2-8d7b-0188fbd363d5": {
@@ -396,7 +396,6 @@
           "settings": {
             "column_span": "1",
             "image": "shopify://shop_images/untitled-5877-WEB_M_68dfb52d-f563-45ce-82b0-fadab11b46e4.jpg",
-            "video": "shopify://files/videos/*1.MOV",
             "title": "Column",
             "heading_top_margin": 15,
             "heading_margin": 5,
