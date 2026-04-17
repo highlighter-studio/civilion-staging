@@ -20,6 +20,51 @@
         "padding_bottom": 100
       }
     },
+    "image_banner_NdECBU": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_7PJGiq": {
+          "type": "heading",
+          "settings": {
+            "heading": "In a field of sheep, the bold perfer another path.",
+            "heading_size": "h0",
+            "txt_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7PJGiq"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-fullscreen",
+        "banner_full_link": "",
+        "image": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
+        "primary_image_size": "dt-full-bleed",
+        "image_padding": 0,
+        "main_image_animation": "none",
+        "image_blur": 0,
+        "primary_image_mobile_show": false,
+        "image_secondary": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+        "secondary_image_size": "dt-half-center",
+        "secondary_image_padding": 0,
+        "secondary_image_animation": "none",
+        "secondary_image_blur": 0,
+        "secondary_image_mobile_show": true,
+        "txt_alignment": "center",
+        "txt_position": "middle_left",
+        "content_width": 50,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": true,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "rgba(0,0,0,0)",
+        "overlay_level": 0
+      }
+    },
     "rich_text_yLMGYp": {
       "type": "rich-text",
       "blocks": {
@@ -85,6 +130,7 @@
   },
   "order": [
     "main",
+    "image_banner_NdECBU",
     "rich_text_yLMGYp",
     "rich_text_LNL6QV"
   ]
