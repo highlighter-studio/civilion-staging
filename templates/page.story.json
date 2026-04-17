@@ -65,6 +65,80 @@
         "overlay_level": 0
       }
     },
+    "collection_list_KBVBGc": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_TUtpAm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "monaco",
+            "image": "shopify://shop_images/Trainer-Navy-Pair.png"
+          }
+        },
+        "featured_collection_Md3N3F": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_xG7Et4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_rJbzXK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_TUtpAm",
+        "featured_collection_Md3N3F",
+        "featured_collection_xG7Et4",
+        "featured_collection_rJbzXK"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "header_alignment": "center",
+        "section_label": "",
+        "heading": "Collections",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "link_style": "text",
+        "list_separator": "none",
+        "list_font_size": "text-normal",
+        "section_layout": "horizontal",
+        "content_alignment": "center",
+        "content_width": "page-width",
+        "list_width": "100",
+        "list_borders": false,
+        "images_enable": true,
+        "rollover_image_position": "inline",
+        "show_first_image": true,
+        "show_first_image_mobile": true,
+        "mobile_image_position": "last",
+        "image_ratio": "portrait",
+        "image_size": "medium",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "btn_color_scheme": "default",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "rich_text_yLMGYp": {
       "type": "rich-text",
       "blocks": {
@@ -100,6 +174,7 @@
   "order": [
     "main",
     "image_banner_NdECBU",
+    "collection_list_KBVBGc",
     "rich_text_yLMGYp"
   ]
 }
