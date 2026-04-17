@@ -64,7 +64,7 @@
         "4133b15e-9fc9-4543-826c-272ad694901f"
       ],
       "custom_css": [
-        "h1 {font-size: 50px;}"
+        "h1 {font-size: 44px;}"
       ],
       "settings": {
         "article_width": "page-width-narrow",
