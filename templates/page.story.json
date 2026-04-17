@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "content_width": "page-width-medium",
         "hdr_alignment": "center",
@@ -19,72 +20,62 @@
         "padding_bottom": 100
       }
     },
-    "image_with_text_PBERGD": {
-      "type": "image-with-text",
+    "rich_text_yLMGYp": {
+      "type": "rich-text",
       "blocks": {
-        "caption_yVqfGW": {
-          "type": "caption",
-          "settings": {
-            "caption": "Add a tagline"
-          }
-        },
-        "heading_NWByz6": {
+        "heading_R6AjRT": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h2"
-          }
-        },
-        "text_B3THGJ": {
-          "type": "text",
-          "settings": {
-            "description": "<p>Pair text with an image to focus on your chosen product, collection, or brand story.</p>",
-            "text_size": "std"
-          }
-        },
-        "button_hg6Cp7": {
-          "type": "button",
-          "settings": {
-            "btn_color_scheme": "default",
-            "button_width_mobile": "default",
-            "btn_txt": "Button label",
-            "btn_link": "",
-            "btn_style": "outline",
-            "btn_two_enable": false,
-            "button_layout": "stacked",
-            "btn_two_txt": "Button label",
-            "btn_two_link": "",
-            "btn_two_style": "solid"
+            "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
+            "heading_size": "h1",
+            "alignment": "left"
           }
         }
       },
       "block_order": [
-        "caption_yVqfGW",
-        "heading_NWByz6",
-        "text_B3THGJ",
-        "button_hg6Cp7"
+        "heading_R6AjRT"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "section_size": "flexible",
-        "content_width": "page-width",
-        "image_alignment": "right",
-        "dt_image_width": 50,
-        "card_spacing": 20,
-        "image_ratio": "portrait",
-        "secondary_image_scale": "small",
-        "txt_alignment": "left",
-        "txt_vertical_alignment": "middle",
-        "txt_padding_top_mobile": 20,
-        "txt_padding_bottom_mobile": 20,
-        "txt_vertical_padding": 0,
-        "text_width": "full",
-        "text_horizontal_position": "center",
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "top_padding": 80,
-        "bottom_padding": 80,
-        "border_vertical": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_LNL6QV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6MFLAp": {
+          "type": "heading",
+          "settings": {
+            "heading": "BOLD IS OUR DESIRE TO TEST FENCES,TEAR DOWN WALLS AND COLOR THE WORLD.",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6MFLAp"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -94,6 +85,7 @@
   },
   "order": [
     "main",
-    "image_with_text_PBERGD"
+    "rich_text_yLMGYp",
+    "rich_text_LNL6QV"
   ]
 }
