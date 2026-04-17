@@ -72,7 +72,7 @@
           "type": "heading",
           "settings": {
             "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "alignment": "left"
           }
         }
@@ -95,43 +95,11 @@
         "border_width": "normal",
         "border_color": "dark"
       }
-    },
-    "rich_text_LNL6QV": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_6MFLAp": {
-          "type": "heading",
-          "settings": {
-            "heading": "BOLD IS OUR DESIRE TO TEST FENCES,TEAR DOWN WALLS AND COLOR THE WORLD.",
-            "heading_size": "h2",
-            "alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "heading_6MFLAp"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "content_width": "page-width",
-        "content_horizontal_position": "center",
-        "bg_image_darken": 0,
-        "bg_image_blur": 0,
-        "text_color": "fg-body",
-        "bg_color": "bg-body",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "top_border": false,
-        "bottom_border": false,
-        "border_width": "normal",
-        "border_color": "dark"
-      }
     }
   },
   "order": [
     "main",
     "image_banner_NdECBU",
-    "rich_text_yLMGYp",
-    "rich_text_LNL6QV"
+    "rich_text_yLMGYp"
   ]
 }
