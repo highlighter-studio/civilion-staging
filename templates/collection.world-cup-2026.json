@@ -59,7 +59,8 @@
             "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
             "grid_rowspan": "1",
-            "match_media_height": false,
+            "match_media_height": true,
+            "image": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
             "caption": "",
             "heading": "",
             "heading_size": "h3",
@@ -102,11 +103,86 @@
         "padding_top": 60,
         "padding_bottom": 80
       }
+    },
+    "image_with_text_rD8xEC": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_YHCYLm": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "Add a tagline"
+          }
+        },
+        "heading_prTf3m": {
+          "type": "heading",
+          "settings": {
+            "heading": "This Is Civilion",
+            "heading_size": "h2"
+          }
+        },
+        "text_3cdwNt": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Civilion is luxury footwear, engineered for sport, leisure, and everything between. Every pair is built for grip on any surface, all-day comfort, and a lightness you won't believe until you hold one.</p><p>Not athletic. Not casual. A category of <em>one</em>.</p>",
+            "text_size": "std"
+          }
+        },
+        "button_8T8wri": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Discover More",
+            "btn_link": "",
+            "btn_style": "solid",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_YHCYLm",
+        "heading_prTf3m",
+        "text_3cdwNt",
+        "button_8T8wri"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "right",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
+        "image_ratio": "square",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "full",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
     }
   },
   "order": [
     "banner",
     "navigation",
-    "product-grid"
+    "product-grid",
+    "image_with_text_rD8xEC"
   ]
 }
