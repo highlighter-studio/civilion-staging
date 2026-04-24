@@ -3541,20 +3541,12 @@ a.product__text {
 }
 
 /* --- Pills --- */
-.sticky-atc-bar__variant-label {
-  font-size: 0.8125rem;
-  letter-spacing: 0.02em;
-  color: rgba(var(--color-foreground-rgb), 0.7);
-  white-space: nowrap;
-}
-
 .sticky-atc-bar__pill {
   appearance: none;
   background: transparent;
   border: var(--variant-pills-border-width, 1px) solid rgba(var(--color-foreground-rgb), 0.4);
   color: rgb(var(--color-foreground-rgb));
-  font-family: inherit;
-  font-size: 0.75rem;
+  font: inherit;
   line-height: 1;
   padding: 0.65rem 1rem;
   cursor: pointer;
