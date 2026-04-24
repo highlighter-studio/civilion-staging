@@ -130,6 +130,7 @@
       "blocks": {
         "overlay_video_JcAx7e": {
           "type": "overlay_video",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/BOH_0787.jpg",
             "hover_video": "shopify://files/videos/IMG_0866.mov",
