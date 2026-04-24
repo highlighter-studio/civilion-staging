@@ -132,6 +132,16 @@
             "hide_if_in_stock": false
           }
         },
+        "text_QJcyXM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.pre_order_disclaimer.value }}</p>",
+            "text_color": "fg-body",
+            "bg_color": "bg-body",
+            "padding": 0,
+            "border_radius": 0
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -146,6 +156,7 @@
         },
         "icon_grid_6dazna": {
           "type": "icon_grid",
+          "disabled": true,
           "settings": {
             "icon_alignment": "left",
             "icon_layout": "horizontal",
@@ -212,6 +223,7 @@
         "099f936f-1f52-44f2-8d7b-0188fbd363d5",
         "870625ea-f97e-4cab-b3b3-04010a7854a5",
         "inventory_zeVG83",
+        "text_QJcyXM",
         "buy_buttons",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
