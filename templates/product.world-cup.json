@@ -194,7 +194,7 @@
       "settings": {
         "section_desktop_layout": "image-left",
         "enable_sticky_info": true,
-        "enable_sticky_buttons": false,
+        "enable_sticky_buttons": true,
         "sticky_buttons_padding": 10,
         "sticky_buttons_padding_horizontal": 20,
         "sticky_buttons_border": false,
