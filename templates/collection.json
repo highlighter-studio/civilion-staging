@@ -12,10 +12,10 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "banner_layout": "overlay",
+        "banner_layout": "stacked-image-first",
         "banner_height_mobile": "default",
         "banner_height": "slim",
-        "stacked_img_ratio": "landscape_21x9",
+        "stacked_img_ratio": "landscape_36x9",
         "banner_width": "none",
         "txt_alignment": "center",
         "text_width": "medium",
