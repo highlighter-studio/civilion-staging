@@ -1,0 +1,52 @@
+{%- doc -%}
+  Renders an overlay with heading, body text, and a button on top of a media
+  collage block (image, video, or overlay_video).
+
+  @param {object} block - The parent block. Reads block.settings.overlay_*.
+
+  @example
+  {% render 'collage-overlay', block: block %}
+{%- enddoc -%}
+
+{%- liquid
+  assign has_heading = false
+  assign has_text = false
+  assign has_button = false
+  if block.settings.overlay_heading != blank
+    assign has_heading = true
+  endif
+  if block.settings.overlay_text != blank
+    assign has_text = true
+  endif
+  if block.settings.overlay_button_label != blank and block.settings.overlay_button_url != blank
+    assign has_button = true
+  endif
+  assign has_overlay = false
+  if has_heading or has_text or has_button
+    assign has_overlay = true
+  endif
+  assign overlay_position = block.settings.overlay_position | default: 'bottom-left'
+  assign overlay_scrim = block.settings.overlay_scrim | default: 'none'
+  assign button_style = block.settings.overlay_button_style | default: 'button--solid'
+-%}
+
+{%- if has_overlay -%}
+  <div class="collage-overlay collage-overlay--pos-{{ overlay_position }} collage-overlay--scrim-{{ overlay_scrim }}{% if block.settings.overlay_hover_only %} collage-overlay--hover-only{% endif %}">
+    <div class="collage-overlay__inner">
+      {%- if has_heading -%}
+        <h3 class="collage-overlay__heading">{{ block.settings.overlay_heading | escape }}</h3>
+      {%- endif -%}
+      {%- if has_text -%}
+        <div class="collage-overlay__text rte">{{ block.settings.overlay_text }}</div>
+      {%- endif -%}
+      {%- if has_button -%}
+        <a
+          href="{{ block.settings.overlay_button_url }}"
+          class="collage-overlay__button{% unless button_style == 'link--underlined' %} button{% endunless %} {{ button_style }}"
+        >
+          {{ block.settings.overlay_button_label | escape }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
