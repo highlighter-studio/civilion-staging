@@ -25,6 +25,16 @@
           "type": "tags",
           "settings": {}
         },
+        "text_qQAkxj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.product_type_pdp.value }}</p>",
+            "text_color": "fg-body",
+            "bg_color": "bg-body",
+            "padding": 0,
+            "border_radius": 0
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -176,6 +186,7 @@
       "block_order": [
         "breadcrumb_Ui8wgw",
         "tags_qFz8mT",
+        "text_qQAkxj",
         "title",
         "description",
         "price",
