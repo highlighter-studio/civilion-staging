@@ -15,8 +15,27 @@
   }
 {%- endstyle -%}
 
+{%- liquid
+  assign has_side_image = false
+  if section.settings.section_layout == 'stacked' and section.settings.side_image != blank
+    assign has_side_image = true
+  endif
+-%}
 <div class="section-{{ section.id }} newsletter-section align-{{ section.settings.alignment }} page-width color-scheme-{{ section.settings.text_color }} color-scheme-{{ section.settings.bg_color }}">
-  <div class="newsletter-section-inner layout--{{ section.settings.section_layout }}">
+  <div class="newsletter-section-inner layout--{{ section.settings.section_layout }}{% if has_side_image %} has-side-image image-position-{{ section.settings.image_position }}{% endif %}">
+
+{% if has_side_image %}
+  <div class="newsletter-side-image">
+    {{
+      section.settings.side_image
+      | image_url: width: 1400
+      | image_tag:
+        loading: 'lazy',
+        widths: '400,600,800,1000,1200,1400',
+        sizes: '(min-width: 750px) 50vw, 100vw'
+    }}
+  </div>
+{% endif %}
 
 {% if section.settings.section_layout == 'columns' %}
 <div class="text-column">
@@ -32,6 +51,8 @@
     {%- endfor -%}
   </div>
   {% endif %}
+
+{% if has_side_image %}<div class="newsletter-content-column">{% endif %}
 
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -109,13 +130,9 @@
           </div>
       {%- endcase -%}
     {%- endfor -%}
-  
+
+{% if has_side_image %}</div>{% endif %}
 </div>
-{% if section.settings.bg_image != null %}
-<div class="newsletter-bg-image">
-  {{ section.settings.bg_image | image_url: width: 2600 | image_tag: loading: 'lazy' }}
-</div>
-{% endif %}
 
 </div>
 
@@ -157,9 +174,27 @@
     },
     {
       "type": "image_picker",
-      "id": "bg_image",
-      "label": "t:sections.newsletter.settings.background_image.label"
-	  },
+      "id": "side_image",
+      "label": "Side image",
+      "info": "Displayed beside the form on desktop when the stacked layout is selected. On mobile, the image appears above the form."
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Image position (desktop)",
+      "visible_if": "{{ section.settings.section_layout == 'stacked' and section.settings.side_image != blank }}"
+    },
     {
       "type": "header",
       "content": "t:sections.all.colors.label"
