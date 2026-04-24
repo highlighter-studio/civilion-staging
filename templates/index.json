@@ -20,13 +20,6 @@
             "txt_alignment": "inherit"
           }
         },
-        "text_TtAECr": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Talk about your brand, product or content</p>",
-            "text_size": "text-std"
-          }
-        },
         "buttons_LRMKb7": {
           "type": "buttons",
           "settings": {
@@ -49,19 +42,19 @@
       },
       "block_order": [
         "heading_47eG3F",
-        "text_TtAECr",
         "buttons_LRMKb7"
       ],
       "name": "t:sections.video-banner.presets.name",
       "settings": {
         "banner_size": "banner-style-fullscreen",
-        "overlay_level": 0,
+        "video_url": "shopify://files/videos/Gardening & croquet at Langdon.mov",
+        "overlay_level": 5,
         "video_size": "100",
         "video_position": "center",
         "video_margin_mobile": 0,
         "video_margin_desktop": 0,
-        "enable_playback_pause": false,
-        "enable_audio": false,
+        "enable_playback_pause": true,
+        "enable_audio": true,
         "txt_position": "middle",
         "txt_alignment": "center",
         "content_width": 100,
@@ -73,78 +66,6 @@
         "text_blend_effect": "none",
         "text_color": "fg-white",
         "bg_color": "#000000"
-      }
-    },
-    "image_banner_ijB3B4": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_6rXn73": {
-          "type": "heading",
-          "settings": {
-            "heading": "Heading",
-            "heading_size": "h1",
-            "txt_alignment": "inherit"
-          }
-        },
-        "text_nNDcnh": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Talk about your brand, product or content</p>",
-            "text_size": "text-std"
-          }
-        },
-        "buttons_RGQM9V": {
-          "type": "buttons",
-          "settings": {
-            "btn_one_show": true,
-            "btn_one_txt": "Button label",
-            "btn_one_link": "",
-            "btn_one_style": "button--solid",
-            "btn_two_show": false,
-            "btn_two_txt": "Button label",
-            "btn_two_link": "",
-            "btn_two_style": "button--solid",
-            "btn_layout": "inline",
-            "btn_alignment": "auto",
-            "btn_width_mobile": "auto",
-            "btn_color_scheme": "default",
-            "padding_top": 20,
-            "padding_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "heading_6rXn73",
-        "text_nNDcnh",
-        "buttons_RGQM9V"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "banner_size": "banner-style-fullscreen",
-        "banner_full_link": "",
-        "image": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
-        "primary_image_size": "dt-full-bleed",
-        "image_padding": 0,
-        "main_image_animation": "none",
-        "image_blur": 0,
-        "primary_image_mobile_show": true,
-        "secondary_image_size": "dt-full-bleed",
-        "secondary_image_padding": 0,
-        "secondary_image_animation": "none",
-        "secondary_image_blur": 0,
-        "secondary_image_mobile_show": true,
-        "txt_alignment": "center",
-        "txt_position": "middle",
-        "content_width": 100,
-        "text_vertical_spacing": 10,
-        "top_padding": 0,
-        "bottom_padding": 0,
-        "fade_in_text": true,
-        "scroll_fade_effect": false,
-        "text_blend_effect": "none",
-        "text_color": "fg-white",
-        "bg_color": "rgba(0,0,0,0)",
-        "overlay_level": 0
       }
     },
     "rich_text_TagPrr": {
@@ -207,7 +128,6 @@
   },
   "order": [
     "video_banner_RNPBpr",
-    "image_banner_ijB3B4",
     "rich_text_TagPrr"
   ]
 }
