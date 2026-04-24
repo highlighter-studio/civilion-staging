@@ -128,18 +128,6 @@
     "section_media_collage_wfwYbQ": {
       "type": "section-media-collage",
       "blocks": {
-        "video_fRmtwN": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/IMG_0866.mov",
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
-          }
-        },
         "image_37aFRR": {
           "type": "image",
           "settings": {
@@ -149,7 +137,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "Sport",
+            "overlay_text": "",
+            "overlay_button_label": "Shop",
+            "overlay_button_url": "shopify://collections/sport",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-right",
+            "overlay_scrim": "light",
+            "overlay_hover_only": true
           }
         },
         "image_CyMVEn": {
@@ -161,12 +157,19 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "Leisure",
+            "overlay_text": "",
+            "overlay_button_label": "Shop",
+            "overlay_button_url": "shopify://collections/leisure-featured",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "light",
+            "overlay_hover_only": true
           }
         }
       },
       "block_order": [
-        "video_fRmtwN",
         "image_37aFRR",
         "image_CyMVEn"
       ],
@@ -182,8 +185,8 @@
         "arrow_style": "solid-inverted",
         "content_width": "page-width",
         "grid_spacing": "default-grid",
-        "grid_columns_tablet": 3,
-        "grid_columns_desktop": 3,
+        "grid_columns_tablet": 2,
+        "grid_columns_desktop": 2,
         "text_color": "fg-body",
         "bg_color": "bg-body",
         "padding_top": 80,
@@ -244,7 +247,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_X46Ybx": {
@@ -256,7 +267,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_hY8KkH": {
@@ -267,7 +286,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_XTQrai": {
@@ -278,7 +305,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_8Y6ppP": {
@@ -289,7 +324,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_b7apDN": {
@@ -300,7 +343,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         }
       },
