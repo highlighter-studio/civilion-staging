@@ -12,7 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "banner_layout": "stacked-image-first",
+        "banner_layout": "overlay",
         "banner_height_mobile": "default",
         "banner_height": "slim",
         "stacked_img_ratio": "landscape_36x9",
