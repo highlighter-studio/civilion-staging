@@ -180,7 +180,23 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Engineered Grip",
-            "content": "<p><em>Traction engineered for surfaces from marina teak to manicured greens. Every step, placed with intention.</em></p>",
+            "content": "<p>Traction engineered for surfaces from marina teak to manicured greens. Every step, placed with intention.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_76nFge": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "All-Day Comfort",
+            "content": "<p>Injection-molded construction that shapes to the foot — no break-in, no compromise. Comfort that's designed, not afterthought.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XihNGK": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Featherweight Construction",
+            "content": "<p>Deceptively light. The kind of weightlessness you notice on the third hour, not the first step.</p>",
             "page": ""
           }
         },
@@ -210,6 +226,8 @@
         "text_PHNEm9",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
+        "collapsible_tab_76nFge",
+        "collapsible_tab_XihNGK",
         "collapsible_tab_xVtpDM"
       ],
       "custom_css": [],
