@@ -193,6 +193,33 @@
         "padding_bottom": 80
       }
     },
+    "section_text_ticker_rexfmG": {
+      "type": "section-text-ticker",
+      "blocks": {
+        "text_geWhtY": {
+          "type": "text",
+          "settings": {
+            "text": "Grounded. Cushioned. Weightless"
+          }
+        }
+      },
+      "block_order": [
+        "text_geWhtY"
+      ],
+      "name": "t:sections.text-ticker.presets.name",
+      "settings": {
+        "font_size": "text-xl",
+        "vertical_padding": 40,
+        "horizontal_padding": 95,
+        "anim_speed": 4,
+        "text_color": "fg-04",
+        "bg_color": "bg-05",
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "full",
+        "border_color": "dark"
+      }
+    },
     "featured_collection_ABXpWC": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.name",
@@ -233,154 +260,6 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
-    },
-    "section_media_collage_Ca6Rrn": {
-      "type": "section-media-collage",
-      "blocks": {
-        "image_qkVVWL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        },
-        "image_X46Ybx": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        },
-        "image_hY8KkH": {
-          "type": "image",
-          "settings": {
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        },
-        "image_XTQrai": {
-          "type": "image",
-          "settings": {
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        },
-        "image_8Y6ppP": {
-          "type": "image",
-          "settings": {
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        },
-        "image_b7apDN": {
-          "type": "image",
-          "settings": {
-            "image_size": "half_width",
-            "image_ratio": "square",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        }
-      },
-      "block_order": [
-        "image_qkVVWL",
-        "image_X46Ybx",
-        "image_hY8KkH",
-        "image_XTQrai",
-        "image_8Y6ppP",
-        "image_b7apDN"
-      ],
-      "name": "t:sections.collage.presets.name",
-      "settings": {
-        "section_label": "",
-        "heading": "",
-        "heading_size": "h2",
-        "description": "",
-        "hdr_alignment": "center",
-        "header_style": "normal",
-        "content_layout": "grid",
-        "arrow_style": "solid-inverted",
-        "content_width": "page-width",
-        "grid_spacing": "default-grid",
-        "grid_columns_tablet": 3,
-        "grid_columns_desktop": 3,
-        "text_color": "fg-body",
-        "bg_color": "bg-body",
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "newsletter_9MfTGr": {
@@ -430,8 +309,8 @@
     "video_banner_RNPBpr",
     "rich_text_TagPrr",
     "section_media_collage_wfwYbQ",
+    "section_text_ticker_rexfmG",
     "featured_collection_ABXpWC",
-    "section_media_collage_Ca6Rrn",
     "newsletter_9MfTGr"
   ]
 }
