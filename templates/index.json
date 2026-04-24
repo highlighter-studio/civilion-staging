@@ -232,6 +232,106 @@
         "border_color": "dark"
       }
     },
+    "section_media_collage_Ca6Rrn": {
+      "type": "section-media-collage",
+      "blocks": {
+        "image_qkVVWL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_X46Ybx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_hY8KkH": {
+          "type": "image",
+          "settings": {
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_XTQrai": {
+          "type": "image",
+          "settings": {
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_8Y6ppP": {
+          "type": "image",
+          "settings": {
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_b7apDN": {
+          "type": "image",
+          "settings": {
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_qkVVWL",
+        "image_X46Ybx",
+        "image_hY8KkH",
+        "image_XTQrai",
+        "image_8Y6ppP",
+        "image_b7apDN"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "description": "",
+        "hdr_alignment": "center",
+        "header_style": "normal",
+        "content_layout": "grid",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width",
+        "grid_spacing": "default-grid",
+        "grid_columns_tablet": 3,
+        "grid_columns_desktop": 3,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "newsletter_9MfTGr": {
       "type": "newsletter",
       "blocks": {
@@ -280,6 +380,7 @@
     "rich_text_TagPrr",
     "section_media_collage_wfwYbQ",
     "featured_collection_ABXpWC",
+    "section_media_collage_Ca6Rrn",
     "newsletter_9MfTGr"
   ]
 }
