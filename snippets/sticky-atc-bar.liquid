@@ -24,18 +24,24 @@
   endif
 
   assign current_variant = product.selected_or_first_available_variant
+  assign size_index = 0
+  if size_option
+    assign size_index = size_option.position | minus: 1
+  endif
 -%}
 
 <sticky-atc-bar
   class="sticky-atc-bar sticky-atc-bar--border-{{ section.settings.sticky_buttons_border }}"
   data-section="{{ section.id }}"
   data-product-form-id="{{ product_form_id }}"
-  hidden
+  inert
+  aria-hidden="true"
 >
   <div class="sticky-atc-bar__inner">
     {%- if size_option -%}
-      <div class="sticky-atc-bar__variant">
-        <label class="sticky-atc-bar__label visually-hidden" for="StickyAtcSize-{{ section.id }}">
+      {%- comment -%} Mobile compact dropdown {%- endcomment -%}
+      <div class="sticky-atc-bar__variant sticky-atc-bar__variant--select">
+        <label class="visually-hidden" for="StickyAtcSize-{{ section.id }}">
           {{ size_option.name }}
         </label>
         <div class="select sticky-atc-bar__select">
@@ -43,20 +49,18 @@
             id="StickyAtcSize-{{ section.id }}"
             class="select__select"
             data-sticky-atc-option="{{ size_option.name | escape }}"
-            data-sticky-atc-position="{{ size_option.position }}"
           >
             {%- for value in size_option.values -%}
-              {%- assign option_index = size_option.position | minus: 1 -%}
               {%- assign matched_variant = nil -%}
               {%- for v in product.variants -%}
-                {%- if v.options[option_index] == value -%}
+                {%- if v.options[size_index] == value -%}
                   {%- assign matched_variant = v -%}
                   {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
               <option
                 value="{{ value | escape }}"
-                {% if value == current_variant.options[option_index] %}selected="selected"{% endif %}
+                {% if value == current_variant.options[size_index] %}selected="selected"{% endif %}
                 {% if matched_variant and matched_variant.available == false %}disabled{% endif %}
               >
                 {{ value }}{% if matched_variant and matched_variant.available == false %} — {{ 'products.product.sold_out' | t }}{% endif %}
@@ -65,6 +69,37 @@
           </select>
           {% render 'icon-caret' %}
         </div>
+      </div>
+
+      {%- comment -%} Desktop pills {%- endcomment -%}
+      <div
+        class="sticky-atc-bar__variant sticky-atc-bar__variant--pills"
+        role="radiogroup"
+        aria-label="{{ size_option.name }}"
+        data-sticky-atc-pills-option="{{ size_option.name | escape }}"
+      >
+        {%- for value in size_option.values -%}
+          {%- assign matched_variant = nil -%}
+          {%- for v in product.variants -%}
+            {%- if v.options[size_index] == value -%}
+              {%- assign matched_variant = v -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- assign is_selected = false -%}
+          {%- if value == current_variant.options[size_index] -%}{%- assign is_selected = true -%}{%- endif -%}
+          {%- assign is_unavailable = false -%}
+          {%- if matched_variant and matched_variant.available == false -%}{%- assign is_unavailable = true -%}{%- endif -%}
+          <button
+            type="button"
+            class="sticky-atc-bar__pill{% if is_selected %} is-selected{% endif %}{% if is_unavailable %} is-unavailable{% endif %}"
+            data-sticky-atc-pill-value="{{ value | escape }}"
+            aria-pressed="{% if is_selected %}true{% else %}false{% endif %}"
+            {% if is_unavailable %}aria-disabled="true"{% endif %}
+          >
+            {{ value }}
+          </button>
+        {%- endfor -%}
       </div>
     {%- endif -%}
 

@@ -3468,10 +3468,13 @@ a.product__text {
   bottom: 0;
   z-index: 5;
   background: var(--color-background);
+  transform: translateY(100%);
+  transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
-.sticky-atc-bar[hidden] {
-  display: none;
+.sticky-atc-bar.is-visible {
+  transform: translateY(0);
 }
 
 .sticky-atc-bar--border-true {
@@ -3489,7 +3492,6 @@ a.product__text {
 }
 
 .sticky-atc-bar__variant {
-  flex: 0 1 220px;
   min-width: 0;
 }
 
@@ -3500,17 +3502,76 @@ a.product__text {
 }
 
 .sticky-atc-bar__submit {
-  flex: 1 1 auto;
   margin: 0;
+}
+
+/* --- Mobile: compact dropdown + flexible ATC --- */
+.sticky-atc-bar__variant--pills {
+  display: none;
+}
+.sticky-atc-bar__variant--select {
+  flex: 0 1 140px;
+}
+.sticky-atc-bar .sticky-atc-bar__submit {
+  flex: 1 1 auto;
 }
 
 @media only screen and (max-width: 749px) {
   .sticky-atc-bar__inner {
     gap: 0.75rem;
   }
-  .sticky-atc-bar__variant {
-    flex: 0 1 130px;
+}
+
+/* --- Desktop: pills on the left, ATC takes 50% on the right --- */
+@media only screen and (min-width: 750px) {
+  .sticky-atc-bar__variant--select {
+    display: none;
   }
+  .sticky-atc-bar__variant--pills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+  .sticky-atc-bar .sticky-atc-bar__submit {
+    flex: 0 0 50%;
+  }
+}
+
+/* --- Pills --- */
+.sticky-atc-bar__pill {
+  appearance: none;
+  background: transparent;
+  border: var(--variant-pills-border-width, 1px) solid rgba(var(--color-foreground-rgb), 0.4);
+  color: rgb(var(--color-foreground-rgb));
+  font: inherit;
+  line-height: 1;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  border-radius: var(--variant-pills-radius, 0);
+  min-width: 2.75rem;
+  text-align: center;
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
+}
+
+.sticky-atc-bar__pill:hover:not(.is-unavailable) {
+  border-color: rgba(var(--color-foreground-rgb), 1);
+  background-color: rgba(var(--color-foreground-rgb), 0.06);
+}
+
+.sticky-atc-bar__pill.is-selected {
+  border-color: rgba(var(--color-foreground-rgb), 1);
+  background: rgb(var(--color-foreground-rgb));
+  color: rgb(var(--color-background-rgb));
+}
+
+.sticky-atc-bar__pill.is-unavailable {
+  color: rgba(var(--color-foreground-rgb), 0.35);
+  border-color: rgba(var(--color-foreground-rgb), 0.15);
+  cursor: not-allowed;
+  text-decoration: line-through;
 }
 
 body.has-sticky-atc-bar {

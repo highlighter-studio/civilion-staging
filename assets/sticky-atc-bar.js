@@ -7,6 +7,7 @@ if (!customElements.get('sticky-atc-bar')) {
         this.observer = null;
         this.mainAtcMutationObserver = null;
         this.variantChangeUnsubscribe = null;
+        this.miniPills = [];
       }
 
       connectedCallback() {
@@ -37,6 +38,8 @@ if (!customElements.get('sticky-atc-bar')) {
         this.mainAtc = this.productInfo.querySelector('.product-form__submit');
         this.mainVariantSelects = this.productInfo.querySelector('variant-selects');
         this.miniSelect = this.querySelector('[data-sticky-atc-option]');
+        this.miniPillsContainer = this.querySelector('[data-sticky-atc-pills-option]');
+        this.miniPills = Array.from(this.querySelectorAll('[data-sticky-atc-pill-value]'));
         this.miniSubmit = this.querySelector('[data-sticky-atc-submit]');
         this.miniLabel = this.querySelector('[data-sticky-atc-label]');
 
@@ -63,8 +66,6 @@ if (!customElements.get('sticky-atc-bar')) {
           (entries) => {
             const entry = entries[0];
             if (!entry) return;
-            // Show only when the main ATC has scrolled ABOVE the viewport
-            // (not when it's below, e.g. on initial page load before any scroll).
             const scrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
             this.toggleVisible(scrolledPast);
           },
@@ -75,10 +76,14 @@ if (!customElements.get('sticky-atc-bar')) {
 
       toggleVisible(visible) {
         if (visible) {
-          this.removeAttribute('hidden');
+          this.classList.add('is-visible');
+          this.removeAttribute('inert');
+          this.removeAttribute('aria-hidden');
           document.body.classList.add('has-sticky-atc-bar');
         } else {
-          this.setAttribute('hidden', '');
+          this.classList.remove('is-visible');
+          this.setAttribute('inert', '');
+          this.setAttribute('aria-hidden', 'true');
           document.body.classList.remove('has-sticky-atc-bar');
         }
       }
@@ -107,55 +112,103 @@ if (!customElements.get('sticky-atc-bar')) {
       }
 
       setupOptionSync() {
-        if (!this.miniSelect || !this.mainVariantSelects) return;
+        if (this.miniSelect && this.mainVariantSelects) {
+          this.miniSelect.addEventListener('change', () => {
+            this.syncToMain(this.miniSelect.dataset.stickyAtcOption, this.miniSelect.value);
+          });
+        }
 
-        this.miniSelect.addEventListener('change', () => {
-          const optionName = this.miniSelect.dataset.stickyAtcOption;
-          const value = this.miniSelect.value;
-          this.syncToMain(optionName, value);
+        if (this.miniPillsContainer && this.miniPills.length) {
+          const optionName = this.miniPillsContainer.dataset.stickyAtcPillsOption;
+          this.miniPills.forEach((pill) => {
+            pill.addEventListener('click', () => {
+              if (pill.getAttribute('aria-disabled') === 'true') return;
+              const value = pill.dataset.stickyAtcPillValue;
+              this.syncToMain(optionName, value);
+              this.markPillSelected(value);
+            });
+          });
+        }
+      }
+
+      markPillSelected(value) {
+        this.miniPills.forEach((pill) => {
+          const selected = pill.dataset.stickyAtcPillValue === value;
+          pill.classList.toggle('is-selected', selected);
+          pill.setAttribute('aria-pressed', selected ? 'true' : 'false');
         });
       }
 
       refreshMiniFromMain() {
-        if (!this.miniSelect || !this.mainVariantSelects) return;
-        const optionName = this.miniSelect.dataset.stickyAtcOption;
+        if (!this.mainVariantSelects) return;
 
-        // Mirror selected value + disabled state from the main picker.
-        const mainSelect = this.mainVariantSelects.querySelector(
-          `select[name="options[${CSS.escape(optionName)}]"]`
-        );
-        if (mainSelect) {
-          if (this.miniSelect.value !== mainSelect.value) {
-            this.miniSelect.value = mainSelect.value;
+        // ----- Refresh mobile <select> -----
+        if (this.miniSelect) {
+          const optionName = this.miniSelect.dataset.stickyAtcOption;
+          const mainSelect = this.mainVariantSelects.querySelector(
+            `select[name="options[${CSS.escape(optionName)}]"]`
+          );
+          if (mainSelect) {
+            if (this.miniSelect.value !== mainSelect.value) this.miniSelect.value = mainSelect.value;
+            for (const opt of this.miniSelect.options) {
+              const mainOpt = Array.from(mainSelect.options).find((o) => o.value === opt.value);
+              if (mainOpt) opt.disabled = mainOpt.disabled;
+            }
+          } else {
+            const radios = this.mainVariantSelects.querySelectorAll(
+              `input[type="radio"][name^="${CSS.escape(optionName)}-"]`
+            );
+            const checked = Array.from(radios).find((r) => r.checked);
+            if (checked && this.miniSelect.value !== checked.value) this.miniSelect.value = checked.value;
+            for (const opt of this.miniSelect.options) {
+              const radio = Array.from(radios).find((r) => r.value === opt.value);
+              if (radio) opt.disabled = radio.classList.contains('disabled');
+            }
           }
-          for (const opt of this.miniSelect.options) {
-            const mainOpt = Array.from(mainSelect.options).find((o) => o.value === opt.value);
-            opt.disabled = mainOpt ? mainOpt.disabled : opt.disabled;
-          }
-          return;
         }
 
-        const radios = this.mainVariantSelects.querySelectorAll(
-          `input[type="radio"][name^="${CSS.escape(optionName)}-"]`
-        );
-        if (!radios.length) return;
+        // ----- Refresh desktop pills -----
+        if (this.miniPillsContainer && this.miniPills.length) {
+          const optionName = this.miniPillsContainer.dataset.stickyAtcPillsOption;
+          const radios = this.mainVariantSelects.querySelectorAll(
+            `input[type="radio"][name^="${CSS.escape(optionName)}-"]`
+          );
+          const mainSelect = this.mainVariantSelects.querySelector(
+            `select[name="options[${CSS.escape(optionName)}]"]`
+          );
 
-        const checked = Array.from(radios).find((r) => r.checked);
-        if (checked && this.miniSelect.value !== checked.value) {
-          this.miniSelect.value = checked.value;
-        }
-        for (const opt of this.miniSelect.options) {
-          const radio = Array.from(radios).find((r) => r.value === opt.value);
-          if (!radio) continue;
-          // Radios aren't disabled via attribute in this theme; they carry a `.disabled` class.
-          opt.disabled = radio.classList.contains('disabled');
+          let checkedValue = null;
+          const unavailable = new Set();
+
+          if (radios.length) {
+            const checked = Array.from(radios).find((r) => r.checked);
+            checkedValue = checked ? checked.value : null;
+            radios.forEach((r) => {
+              if (r.classList.contains('disabled')) unavailable.add(r.value);
+            });
+          } else if (mainSelect) {
+            checkedValue = mainSelect.value;
+            Array.from(mainSelect.options).forEach((o) => {
+              if (o.disabled) unavailable.add(o.value);
+            });
+          }
+
+          this.miniPills.forEach((pill) => {
+            const value = pill.dataset.stickyAtcPillValue;
+            const selected = value === checkedValue;
+            const isUnavailable = unavailable.has(value);
+            pill.classList.toggle('is-selected', selected);
+            pill.classList.toggle('is-unavailable', isUnavailable);
+            pill.setAttribute('aria-pressed', selected ? 'true' : 'false');
+            if (isUnavailable) pill.setAttribute('aria-disabled', 'true');
+            else pill.removeAttribute('aria-disabled');
+          });
         }
       }
 
       syncToMain(optionName, value) {
         if (!this.mainVariantSelects) return;
 
-        // Try a matching <select> first (dropdown picker)
         const select = this.mainVariantSelects.querySelector(
           `select[name="options[${CSS.escape(optionName)}]"]`
         );
@@ -167,7 +220,6 @@ if (!customElements.get('sticky-atc-bar')) {
           return;
         }
 
-        // Otherwise look for a radio (pill picker); name format is `{OptionName}-{position}`
         const radios = this.mainVariantSelects.querySelectorAll(
           `input[type="radio"][name^="${CSS.escape(optionName)}-"]`
         );
