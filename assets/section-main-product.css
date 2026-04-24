@@ -3541,17 +3541,29 @@ a.product__text {
 }
 
 /* --- Pills --- */
+.sticky-atc-bar__variant-label {
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  color: rgba(var(--color-foreground-rgb), 0.7);
+  white-space: nowrap;
+}
+
 .sticky-atc-bar__pill {
   appearance: none;
   background: transparent;
   border: var(--variant-pills-border-width, 1px) solid rgba(var(--color-foreground-rgb), 0.4);
   color: rgb(var(--color-foreground-rgb));
-  font: inherit;
+  font-family: inherit;
+  font-size: 0.75rem;
   line-height: 1;
-  padding: 0.65rem 1rem;
+  padding: 0.9rem 1.25rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border-radius: var(--variant-pills-radius, 0);
-  min-width: 2.75rem;
   text-align: center;
   transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
 }
