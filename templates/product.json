@@ -144,17 +144,6 @@
             "text_indent": false
           }
         },
-        "text_PHNEm9": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>Grounded</strong>. Cushioned. <em>Weightless</em>.</p>",
-            "text_color": "fg-body",
-            "bg_color": "bg-body",
-            "padding": 0,
-            "border_radius": 0
-          }
-        },
         "icon_grid_6dazna": {
           "type": "icon_grid",
           "settings": {
@@ -224,7 +213,6 @@
         "inventory_zeVG83",
         "buy_buttons",
         "description",
-        "text_PHNEm9",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "collapsible_tab_76nFge",
@@ -491,6 +479,33 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "section_text_ticker_n9GRxw": {
+      "type": "section-text-ticker",
+      "blocks": {
+        "text_XYbVQV": {
+          "type": "text",
+          "settings": {
+            "text": "Grounded. Cushioned. Weightless."
+          }
+        }
+      },
+      "block_order": [
+        "text_XYbVQV"
+      ],
+      "name": "t:sections.text-ticker.presets.name",
+      "settings": {
+        "font_size": "text-xl",
+        "vertical_padding": 20,
+        "horizontal_padding": 30,
+        "anim_speed": 8,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "full",
+        "border_color": "dark"
+      }
     }
   },
   "order": [
@@ -498,6 +513,7 @@
     "complementary-products",
     "rich_text_XwVKQK",
     "related-products",
-    "multicolumn_WwfBp7"
+    "multicolumn_WwfBp7",
+    "section_text_ticker_n9GRxw"
   ]
 }
