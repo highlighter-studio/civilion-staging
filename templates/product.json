@@ -179,8 +179,8 @@
         "5c65d55b-9f21-4d69-b50a-6219b616bb68": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Product Details",
-            "content": "{{ product.description }}",
+            "heading": "Engineered Grip",
+            "content": "<p><em>Traction engineered for surfaces from marina teak to manicured greens. Every step, placed with intention.</em></p>",
             "page": ""
           }
         },
