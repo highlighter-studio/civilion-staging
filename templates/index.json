@@ -218,12 +218,53 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "newsletter_9MfTGr": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_CH3g3b": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Club",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_jqNUGa": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>First access. New collections. The culture behind the craft.</p>"
+          }
+        },
+        "email_form_bNeNrU": {
+          "type": "email_form",
+          "settings": {
+            "form_width": "fixed",
+            "form_style": "outline",
+            "newsletter_submit_style": "icon"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CH3g3b",
+        "paragraph_jqNUGa",
+        "email_form_bNeNrU"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "alignment": "left",
+        "section_layout": "stacked",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "video_banner_RNPBpr",
     "rich_text_TagPrr",
     "section_media_collage_wfwYbQ",
-    "featured_collection_ABXpWC"
+    "featured_collection_ABXpWC",
+    "newsletter_9MfTGr"
   ]
 }
