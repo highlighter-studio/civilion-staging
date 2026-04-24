@@ -117,7 +117,7 @@
         "bg_image_blur": 0,
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "padding_top": 80,
+        "padding_top": 120,
         "padding_bottom": 80,
         "top_border": false,
         "bottom_border": false,
