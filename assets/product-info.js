@@ -208,10 +208,15 @@ if (!customElements.get('product-info')) {
           this.querySelector(`#Quantity-Rules-${this.dataset.section}`)?.classList.remove('hidden');
           this.querySelector(`#Volume-Note-${this.dataset.section}`)?.classList.remove('hidden');
 
-          this.productForm?.toggleSubmitButton(
-            html.getElementById(`ProductSubmitButton-${this.sectionId}`)?.hasAttribute('disabled') ?? true,
-            window.variantStrings.soldOut
-          );
+          const submitButtonInHtml = html.getElementById(`ProductSubmitButton-${this.sectionId}`);
+          // Trust the re-rendered HTML when it's present (covers server-side
+          // checks like quantity_rule_soldout); otherwise fall back to the
+          // variant's own availability so a missing/unexpected response
+          // doesn't leave the form stuck in a disabled state.
+          const submitDisabled = submitButtonInHtml
+            ? submitButtonInHtml.hasAttribute('disabled')
+            : !variant.available;
+          this.productForm?.toggleSubmitButton(submitDisabled, window.variantStrings.soldOut);
 
           publish(PUB_SUB_EVENTS.variantChange, {
             data: {
