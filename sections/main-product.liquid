@@ -209,12 +209,12 @@
       }        
       }      
     {%- endif -%}
-    @media only screen and (max-width: 750px) {
-      .sticky-buy-buttons .product-form {
-        padding: {{ section.settings.sticky_buttons_padding }}px {{ section.settings.sticky_buttons_padding_horizontal }}px {{ section.settings.sticky_buttons_padding }}px {{ section.settings.sticky_buttons_padding_horizontal }}px;
+    {%- if section.settings.enable_sticky_buttons -%}
+      .sticky-atc-bar__inner {
+        padding: {{ section.settings.sticky_buttons_padding }}px {{ section.settings.sticky_buttons_padding_horizontal }}px;
         box-shadow: 0px 0px 12px 0px rgba(0,0,0,{{ section.settings.sticky_buttons_shadow | divided_by: 100.0 }});
       }
-    }
+    {%- endif -%}
     {%- if section.settings.padding_top > 0 -%}
     .pmc-thumbnail-position--adjacent-left-normal .gallery-slider-thumbnails, 
     .pmc-thumbnail-position--adjacent-left-large .gallery-slider-thumbnails,
@@ -285,7 +285,7 @@
     </div>
     
     <div class="product product-main-info-section align-{{ section.settings.info_txt_alignment }} vertical-align-{{ section.settings.text_section_vertical_position }}">
-      <div class="product__info-container product-info-justify-{{ section.settings.text_section_position }}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if section.settings.enable_sticky_buttons %} sticky-buy-buttons sticky-buy-buttons--border-{{ section.settings.sticky_buttons_border }}{% endif %}">
+      <div class="product__info-container product-info-justify-{{ section.settings.text_section_position }}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}">
                 
         <script src="{{ 'product-page-swap.js' | asset_url }}"></script>
         {%- for block in section.blocks -%}
@@ -1395,24 +1395,6 @@
                 text-align: {{ block.settings.pickup_alignment }};
               }
             </style>
-            {% if section.settings.enable_sticky_buttons and block.settings.show_dynamic_checkout == false %}
-            <style>
-              @media only screen and (max-width: 749px) {
-                .sub-footer {
-                  padding-bottom: 100px;
-                }  
-              }
-            </style>
-            {% endif %}
-            {% if section.settings.enable_sticky_buttons and block.settings.show_dynamic_checkout %}
-            <style>
-              @media only screen and (max-width: 749px) {
-                .sub-footer {
-                  padding-bottom: 180px;
-                }  
-              }
-            </style>
-            {% endif %}
             {% if block.settings.show_pickup_icon == false %}
             <style>
               .pickup-availability-info .icon {
@@ -1562,8 +1544,12 @@
 <script type="application/ld+json">
   {{ product | structured_data }}
 </script>
-  
-</section>  
+
+</section>
+
+{%- if section.settings.enable_sticky_buttons -%}
+  {% render 'sticky-atc-bar', product: product, section: section, product_form_id: product_form_id %}
+{%- endif -%}
 </product-info>
 
 {% schema %}
