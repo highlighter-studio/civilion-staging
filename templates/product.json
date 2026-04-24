@@ -41,15 +41,6 @@
             "title_size": "h2"
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-            "display_type": "normal",
-            "description_drawer_link_style": "underline",
-            "accordion_open_default": false,
-            "text_indent": false
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -144,6 +135,25 @@
             "show_gift_card_recipient": true
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+            "display_type": "normal",
+            "description_drawer_link_style": "underline",
+            "accordion_open_default": false,
+            "text_indent": false
+          }
+        },
+        "text_PHNEm9": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Grounded</strong>. Cushioned. <em>Weightless</em>.</p>",
+            "text_color": "fg-body",
+            "bg_color": "bg-body",
+            "padding": 0,
+            "border_radius": 0
+          }
+        },
         "icon_grid_6dazna": {
           "type": "icon_grid",
           "settings": {
@@ -188,7 +198,6 @@
         "tags_qFz8mT",
         "text_qQAkxj",
         "title",
-        "description",
         "price",
         "gender_toggle_qfHfxC",
         "d397b53e-d0be-4717-805f-6ee8a8d247bf",
@@ -197,6 +206,8 @@
         "870625ea-f97e-4cab-b3b3-04010a7854a5",
         "inventory_zeVG83",
         "buy_buttons",
+        "description",
+        "text_PHNEm9",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "collapsible_tab_xVtpDM"
@@ -378,7 +389,7 @@
           "type": "column",
           "settings": {
             "column_span": "1",
-            "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
+            "image": "shopify://shop_images/BOH_0787.jpg",
             "title": "Column",
             "heading_top_margin": 15,
             "heading_margin": 5,
@@ -446,7 +457,7 @@
         "column_vertical_alignment": "top",
         "card_image_alignment": "center",
         "image_size": "full-width",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "text_alignment": "left",
         "column_heading_size": "h3",
         "block_button_width": "auto",
