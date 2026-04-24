@@ -17,33 +17,36 @@
         "column_f8PDBL": {
           "type": "column",
           "settings": {
-            "icon": "location",
-            "title": "Our Stores",
-            "text": "<p>London, Paris, Tokyo</p>"
+            "icon": "custom",
+            "icon_custom_image": "shopify://shop_images/diamond.png",
+            "title": "Precision Engineered",
+            "text": "<p>Architecturally designed, not molded</p>"
           }
         },
         "column_9nVpjd": {
           "type": "column",
           "settings": {
-            "icon": "gift",
-            "title": "Gift Wrapping",
-            "text": "<p>Available on all orders</p>"
+            "icon": "custom",
+            "icon_custom_image": "shopify://shop_images/cloud.png",
+            "title": "All-Day Comfort",
+            "text": "<p>Every surface, every occasion</p>"
           }
         },
         "column_VMH6pt": {
           "type": "column",
           "settings": {
-            "icon": "return",
-            "title": "Free Returns",
-            "text": "<p>Easy global returns</p>"
+            "icon": "custom",
+            "icon_custom_image": "shopify://shop_images/football.png",
+            "title": "Licensed by the Best",
+            "text": "<p>Official sport partnerships worldwide</p>"
           }
         },
         "column_73RftU": {
           "type": "column",
           "settings": {
-            "icon": "payment",
-            "title": "Secure Payment",
-            "text": "<p>Flexible and simple</p>"
+            "icon": "return",
+            "title": "Easy Returns",
+            "text": "<p>Hassle-free exchanges & refunds</p>"
           }
         }
       },
