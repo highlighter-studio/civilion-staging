@@ -3542,7 +3542,7 @@ a.product__text {
 
 /* --- Pills --- */
 .sticky-atc-bar__variant-label {
-  font-size: 0.8125rem;
+  font-size: 1.05rem;
   letter-spacing: 0.02em;
   color: rgba(var(--color-foreground-rgb), 0.7);
   white-space: nowrap;
