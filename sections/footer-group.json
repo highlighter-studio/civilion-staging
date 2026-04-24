@@ -141,7 +141,7 @@
             "alignment": "left",
             "list_layout": "vertical",
             "list_layout_mobile": "vertical",
-            "menu": "footer"
+            "menu": "footer-explore"
           }
         },
         "link_list_B6bDcU": {
@@ -153,7 +153,7 @@
             "alignment": "left",
             "list_layout": "vertical",
             "list_layout_mobile": "vertical",
-            "menu": "footer"
+            "menu": "footer-help"
           }
         },
         "text_gyqwQi": {
