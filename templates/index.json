@@ -74,7 +74,7 @@
         "caption_BgEAEk": {
           "type": "caption",
           "settings": {
-            "caption": "Our Story",
+            "caption": "How you move matters.",
             "alignment": "center",
             "opacity": 100
           }
@@ -82,8 +82,8 @@
         "text_FCNxYR": {
           "type": "text",
           "settings": {
-            "text": "<p>Our brand is a tribute to nature's timeless allure and formulations that embody the essence of alpine purity and sophistication. Thoughtful and sustainable design extends to everything we produce.</p>",
-            "text_size": "text-large",
+            "text": "<h2>Recreation isn't rest. It's how you move through the world — with intention, with craft, with style.</h2>",
+            "text_size": "text-xl",
             "alignment": "center",
             "text_indent": "noindent"
           }
@@ -97,7 +97,7 @@
             "btn_one_show": true,
             "btn_one_txt": "Our Story",
             "btn_one_link": "",
-            "btn_one_style": "button--outline",
+            "btn_one_style": "button--solid",
             "btn_two_show": false,
             "btn_two_txt": "Button text",
             "btn_two_link": "",
@@ -116,7 +116,7 @@
         "bg_image_darken": 0,
         "bg_image_blur": 0,
         "text_color": "fg-body",
-        "bg_color": "bg-01",
+        "bg_color": "bg-body",
         "padding_top": 80,
         "padding_bottom": 80,
         "top_border": false,
