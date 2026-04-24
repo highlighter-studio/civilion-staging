@@ -3554,7 +3554,7 @@ a.product__text {
   border: var(--variant-pills-border-width, 1px) solid rgba(var(--color-foreground-rgb), 0.4);
   color: rgb(var(--color-foreground-rgb));
   font-family: inherit;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   line-height: 1;
   padding: 0.9rem 1.25rem;
   min-width: 2.75rem;
