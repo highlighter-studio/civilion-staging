@@ -25,6 +25,16 @@
           "type": "tags",
           "settings": {}
         },
+        "text_NgJdPP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.product_type_pdp.value }}</p>",
+            "text_color": "fg-body",
+            "bg_color": "bg-body",
+            "padding": 0,
+            "border_radius": 0
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -159,8 +169,24 @@
         "5c65d55b-9f21-4d69-b50a-6219b616bb68": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Product Details",
-            "content": "{{ product.description }}",
+            "heading": "Engineered Grip",
+            "content": "<p>Traction engineered for surfaces from marina teak to manicured greens. Every step, placed with intention.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_RctLdi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "All-Day Comfort",
+            "content": "<p>Injection-molded construction that shapes to the foot — no break-in, no compromise. Comfort that's designed, not afterthought.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Dw44pC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Featherweight Construction",
+            "content": "<p>Deceptively light. The kind of weightlessness you notice on the third hour, not the first step.</p>",
             "page": ""
           }
         },
@@ -176,6 +202,7 @@
       "block_order": [
         "breadcrumb_Ui8wgw",
         "tags_qFz8mT",
+        "text_NgJdPP",
         "title",
         "description",
         "price",
@@ -188,6 +215,8 @@
         "buy_buttons",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
+        "collapsible_tab_RctLdi",
+        "collapsible_tab_Dw44pC",
         "collapsible_tab_xVtpDM"
       ],
       "custom_css": [],
