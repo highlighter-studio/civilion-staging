@@ -78,6 +78,7 @@
         aria-label="{{ size_option.name }}"
         data-sticky-atc-pills-option="{{ size_option.name | escape }}"
       >
+        <span class="sticky-atc-bar__variant-label" aria-hidden="true">{{ size_option.name }}</span>
         {%- for value in size_option.values -%}
           {%- assign matched_variant = nil -%}
           {%- for v in product.variants -%}
