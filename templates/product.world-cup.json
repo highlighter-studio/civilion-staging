@@ -627,7 +627,7 @@
         "column_vertical_alignment": "top",
         "card_image_alignment": "center",
         "image_size": "full-width",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "text_alignment": "left",
         "column_heading_size": "h3",
         "block_button_width": "auto",
