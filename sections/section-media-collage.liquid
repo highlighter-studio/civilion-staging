@@ -1,7 +1,20 @@
 {{ 'section-media-collage.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.content_layout == 'carousel' %}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}  
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{%- liquid
+  assign has_overlay_video = false
+  for block in section.blocks
+    if block.type == 'overlay_video'
+      assign has_overlay_video = true
+      break
+    endif
+  endfor
+-%}
+{% if has_overlay_video %}
+  <script src="{{ 'section-media-collage.js' | asset_url }}" defer></script>
 {% endif %}
 
 {%- style -%}
@@ -78,6 +91,7 @@
     {% render 'media-placeholder-lifestyle', style: 3 %}
     {% endif %}
   </div>
+  {% render 'collage-overlay', block: block %}
   </div>
   {% if section.settings.content_layout == 'carousel' %}</div>{% endif %}
 
@@ -99,7 +113,8 @@
     {% else %}
     {% render 'media-placeholder-lifestyle', style: 3 %}
     {% endif %}
-  </div>  
+  </div>
+  {% render 'collage-overlay', block: block %}
   </div>
   {% if section.settings.content_layout == 'carousel' %}</div>{% endif %}
   {% endif %}
@@ -136,6 +151,7 @@
     {% render 'media-placeholder-lifestyle', style: 3 %}
     {% endif %}
   </div>
+  {% render 'collage-overlay', block: block %}
   </div>
   {% if section.settings.content_layout == 'carousel' %}</div>{% endif %}
   {% else %}
@@ -156,11 +172,57 @@
     {% else %}
     {% render 'media-placeholder-lifestyle', style: 3 %}
     {% endif %}
-  </div>  
+  </div>
+  {% render 'collage-overlay', block: block %}
   </div>
   {% if section.settings.content_layout == 'carousel' %}</div>{% endif %}
   {% endif %}
-  
+
+  {% when 'overlay_video' %}
+  {% if block.settings.image_size == 'half_width' %}
+    {% assign ov_image_size = 1400 %}
+    {% assign ov_width_class = 'collage-image-half-width' %}
+  {% else %}
+    {% assign ov_image_size = 2800 %}
+    {% assign ov_width_class = 'collage-image-full-width' %}
+  {% endif %}
+
+  {% if section.settings.content_layout == 'grid' and block.settings.image_size == 'half_width' %}
+  <style>
+  .ci-{{ block.id }} {
+    margin-top: {{ block.settings.image_offset_vertical }}px !important;
+    left: {{ block.settings.image_offset_horizontal }}px;
+  }
+  </style>
+  {% endif %}
+
+  {% if section.settings.content_layout == 'carousel' %}<div class="grid__item">{% endif %}
+  <div class="ci-{{ block.id }} collage-image {{ ov_width_class }} ratio-{{ block.settings.image_ratio }}" {{ block.shopify_attributes }} data-hover-video>
+  <div class="collage-image-wrapper ci-image-padding-mobile-{{ block.settings.image_padding_mobile }} ci-image-padding-{{ block.settings.image_padding }} collage-overlay-video">
+    {% if block.settings.image %}
+      {{ block.settings.image | image_url: width: ov_image_size | image_tag: loading: 'lazy', class: 'collage-overlay-video__image' }}
+    {% else %}
+      {% render 'media-placeholder-lifestyle', style: 3 %}
+    {% endif %}
+    {% if block.settings.hover_video != blank %}
+      <video
+        class="collage-overlay-video__video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        {% if block.settings.image %}poster="{{ block.settings.image | image_url: width: 800 }}"{% endif %}
+      >
+        {% for source in block.settings.hover_video.sources %}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {% endfor %}
+      </video>
+    {% endif %}
+  </div>
+  {% render 'collage-overlay', block: block %}
+  </div>
+  {% if section.settings.content_layout == 'carousel' %}</div>{% endif %}
+
 {% endcase %}
 {% endfor %}
 </div>
@@ -564,6 +626,72 @@
         "unit": "px",
         "default": 0,
         "label": "t:sections.collage.blocks.image.settings.image_offset_horizontal.label"
+        },
+        {
+          "type": "header",
+          "content": "Overlay content"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "overlay_text",
+          "label": "Body text"
+        },
+        {
+          "type": "text",
+          "id": "overlay_button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "overlay_button_url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "overlay_button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "button--solid", "label": "Solid" },
+            { "value": "button--outline", "label": "Outline" },
+            { "value": "link--underlined", "label": "Underlined link" }
+          ],
+          "default": "button--solid"
+        },
+        {
+          "type": "select",
+          "id": "overlay_position",
+          "label": "Position",
+          "options": [
+            { "value": "top-left", "label": "Top left" },
+            { "value": "top-right", "label": "Top right" },
+            { "value": "bottom-left", "label": "Bottom left" },
+            { "value": "bottom-right", "label": "Bottom right" },
+            { "value": "center", "label": "Center" }
+          ],
+          "default": "bottom-left"
+        },
+        {
+          "type": "select",
+          "id": "overlay_scrim",
+          "label": "Background scrim",
+          "info": "Darkens or lightens the media behind the overlay for better readability.",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "dark", "label": "Dark" },
+            { "value": "light", "label": "Light" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "checkbox",
+          "id": "overlay_hover_only",
+          "label": "Show on hover only",
+          "default": false
         }
         ]
       },
@@ -672,7 +800,226 @@
         "unit": "px",
         "default": 0,
         "label": "t:sections.collage.blocks.image.settings.image_offset_horizontal.label"
+        },
+        {
+          "type": "header",
+          "content": "Overlay content"
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "overlay_text",
+          "label": "Body text"
+        },
+        {
+          "type": "text",
+          "id": "overlay_button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "overlay_button_url",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "overlay_button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "button--solid", "label": "Solid" },
+            { "value": "button--outline", "label": "Outline" },
+            { "value": "link--underlined", "label": "Underlined link" }
+          ],
+          "default": "button--solid"
+        },
+        {
+          "type": "select",
+          "id": "overlay_position",
+          "label": "Position",
+          "options": [
+            { "value": "top-left", "label": "Top left" },
+            { "value": "top-right", "label": "Top right" },
+            { "value": "bottom-left", "label": "Bottom left" },
+            { "value": "bottom-right", "label": "Bottom right" },
+            { "value": "center", "label": "Center" }
+          ],
+          "default": "bottom-left"
+        },
+        {
+          "type": "select",
+          "id": "overlay_scrim",
+          "label": "Background scrim",
+          "info": "Darkens or lightens the media behind the overlay for better readability.",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "dark", "label": "Dark" },
+            { "value": "light", "label": "Light" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "checkbox",
+          "id": "overlay_hover_only",
+          "label": "Show on hover only",
+          "default": false
         }
+        ]
+      },
+      {
+        "type": "overlay_video",
+        "name": "Overlay video",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Cover image"
+          },
+          {
+            "type": "video",
+            "id": "hover_video",
+            "label": "Hover video",
+            "info": "Plays on hover (desktop). Mobile shows the cover image only."
+          },
+          {
+            "type": "select",
+            "id": "image_size",
+            "label": "t:sections.all.width",
+            "options": [
+              { "value": "half_width", "label": "Auto" },
+              { "value": "full_width", "label": "t:sections.all.size.full_width" }
+            ],
+            "default": "half_width"
+          },
+          {
+            "type": "select",
+            "id": "image_ratio",
+            "label": "t:sections.all.ratio.ratio_heading",
+            "options": [
+              { "value": "square", "label": "t:sections.all.ratio.square" },
+              { "value": "landscape-16x9", "label": "t:sections.all.ratio.landscape_16_9" },
+              { "value": "landscape", "label": "t:sections.all.ratio.landscape_6_4" },
+              { "value": "portrait", "label": "t:sections.all.ratio.portrait_4_5" },
+              { "value": "portrait-4x6", "label": "t:sections.all.ratio.portrait_4_6" },
+              { "value": "portrait-9x16", "label": "t:sections.all.ratio.portrait_9_16" },
+              { "value": "fit", "label": "t:sections.all.ratio.adapt_to_image" }
+            ],
+            "default": "square"
+          },
+          {
+            "type": "range",
+            "id": "image_padding_mobile",
+            "min": 0,
+            "max": 60,
+            "step": 10,
+            "unit": "px",
+            "default": 0,
+            "label": "t:sections.all.padding.padding_mobile"
+          },
+          {
+            "type": "range",
+            "id": "image_padding",
+            "min": 0,
+            "max": 120,
+            "step": 10,
+            "unit": "px",
+            "default": 0,
+            "label": "t:sections.all.padding.padding_desktop"
+          },
+          {
+            "type": "header",
+            "content": "t:sections.collage.blocks.image.settings.image_offset_info.label",
+            "info": "t:sections.collage.blocks.image.settings.image_offset_info.info"
+          },
+          {
+            "type": "range",
+            "id": "image_offset_vertical",
+            "min": -100,
+            "max": 100,
+            "step": 50,
+            "unit": "px",
+            "default": 0,
+            "label": "t:sections.collage.blocks.image.settings.image_offset_vertical.label"
+          },
+          {
+            "type": "range",
+            "id": "image_offset_horizontal",
+            "min": -100,
+            "max": 100,
+            "step": 50,
+            "unit": "px",
+            "default": 0,
+            "label": "t:sections.collage.blocks.image.settings.image_offset_horizontal.label"
+          },
+          {
+            "type": "header",
+            "content": "Overlay content"
+          },
+          {
+            "type": "text",
+            "id": "overlay_heading",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "overlay_text",
+            "label": "Body text"
+          },
+          {
+            "type": "text",
+            "id": "overlay_button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "overlay_button_url",
+            "label": "Button link"
+          },
+          {
+            "type": "select",
+            "id": "overlay_button_style",
+            "label": "Button style",
+            "options": [
+              { "value": "button--solid", "label": "Solid" },
+              { "value": "button--outline", "label": "Outline" },
+              { "value": "link--underlined", "label": "Underlined link" }
+            ],
+            "default": "button--solid"
+          },
+          {
+            "type": "select",
+            "id": "overlay_position",
+            "label": "Position",
+            "options": [
+              { "value": "top-left", "label": "Top left" },
+              { "value": "top-right", "label": "Top right" },
+              { "value": "bottom-left", "label": "Bottom left" },
+              { "value": "bottom-right", "label": "Bottom right" },
+              { "value": "center", "label": "Center" }
+            ],
+            "default": "bottom-left"
+          },
+          {
+            "type": "select",
+            "id": "overlay_scrim",
+            "label": "Background scrim",
+            "info": "Darkens or lightens the media behind the overlay for better readability.",
+            "options": [
+              { "value": "none", "label": "None" },
+              { "value": "dark", "label": "Dark" },
+              { "value": "light", "label": "Light" }
+            ],
+            "default": "none"
+          },
+          {
+            "type": "checkbox",
+            "id": "overlay_hover_only",
+            "label": "Show on hover only",
+            "default": false
+          }
         ]
       }
     ],
