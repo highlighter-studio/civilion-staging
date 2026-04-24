@@ -128,6 +128,18 @@
     "section_media_collage_wfwYbQ": {
       "type": "section-media-collage",
       "blocks": {
+        "video_fRmtwN": {
+          "type": "video",
+          "settings": {
+            "video_url": "shopify://files/videos/Gardening & croquet at Langdon.mov",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
         "image_37aFRR": {
           "type": "image",
           "settings": {
@@ -154,6 +166,7 @@
         }
       },
       "block_order": [
+        "video_fRmtwN",
         "image_37aFRR",
         "image_CyMVEn"
       ],
