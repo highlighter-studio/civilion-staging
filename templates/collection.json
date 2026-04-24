@@ -37,6 +37,7 @@
     },
     "navigation": {
       "type": "main-collection-sub-navigation",
+      "disabled": true,
       "settings": {
         "menu": "customer-account-main-menu",
         "alignment": "center",
