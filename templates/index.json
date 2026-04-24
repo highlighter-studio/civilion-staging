@@ -199,7 +199,7 @@
         "text_geWhtY": {
           "type": "text",
           "settings": {
-            "text": "Grounded. Cushioned. Weightless"
+            "text": "<p><strong>Grounded</strong>. Cushioned. <em>Weightless. </em>Meet Civilion.</p>"
           }
         }
       },
@@ -208,12 +208,13 @@
       ],
       "name": "t:sections.text-ticker.presets.name",
       "settings": {
+        "font_style": "heading",
         "font_size": "text-xl",
         "vertical_padding": 40,
         "horizontal_padding": 95,
         "anim_speed": 4,
         "text_color": "fg-04",
-        "bg_color": "bg-05",
+        "bg_color": "bg-04",
         "top_border": false,
         "bottom_border": false,
         "border_width": "full",
