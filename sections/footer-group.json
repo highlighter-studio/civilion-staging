@@ -102,7 +102,18 @@
             "logo_opacity": 100,
             "alignment": "left",
             "logo_padding_top": 50,
-            "logo_padding_bottom": 50,
+            "logo_padding_bottom": 10,
+            "block_width": "full_width"
+          }
+        },
+        "text_kqjJtL": {
+          "type": "text",
+          "settings": {
+            "heading": "For The Professional Leisure-ist & The High Art Of Recreation ",
+            "subtext": "<p><br/></p>",
+            "text_size": "text-xl",
+            "alignment_mobile": "center",
+            "alignment": "center",
             "block_width": "full_width"
           }
         },
@@ -144,9 +155,10 @@
         },
         "text_gyqwQi": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "",
-            "subtext": "<p>Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.</p>",
+            "subtext": "<h3>For The Professional Leisure-ist & The High Art Of Recreation </h3>",
             "text_size": "text-normal",
             "alignment_mobile": "left",
             "alignment": "left",
@@ -167,6 +179,7 @@
       "block_order": [
         "newsletter_footer_block",
         "logo_B6PCPJ",
+        "text_kqjJtL",
         "link_list_YbfEkc",
         "link_list_t4mNyf",
         "link_list_B6bDcU",
