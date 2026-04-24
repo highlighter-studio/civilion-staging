@@ -124,10 +124,63 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "section_media_collage_wfwYbQ": {
+      "type": "section-media-collage",
+      "blocks": {
+        "image_37aFRR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ScottishOpenMcIlroy_Banner_W_copy.jpg",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_CyMVEn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_37aFRR",
+        "image_CyMVEn"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "description": "",
+        "hdr_alignment": "center",
+        "header_style": "normal",
+        "content_layout": "grid",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width",
+        "grid_spacing": "default-grid",
+        "grid_columns_tablet": 2,
+        "grid_columns_desktop": 2,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "video_banner_RNPBpr",
-    "rich_text_TagPrr"
+    "rich_text_TagPrr",
+    "section_media_collage_wfwYbQ"
   ]
 }
