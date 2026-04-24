@@ -210,9 +210,9 @@
       "settings": {
         "font_style": "heading",
         "font_size": "text-xl",
-        "vertical_padding": 40,
-        "horizontal_padding": 95,
-        "anim_speed": 4,
+        "vertical_padding": 25,
+        "horizontal_padding": 90,
+        "anim_speed": 6,
         "text_color": "fg-04",
         "bg_color": "bg-04",
         "top_border": false,
