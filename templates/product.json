@@ -146,6 +146,7 @@
         },
         "icon_grid_6dazna": {
           "type": "icon_grid",
+          "disabled": true,
           "settings": {
             "icon_alignment": "left",
             "icon_layout": "horizontal",
@@ -486,7 +487,7 @@
         "text_XYbVQV": {
           "type": "text",
           "settings": {
-            "text": "Grounded. Cushioned. Weightless."
+            "text": "<p>Grounded. Cushioned. Weightless.</p>"
           }
         }
       },
@@ -495,6 +496,7 @@
       ],
       "name": "t:sections.text-ticker.presets.name",
       "settings": {
+        "font_style": "body",
         "font_size": "text-xl",
         "vertical_padding": 20,
         "horizontal_padding": 30,
