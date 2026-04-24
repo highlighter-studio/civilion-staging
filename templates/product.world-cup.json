@@ -504,6 +504,48 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "featured_collection_J9jgq9": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "world-cup-2026",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "description": "",
+        "btn_enable": false,
+        "btn_label": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "products_layout": "carousel",
+        "arrow_style": "solid",
+        "content_width": "page-width",
+        "no_items": 8,
+        "mobile_grid": "1",
+        "tablet_grid": "3",
+        "dt_grid": "4",
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_prices": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "rollover_titles": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
     }
   },
   "order": [
@@ -512,6 +554,7 @@
     "rich_text_XwVKQK",
     "related-products",
     "image_banner_Ywmc7q",
+    "featured_collection_J9jgq9",
     "multicolumn_WwfBp7"
   ]
 }
