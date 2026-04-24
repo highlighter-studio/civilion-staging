@@ -435,7 +435,7 @@
         "no_items": 8,
         "mobile_grid": "1",
         "tablet_grid": "3",
-        "dt_grid": "4",
+        "dt_grid": "3",
         "card_image_display": "second_image_hover",
         "pagination_color_scheme": "body",
         "show_prices": true,

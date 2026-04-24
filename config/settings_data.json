@@ -86,7 +86,7 @@
     "accordion_icon": "plus",
     "card_bg_col": "rgba(0,0,0,0)",
     "card_corner_radius": 0,
-    "card_img_aspect_ratio": "portrait",
+    "card_img_aspect_ratio": "fit",
     "card_media_bg_col": "rgba(0,0,0,0)",
     "card_show_product_type": true,
     "card_text_alignment": "center",
