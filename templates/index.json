@@ -253,6 +253,8 @@
       "settings": {
         "alignment": "left",
         "section_layout": "stacked",
+        "side_image": "shopify://shop_images/StudioJan-9359_Red_Pants.jpg",
+        "image_position": "left",
         "text_color": "fg-04",
         "bg_color": "bg-04",
         "padding_top": 60,
