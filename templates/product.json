@@ -146,6 +146,7 @@
         },
         "text_PHNEm9": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Grounded</strong>. Cushioned. <em>Weightless</em>.</p>",
             "text_color": "fg-body",
