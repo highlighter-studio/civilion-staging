@@ -1,0 +1,91 @@
+{% comment %}
+  Renders a scroll-triggered sticky add-to-cart bar.
+  Appears at the bottom of the viewport (mobile + desktop) only when the
+  main product form's ATC button is scrolled above the viewport.
+
+  Accepts:
+  - product: {Object}
+  - section: {Object}
+  - product_form_id: {String} id of the main product form (the bar's button submits this form)
+{% endcomment %}
+
+{%- liquid
+  assign size_option = nil
+  for option in product.options_with_values
+    if option.name == 'Size'
+      assign size_option = option
+      break
+    endif
+  endfor
+
+  assign add_label = 'products.product.add_to_cart' | t
+  if template contains 'preorder' or template contains 'pre-order' or product.tags contains 'pre-order' or product.tags contains 'Pre-order' or product.tags contains 'preorder' or product.tags contains 'Preorder'
+    assign add_label = 'products.product.pre_order' | t
+  endif
+
+  assign current_variant = product.selected_or_first_available_variant
+-%}
+
+<sticky-atc-bar
+  class="sticky-atc-bar sticky-atc-bar--border-{{ section.settings.sticky_buttons_border }}"
+  data-section="{{ section.id }}"
+  data-product-form-id="{{ product_form_id }}"
+  hidden
+>
+  <div class="sticky-atc-bar__inner">
+    {%- if size_option -%}
+      <div class="sticky-atc-bar__variant">
+        <label class="sticky-atc-bar__label visually-hidden" for="StickyAtcSize-{{ section.id }}">
+          {{ size_option.name }}
+        </label>
+        <div class="select sticky-atc-bar__select">
+          <select
+            id="StickyAtcSize-{{ section.id }}"
+            class="select__select"
+            data-sticky-atc-option="{{ size_option.name | escape }}"
+            data-sticky-atc-position="{{ size_option.position }}"
+          >
+            {%- for value in size_option.values -%}
+              {%- assign option_index = size_option.position | minus: 1 -%}
+              {%- assign matched_variant = nil -%}
+              {%- for v in product.variants -%}
+                {%- if v.options[option_index] == value -%}
+                  {%- assign matched_variant = v -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              <option
+                value="{{ value | escape }}"
+                {% if value == current_variant.options[option_index] %}selected="selected"{% endif %}
+                {% if matched_variant and matched_variant.available == false %}disabled{% endif %}
+              >
+                {{ value }}{% if matched_variant and matched_variant.available == false %} — {{ 'products.product.sold_out' | t }}{% endif %}
+              </option>
+            {%- endfor -%}
+          </select>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <button
+      type="submit"
+      form="{{ product_form_id }}"
+      class="sticky-atc-bar__submit button button--full-width button--primary"
+      data-sticky-atc-submit
+      {% if current_variant.available == false or current_variant == null %}disabled{% endif %}
+    >
+      <span data-sticky-atc-label>
+        {%- if current_variant == null -%}
+          {{ 'products.product.unavailable' | t }}
+        {%- elsif current_variant.available == false -%}
+          {{ 'products.product.sold_out' | t }}
+        {%- else -%}
+          {{ add_label }}
+        {%- endif -%}
+      </span>
+    </button>
+  </div>
+</sticky-atc-bar>
+
+<script src="{{ 'sticky-atc-bar.js' | asset_url }}" defer="defer"></script>
