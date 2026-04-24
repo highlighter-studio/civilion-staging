@@ -9,6 +9,72 @@
  */
 {
   "sections": {
+    "video_banner_RNPBpr": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_47eG3F": {
+          "type": "heading",
+          "settings": {
+            "heading": "The High Art of Recreation",
+            "heading_size": "h1",
+            "txt_alignment": "inherit"
+          }
+        },
+        "text_TtAECr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Talk about your brand, product or content</p>",
+            "text_size": "text-std"
+          }
+        },
+        "buttons_LRMKb7": {
+          "type": "buttons",
+          "settings": {
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_color_scheme": "white",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "btn_one_show": true,
+            "btn_one_txt": "Button text",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_47eG3F",
+        "text_TtAECr",
+        "buttons_LRMKb7"
+      ],
+      "name": "t:sections.video-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-fullscreen",
+        "overlay_level": 0,
+        "video_size": "100",
+        "video_position": "center",
+        "video_margin_mobile": 0,
+        "video_margin_desktop": 0,
+        "enable_playback_pause": false,
+        "enable_audio": false,
+        "txt_position": "middle",
+        "txt_alignment": "center",
+        "content_width": 100,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": false,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "#000000"
+      }
+    },
     "image_banner_ijB3B4": {
       "type": "image-banner",
       "blocks": {
@@ -140,6 +206,7 @@
     }
   },
   "order": [
+    "video_banner_RNPBpr",
     "image_banner_ijB3B4",
     "rich_text_TagPrr"
   ]
