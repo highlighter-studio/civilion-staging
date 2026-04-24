@@ -128,6 +128,27 @@
     "section_media_collage_wfwYbQ": {
       "type": "section-media-collage",
       "blocks": {
+        "overlay_video_JcAx7e": {
+          "type": "overlay_video",
+          "settings": {
+            "image": "shopify://shop_images/BOH_0787.jpg",
+            "hover_video": "shopify://files/videos/IMG_0866.mov",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
+          }
+        },
         "image_37aFRR": {
           "type": "image",
           "settings": {
@@ -170,6 +191,7 @@
         }
       },
       "block_order": [
+        "overlay_video_JcAx7e",
         "image_37aFRR",
         "image_CyMVEn"
       ],
