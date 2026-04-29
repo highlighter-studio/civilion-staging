@@ -124,8 +124,9 @@ if (!customElements.get('product-info')) {
             callback(html);
           })
           .then(() => {
-            // set focus to last clicked option value
-            document.querySelector(`#${targetId}`)?.focus();
+            // set focus to last clicked option value without scrolling — keeps the
+            // sticky ATC pills from yanking the viewport up to the main variant picker
+            document.querySelector(`#${targetId}`)?.focus({ preventScroll: true });
           })
           .catch((error) => {
             if (error.name === 'AbortError') {
