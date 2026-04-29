@@ -106,50 +106,74 @@
         "border_color": "dark"
       }
     },
-    "image_with_text_Nx8tDT": {
-      "type": "image-with-text",
+    "collection_cards_4GqDfQ": {
+      "type": "collection-cards",
       "blocks": {
-        "heading_LEkaqc": {
-          "type": "heading",
+        "featured_collection_DgcGrt": {
+          "type": "featured_collection",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h2"
+            "collection": "monaco",
+            "description": "",
+            "button_label": "Shop Now"
           }
         },
-        "text_7qLdmD": {
-          "type": "text",
+        "featured_collection_HQCPQD": {
+          "type": "featured_collection",
           "settings": {
-            "description": "<p>Pair text with an image to focus on your chosen product, collection, or brand story.</p>",
-            "text_size": "std"
+            "collection": "",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        },
+        "featured_collection_ydQxtJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "description": "",
+            "button_label": "Shop Now"
           }
         }
       },
       "block_order": [
-        "heading_LEkaqc",
-        "text_7qLdmD"
+        "featured_collection_DgcGrt",
+        "featured_collection_HQCPQD",
+        "featured_collection_ydQxtJ"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.collection-cards.presets.name",
       "settings": {
-        "section_size": "flexible",
+        "section_layout": "grid",
+        "arrow_style": "solid",
+        "grid_layout_mobile": "2",
+        "grid_layout_tablet": 3,
+        "grid_layout_desktop": 3,
+        "grid_spacing_vertical": 20,
+        "grid_spacing_horizontal": "default",
         "content_width": "page-width",
-        "image_alignment": "left",
-        "dt_image_width": 50,
-        "card_spacing": 20,
-        "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
-        "image_ratio": "square",
-        "secondary_image_scale": "small",
-        "txt_alignment": "left",
-        "txt_vertical_alignment": "middle",
-        "txt_padding_top_mobile": 20,
-        "txt_padding_bottom_mobile": 20,
-        "txt_vertical_padding": 0,
-        "text_width": "full",
-        "text_horizontal_position": "center",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "card_layout": "stacked",
+        "card_ratio": "square",
+        "card_heading_visibility": "normal",
+        "card_heading_position": "center",
+        "card_heading_size": "normal",
+        "media_radius_top_only": false,
+        "show_card_buttons": false,
+        "cards_button_position": "inline",
+        "cards_button_style": "button--solid",
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "top_padding": 80,
-        "bottom_padding": 80,
-        "border_vertical": false,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -162,8 +186,7 @@
         "featured_collection_TUtpAm": {
           "type": "featured_collection",
           "settings": {
-            "collection": "monaco",
-            "image": "shopify://shop_images/Trainer-Navy-Pair.png"
+            "collection": "monaco"
           }
         },
         "featured_collection_Md3N3F": {
@@ -198,7 +221,7 @@
         "heading": "Collections",
         "heading_size": "h2",
         "sub_heading": "",
-        "link_style": "text",
+        "link_style": "pill",
         "list_separator": "none",
         "list_font_size": "text-normal",
         "section_layout": "horizontal",
@@ -207,7 +230,7 @@
         "list_width": "100",
         "list_borders": false,
         "images_enable": true,
-        "rollover_image_position": "inline",
+        "rollover_image_position": "inline-hover-justified",
         "show_first_image": true,
         "show_first_image_mobile": true,
         "mobile_image_position": "last",
@@ -235,7 +258,7 @@
     "main",
     "image_banner_NdECBU",
     "rich_text_yLMGYp",
-    "image_with_text_Nx8tDT",
+    "collection_cards_4GqDfQ",
     "collection_list_KBVBGc"
   ]
 }
