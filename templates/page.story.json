@@ -75,10 +75,20 @@
             "heading_size": "h2",
             "alignment": "left"
           }
+        },
+        "text_gbJCYU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Civilion was born from a simple observation: the world had comfort, and the world had luxury — but nobody had married them at this level. We didn't set out to improve injection-molded footwear. We set out to reinvent what it could mean. Sculptural. Architectural. </p><p>Designed with the conviction that what you stand in should reflect how you move through the world — from the fairway to the terrace, the marina to the city. <strong>This is The High Art of Recreation.</strong></p>",
+            "text_size": "text-large",
+            "alignment": "left",
+            "text_indent": "noindent"
+          }
         }
       },
       "block_order": [
-        "heading_R6AjRT"
+        "heading_R6AjRT",
+        "text_gbJCYU"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
