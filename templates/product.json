@@ -51,6 +51,15 @@
             "show_shoppay_banner": false
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+            "display_type": "normal",
+            "description_drawer_link_style": "underline",
+            "accordion_open_default": false,
+            "text_indent": false
+          }
+        },
         "gender_toggle_qfHfxC": {
           "type": "gender_toggle",
           "settings": {}
@@ -135,15 +144,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-            "display_type": "normal",
-            "description_drawer_link_style": "underline",
-            "accordion_open_default": false,
-            "text_indent": false
-          }
-        },
         "icon_grid_6dazna": {
           "type": "icon_grid",
           "disabled": true,
@@ -206,6 +206,7 @@
         "text_qQAkxj",
         "title",
         "price",
+        "description",
         "gender_toggle_qfHfxC",
         "d397b53e-d0be-4717-805f-6ee8a8d247bf",
         "colorway_swatches_iLdUWU",
@@ -213,7 +214,6 @@
         "870625ea-f97e-4cab-b3b3-04010a7854a5",
         "inventory_zeVG83",
         "buy_buttons",
-        "description",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "collapsible_tab_76nFge",
