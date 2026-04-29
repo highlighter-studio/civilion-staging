@@ -105,7 +105,7 @@
             "logo_opacity": 100,
             "alignment": "left",
             "logo_padding_top": 50,
-            "logo_padding_bottom": 10,
+            "logo_padding_bottom": 15,
             "block_width": "full_width"
           }
         },
@@ -113,7 +113,7 @@
           "type": "text",
           "settings": {
             "heading": "For The Professional Leisure-ist & The High Art Of Recreation ",
-            "subtext": "<p><br/></p>",
+            "subtext": "<p><br/><br/></p>",
             "text_size": "text-xl",
             "alignment_mobile": "center",
             "alignment": "center",
