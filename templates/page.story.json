@@ -179,12 +179,61 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "rich_text_WAjJJd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_C7BYnU": {
+          "type": "heading",
+          "settings": {
+            "heading": "We didn't build Civilion for everyone. We built it for the ones who already know — that comfort isn't a compromise, that taste isn't a trend, and that the boldest move is often the quietest one.",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        },
+        "button_LerhBH": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "btn_layout": "inline",
+            "btn_color_scheme": "default",
+            "btn_one_show": true,
+            "btn_one_txt": "Step in",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_C7BYnU",
+        "button_LerhBH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 120,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
     }
   },
   "order": [
     "main",
     "image_banner_NdECBU",
     "rich_text_yLMGYp",
-    "collection_cards_4GqDfQ"
+    "collection_cards_4GqDfQ",
+    "rich_text_WAjJJd"
   ]
 }
