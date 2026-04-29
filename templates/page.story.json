@@ -37,7 +37,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "banner_size": "banner-style-fullscreen",
+        "banner_size": "banner-style-large",
         "banner_full_link": "",
         "image": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
         "primary_image_size": "dt-full-bleed",
@@ -88,8 +88,58 @@
         "bg_image_blur": 0,
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "padding_top": 80,
+        "padding_top": 120,
         "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_text_Nx8tDT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LEkaqc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h2"
+          }
+        },
+        "text_7qLdmD": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or brand story.</p>",
+            "text_size": "std"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LEkaqc",
+        "text_7qLdmD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "left",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
+        "image_ratio": "square",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "full",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "border_vertical": false,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -175,6 +225,7 @@
     "main",
     "image_banner_NdECBU",
     "rich_text_yLMGYp",
+    "image_with_text_Nx8tDT",
     "collection_list_KBVBGc"
   ]
 }
