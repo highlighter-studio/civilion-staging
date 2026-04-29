@@ -120,7 +120,7 @@
         "featured_collection_HQCPQD": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "world-cup-2026",
             "description": "",
             "button_label": "Shop Now"
           }
@@ -128,7 +128,7 @@
         "featured_collection_ydQxtJ": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
+            "collection": "oxford",
             "description": "",
             "button_label": "Shop Now"
           }
@@ -143,7 +143,7 @@
       "settings": {
         "section_layout": "grid",
         "arrow_style": "solid",
-        "grid_layout_mobile": "2",
+        "grid_layout_mobile": "1",
         "grid_layout_tablet": 3,
         "grid_layout_desktop": 3,
         "grid_spacing_vertical": 20,
@@ -161,11 +161,11 @@
         "btn_color_scheme": "default",
         "btn_position_mobile": "bottom",
         "btn_position_desktop": "bottom",
-        "card_layout": "stacked",
+        "card_layout": "overlay",
         "card_ratio": "square",
-        "card_heading_visibility": "normal",
+        "card_heading_visibility": "rollover",
         "card_heading_position": "center",
-        "card_heading_size": "normal",
+        "card_heading_size": "h2",
         "media_radius_top_only": false,
         "show_card_buttons": false,
         "cards_button_position": "inline",
