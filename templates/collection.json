@@ -25,7 +25,7 @@
         "description_size": "text-body",
         "text_indent": "none",
         "description_padding": 40,
-        "cards_img_ratio": "portrait",
+        "cards_img_ratio": "square",
         "cards_img_position": "left",
         "image_padding": "page_margin",
         "grid_spacing": "none",
