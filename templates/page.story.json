@@ -65,6 +65,37 @@
         "overlay_level": 0
       }
     },
+    "rich_text_yLMGYp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_R6AjRT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_R6AjRT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "collection_list_KBVBGc": {
       "type": "collection-list",
       "blocks": {
@@ -138,43 +169,12 @@
         "border_width": "normal",
         "border_color": "dark"
       }
-    },
-    "rich_text_yLMGYp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_R6AjRT": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
-            "heading_size": "h2",
-            "alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "heading_R6AjRT"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "content_width": "page-width-medium",
-        "content_horizontal_position": "center",
-        "bg_image_darken": 0,
-        "bg_image_blur": 0,
-        "text_color": "fg-body",
-        "bg_color": "bg-body",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "top_border": false,
-        "bottom_border": false,
-        "border_width": "normal",
-        "border_color": "dark"
-      }
     }
   },
   "order": [
     "main",
     "image_banner_NdECBU",
-    "collection_list_KBVBGc",
-    "rich_text_yLMGYp"
+    "rich_text_yLMGYp",
+    "collection_list_KBVBGc"
   ]
 }
