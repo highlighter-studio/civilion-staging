@@ -1765,19 +1765,3 @@ model-viewer {
   border-left: 1px solid rgba(var(--color-foreground-rgb),0.9);
 }
 */
-/* Mixed gallery: hero + zero-gap 2-column grid (desktop only) */
-@media only screen and (min-width: 950px) {
-  .product-media--mobile-slider--desktop-mixed {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-
-  .product-media--mobile-slider--desktop-mixed > .product-media-image:first-child {
-    grid-column: 1 / -1;
-  }
-
-  .product-media--mobile-slider--desktop-mixed > .product-media-image:last-child:nth-child(even) {
-    grid-column: 1 / -1;
-  }
-}
