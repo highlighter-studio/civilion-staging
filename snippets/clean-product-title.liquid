@@ -1,0 +1,6 @@
+{%- comment -%}
+  Strips "Men's" and "Women's" from a product title for customer-facing display.
+  Cart templates intentionally do not render through this snippet.
+  Usage: {% render 'clean-product-title', title: product.title %}
+{%- endcomment -%}
+{{- title | replace: "Men's ", "" | replace: " Men's", "" | replace: "Men's", "" | replace: "Women's ", "" | replace: " Women's", "" | replace: "Women's", "" | strip | escape -}}
