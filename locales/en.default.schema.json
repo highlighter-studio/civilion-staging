@@ -3248,13 +3248,13 @@
           }
         },
         "cart_bubble_color_text": {
-          "label": "Bubble text color",
+          "label": "Bubble text color"
         },
         "cart_bubble_color_background": {
-          "label": "Bubble background color",
+          "label": "Bubble background color"
         },
         "cart_bubble_font_size": {
-          "label": "Quantity font size",
+          "label": "Quantity font size"
         },
         "cart_ui_quantity": {
           "label": "Quantity style",
@@ -4805,6 +4805,9 @@
           },
           "options__3": {
             "label": "Carousel"
+          },
+          "options__4": {
+            "label": "Mixed gallery"
           }
         },
         "media_videos_autoplay": {
