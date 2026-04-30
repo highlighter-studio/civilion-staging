@@ -236,7 +236,7 @@
         "media_section_width": "wide",
         "mobile_media_nav": "track",
         "mobile_media_nav_position": "within-media",
-        "gallery_layout": "grid",
+        "gallery_layout": "mixed",
         "desktop_media_nav": "thumbnails",
         "desktop_media_thumbnail_size": "normal",
         "desktop_media_thumbnail_position": "left",
