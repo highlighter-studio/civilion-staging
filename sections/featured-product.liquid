@@ -234,7 +234,7 @@
   
 <h2 class="{{ block.settings.heading_size | escape }}" {{ block.shopify_attributes }}>
 {% if product.title != blank %}
-  {{ product.title }}
+  {% render 'clean-product-title', title: product.title %}
   {% else %}
   {{ 'onboarding.product_title' | t }}
 {% endif %}

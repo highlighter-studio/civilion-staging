@@ -316,7 +316,7 @@
                   </li>
                 {% endfor %}
                   <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="product-breadcrumb--product-title" aria-current="page"><span itemprop="name">{{ product.title }}</span></span>
+                    <span class="product-breadcrumb--product-title" aria-current="page"><meta itemprop="name" content="{{ product.title | escape }}">{% render 'clean-product-title', title: product.title %}</span>
                     <meta itemprop="item" content="{{ canonical_url }}">
                     <meta itemprop="position" content="{{ position_counter | plus: 1 }}" />
                   </li>
@@ -554,10 +554,10 @@
             
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1 class="{{ block.settings.title_size }}">{{ product.title }}</h1>
+                <h1 class="{{ block.settings.title_size }}">{% render 'clean-product-title', title: product.title %}</h1>
                   <a href="{{ product.url }}" class="product__title pt__quick_view">
                     <h2 class="{{ block.settings.title_size }}">
-                      {{ product.title | escape }}
+                      {% render 'clean-product-title', title: product.title %}
                     </h2>
                   </a>
               </div>
@@ -1498,7 +1498,7 @@
   <div class="product-description-drawer--contents{% if settings.drawer_margin > 0 %} drawer-with-margin{% endif %}">
     <button class="product-description-drawer--close">{% render 'icon-close' %}</button>
     <div class="product-description-drawer--header">
-    <div class="product-description-drawer--title dialog-title">{{ product.title }}</div>   
+    <div class="product-description-drawer--title dialog-title">{% render 'clean-product-title', title: product.title %}</div>
     </div>
     <div class="product-description-drawer--contents-text">
     {% if product.description contains specifications_split_word %}
