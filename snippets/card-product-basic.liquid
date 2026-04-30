@@ -46,14 +46,14 @@
 {% if show_vendor %}
 <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
 {% if show_vendor_inline %}
-<h3 class="card-product-title-h3 card-title-font-family-{{ settings.card_title_font }}">{% if placeholder %}<span class="vendor--style-{{ settings.card_vendor_text_style }}">{{ 'products.product.vendor' | t }}</span>{% endif %}<span class="vendor--style-{{ settings.card_vendor_text_style }}">{{ card_product.vendor }}</span> {{ card_product.title | escape }}{% if placeholder %}{{ 'onboarding.product_title' | t }}{% endif %}</h3>
+<h3 class="card-product-title-h3 card-title-font-family-{{ settings.card_title_font }}">{% if placeholder %}<span class="vendor--style-{{ settings.card_vendor_text_style }}">{{ 'products.product.vendor' | t }}</span>{% endif %}<span class="vendor--style-{{ settings.card_vendor_text_style }}">{{ card_product.vendor }}</span> {% render 'clean-product-title', title: card_product.title %}{% if placeholder %}{{ 'onboarding.product_title' | t }}{% endif %}</h3>
 {% else %}
 <div class="card-product-vendor vendor--style-{{ settings.card_vendor_text_style }}">{{ card_product.vendor }}{% if placeholder %}{{ 'products.product.vendor' | t }}{% endif %}</div>
-<h3 class="card-product-title-h3 card-title-font-family-{{ settings.card_title_font }}">{{ card_product.title | escape }}{% if placeholder %}{{ 'onboarding.product_title' | t }}{% endif %}</h3>
+<h3 class="card-product-title-h3 card-title-font-family-{{ settings.card_title_font }}">{% render 'clean-product-title', title: card_product.title %}{% if placeholder %}{{ 'onboarding.product_title' | t }}{% endif %}</h3>
 {% endif %}
 {% else %}
 <h3 class="card-product-title-h3 card-title-font-family-{{ settings.card_title_font }}">
-  {{ card_product.title | escape }}{% if placeholder %}{{ 'onboarding.product_title' | t }}{% endif %}
+  {% render 'clean-product-title', title: card_product.title %}{% if placeholder %}{{ 'onboarding.product_title' | t }}{% endif %}
 </h3>
 {% endif %}
 {% if settings.card_show_product_type %}
