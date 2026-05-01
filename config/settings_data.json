@@ -91,7 +91,7 @@
     "card_title_font_size": "medium",
     "card_show_product_type": true,
     "card_text_alignment": "center",
-    "card_text_top_padding": 15,
+    "card_text_top_padding": 20,
     "card_text_btm_padding": 20,
     "card_text_padding": 0,
     "card_text_border": false,
