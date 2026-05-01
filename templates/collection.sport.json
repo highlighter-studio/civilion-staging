@@ -15,15 +15,15 @@
         "hero_heading": {
           "type": "heading",
           "settings": {
-            "heading": "Sport",
-            "heading_size": "hxxl",
+            "heading": "A Better Class of Sport",
+            "heading_size": "h0",
             "txt_alignment": "inherit"
           }
         },
         "hero_text": {
           "type": "text",
           "settings": {
-            "text": "<p>Performance luxury, engineered for movement.</p>",
+            "text": "<p>For the match, the clubhouse, and everything after.</p>",
             "text_size": "text-large"
           }
         }
@@ -33,7 +33,8 @@
         "hero_text"
       ],
       "settings": {
-        "banner_size": "banner-style-medium",
+        "banner_size": "banner-style-large",
+        "video_url": "shopify://files/videos/Man playing pétanque in a French Riviera summer.mp4",
         "video_poster": "shopify://shop_images/4399_wide_copy.jpg",
         "overlay_level": 5,
         "video_size": "100",
@@ -69,7 +70,7 @@
         "manifesto_text": {
           "type": "text",
           "settings": {
-            "text": "<p>From the court to the course, Civilion redefines what performance footwear feels like. Injection-moulded comfort meets luxury design — engineered for athletes who never compromise on style.</p>",
+            "text": "<p>Less about breaking records. More about keeping standards.<br/>Designed for courts, courses, and the rituals around them.</p>",
             "text_size": "text-large",
             "alignment": "center",
             "text_indent": "noindent"
@@ -190,7 +191,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "gallery_img_2": {
@@ -202,7 +211,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_3GiQnq": {
@@ -214,7 +231,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         }
       },
