@@ -29,7 +29,7 @@
         "cards_img_position": "left",
         "image_padding": "page_margin",
         "grid_spacing": "none",
-        "txt_col": "#ffffff",
+        "txt_col": "#333333",
         "bg_col": "#fafafa",
         "top_padding": 0,
         "bottom_padding": 0
