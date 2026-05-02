@@ -12,7 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "banner_layout": "stacked-image-first",
+        "banner_layout": "split_banner",
         "banner_height_mobile": "default",
         "banner_height": "slim",
         "stacked_img_ratio": "landscape_36x9",
@@ -30,7 +30,7 @@
         "image_padding": "page_margin",
         "grid_spacing": "none",
         "txt_col": "#ffffff",
-        "bg_col": "#000000",
+        "bg_col": "#fafafa",
         "top_padding": 0,
         "bottom_padding": 0
       }
