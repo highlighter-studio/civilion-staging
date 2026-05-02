@@ -52,27 +52,27 @@
       "blocks": {
         "image_card_CptkM6": {
           "type": "image_card",
-          "disabled": true,
           "settings": {
-            "grid_position": 1,
+            "grid_position": 5,
             "card_ratio": "square",
             "grid_colspan": "auto",
             "card_ratio_desktop_fullwidth": "landscape-21x9",
             "grid_rowspan": "1",
             "match_media_height": false,
-            "caption": "",
-            "heading": "",
+            "image": "shopify://shop_images/STUDIO_MONACO_LUNAR_9765.webp",
+            "caption": "Soft where it matters. Structured where it counts.",
+            "heading": "Ease, without letting go.",
             "heading_size": "h3",
             "description": "",
-            "alignment": "center",
+            "alignment": "left",
             "text_position": "center",
             "text_vertical_spacing": 10,
-            "text_padding": 10,
+            "text_padding": 20,
             "url": "",
             "button_show": false,
             "button_label": "",
             "btn_style": "solid",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "bg_color": "#000000"
           }
         }
