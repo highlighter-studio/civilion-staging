@@ -216,6 +216,72 @@
         "padding_bottom": 80
       }
     },
+    "collection_list_3jbrVL": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_UqGnVU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "monaco"
+          }
+        },
+        "featured_collection_xgbcXF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "oxford"
+          }
+        },
+        "featured_collection_mnCByw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chelsea"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_UqGnVU",
+        "featured_collection_xgbcXF",
+        "featured_collection_mnCByw"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "header_alignment": "left",
+        "section_label": "",
+        "heading": "Collections",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "link_style": "text",
+        "list_separator": "none",
+        "list_font_size": "text-normal",
+        "section_layout": "vertical",
+        "content_alignment": "left",
+        "content_width": "page-width",
+        "list_width": "100",
+        "list_borders": false,
+        "images_enable": true,
+        "rollover_image_position": "center",
+        "show_first_image": true,
+        "show_first_image_mobile": true,
+        "mobile_image_position": "last",
+        "image_ratio": "portrait",
+        "image_size": "medium",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "btn_color_scheme": "default",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "section_text_ticker_rexfmG": {
       "type": "section-text-ticker",
       "blocks": {
@@ -333,6 +399,7 @@
     "video_banner_RNPBpr",
     "rich_text_TagPrr",
     "section_media_collage_wfwYbQ",
+    "collection_list_3jbrVL",
     "section_text_ticker_rexfmG",
     "featured_collection_ABXpWC",
     "newsletter_9MfTGr"
