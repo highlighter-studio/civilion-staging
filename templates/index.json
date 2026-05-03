@@ -32,11 +32,11 @@
             "btn_one_show": true,
             "btn_one_txt": "Meet Civilion",
             "btn_one_link": "",
-            "btn_one_style": "button--solid",
+            "btn_one_style": "button--outline",
             "btn_two_show": true,
             "btn_two_txt": "Shop New",
             "btn_two_link": "",
-            "btn_two_style": "button--solid"
+            "btn_two_style": "button--outline"
           }
         }
       },
