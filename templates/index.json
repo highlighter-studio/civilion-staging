@@ -82,8 +82,8 @@
         "text_FCNxYR": {
           "type": "text",
           "settings": {
-            "text": "<h2>Recreation isn't rest. It's how you move through the world — with intention, with craft, with style.</h2>",
-            "text_size": "text-xl",
+            "text": "<h2>Unrushed. Unmistakable.</h2>",
+            "text_size": "text-xxl",
             "alignment": "center",
             "text_indent": "noindent"
           }
@@ -184,7 +184,7 @@
             "overlay_text": "",
             "overlay_button_label": "Shop",
             "overlay_button_url": "shopify://collections/leisure-featured",
-            "overlay_button_style": "button--solid",
+            "overlay_button_style": "button--outline",
             "overlay_position": "bottom-left",
             "overlay_scrim": "light",
             "overlay_hover_only": true
@@ -207,7 +207,7 @@
         "content_layout": "grid",
         "arrow_style": "solid-inverted",
         "content_width": "page-width",
-        "grid_spacing": "default-grid",
+        "grid_spacing": "no-spacing",
         "grid_columns_tablet": 2,
         "grid_columns_desktop": 2,
         "text_color": "fg-body",
@@ -222,13 +222,15 @@
         "featured_collection_UqGnVU": {
           "type": "featured_collection",
           "settings": {
-            "collection": "monaco"
+            "collection": "monaco",
+            "image": "shopify://shop_images/CVM-1000-WhiteLie_0a83cdf4-f195-47ca-998a-ea77be991ec9.webp"
           }
         },
         "featured_collection_xgbcXF": {
           "type": "featured_collection",
           "settings": {
-            "collection": "oxford"
+            "collection": "oxford",
+            "image": "shopify://shop_images/CVOL-2008-TuxWhite_0f575fb9-900a-46ad-834d-c09556cbbb16.webp"
           }
         },
         "featured_collection_mnCByw": {
@@ -251,8 +253,8 @@
         "heading_size": "h2",
         "sub_heading": "",
         "link_style": "text",
-        "list_separator": "none",
-        "list_font_size": "text-normal",
+        "list_separator": "dash",
+        "list_font_size": "text-xxl",
         "section_layout": "vertical",
         "content_alignment": "left",
         "content_width": "page-width",
@@ -263,8 +265,8 @@
         "show_first_image": true,
         "show_first_image_mobile": true,
         "mobile_image_position": "last",
-        "image_ratio": "portrait",
-        "image_size": "medium",
+        "image_ratio": "square",
+        "image_size": "large",
         "btn_enable": false,
         "btn_txt": "",
         "btn_url": "",
@@ -273,10 +275,10 @@
         "btn_position_desktop": "bottom",
         "btn_color_scheme": "default",
         "text_color": "fg-body",
-        "bg_color": "bg-body",
+        "bg_color": "bg-01",
         "padding_top": 80,
         "padding_bottom": 80,
-        "top_border": false,
+        "top_border": true,
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
