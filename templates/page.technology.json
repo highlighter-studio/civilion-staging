@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "page-width-medium",
+        "hdr_alignment": "center",
+        "heading_hide": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_banner_NdECBU": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_7PJGiq": {
+          "type": "heading",
+          "settings": {
+            "heading": "In a field of sheep, the bold prefer another path.",
+            "heading_size": "h0",
+            "txt_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7PJGiq"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-large",
+        "banner_full_link": "",
+        "image": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
+        "primary_image_size": "dt-full-bleed",
+        "image_padding": 0,
+        "main_image_animation": "none",
+        "image_blur": 0,
+        "primary_image_mobile_show": false,
+        "image_secondary": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+        "secondary_image_size": "dt-half-center",
+        "secondary_image_padding": 0,
+        "secondary_image_animation": "none",
+        "secondary_image_blur": 0,
+        "secondary_image_mobile_show": true,
+        "txt_alignment": "center",
+        "txt_position": "middle_left",
+        "content_width": 50,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": true,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "rgba(0,0,0,0)",
+        "overlay_level": 0
+      }
+    },
+    "rich_text_yLMGYp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_R6AjRT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        },
+        "text_gbJCYU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Civilion was born from a simple observation: the world had comfort, and the world had luxury — but nobody had married them at this level. We didn't set out to improve injection-molded footwear. We set out to reinvent what it could mean. Sculptural. Architectural. </p><p>Designed with the conviction that what you stand in should reflect how you move through the world — from the fairway to the terrace, the marina to the city. <strong>This is The High Art of Recreation.</strong></p>",
+            "text_size": "text-large",
+            "alignment": "left",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "heading_R6AjRT",
+        "text_gbJCYU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 120,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collection_cards_4GqDfQ": {
+      "type": "collection-cards",
+      "blocks": {
+        "featured_collection_DgcGrt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "monaco",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        },
+        "featured_collection_HQCPQD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "world-cup-2026",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        },
+        "featured_collection_ydQxtJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "oxford",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_DgcGrt",
+        "featured_collection_HQCPQD",
+        "featured_collection_ydQxtJ"
+      ],
+      "name": "t:sections.collection-cards.presets.name",
+      "settings": {
+        "section_layout": "grid",
+        "arrow_style": "solid",
+        "grid_layout_mobile": "1",
+        "grid_layout_tablet": 3,
+        "grid_layout_desktop": 3,
+        "grid_spacing_vertical": 20,
+        "grid_spacing_horizontal": "default",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "card_layout": "overlay",
+        "card_ratio": "square",
+        "card_heading_visibility": "rollover",
+        "card_heading_position": "center",
+        "card_heading_size": "h2",
+        "media_radius_top_only": false,
+        "show_card_buttons": false,
+        "cards_button_position": "inline",
+        "cards_button_style": "button--solid",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_WAjJJd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_C7BYnU": {
+          "type": "heading",
+          "settings": {
+            "heading": "We didn't build Civilion for everyone. We built it for the ones who already know — that comfort isn't a compromise, that taste isn't a trend, and that the boldest move is often the quietest one.",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        },
+        "button_LerhBH": {
+          "type": "button",
+          "settings": {
+            "alignment": "left",
+            "btn_layout": "inline",
+            "btn_color_scheme": "default",
+            "btn_one_show": true,
+            "btn_one_txt": "Step in",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_C7BYnU",
+        "button_LerhBH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 120,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_NdECBU",
+    "rich_text_yLMGYp",
+    "collection_cards_4GqDfQ",
+    "rich_text_WAjJJd"
+  ]
+}
