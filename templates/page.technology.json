@@ -59,7 +59,7 @@
         "secondary_image_blur": 0,
         "secondary_image_mobile_show": true,
         "txt_alignment": "left",
-        "txt_position": "middle_left",
+        "txt_position": "bottom_left",
         "content_width": 50,
         "text_vertical_spacing": 10,
         "top_padding": 0,
@@ -78,7 +78,7 @@
         "heading_R6AjRT": {
           "type": "heading",
           "settings": {
-            "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
+            "heading": "One Pair, Fully Considered",
             "heading_size": "h2",
             "alignment": "left"
           }
@@ -86,8 +86,8 @@
         "text_gbJCYU": {
           "type": "text",
           "settings": {
-            "text": "<p>Civilion was born from a simple observation: the world had comfort, and the world had luxury — but nobody had married them at this level. We didn't set out to improve injection-molded footwear. We set out to reinvent what it could mean. Sculptural. Architectural. </p><p>Designed with the conviction that what you stand in should reflect how you move through the world — from the fairway to the terrace, the marina to the city. <strong>This is The High Art of Recreation.</strong></p>",
-            "text_size": "text-large",
+            "text": "<p>We didn’t set out to make something casual. We set out to make something capable. Civilion uses a performance-tuned EVA build to deliver lightweight structure, airflow, cushioning, and reliable traction in one considered form. It’s designed to handle more than it suggests—quietly doing the work, so you don’t have to think about it.</p>",
+            "text_size": "text-std",
             "alignment": "left",
             "text_indent": "noindent"
           }
@@ -107,6 +107,53 @@
         "bg_color": "bg-body",
         "padding_top": 120,
         "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_hotspots_iGQgEQ": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "hotspot_twYHLG": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "pos_x": 45,
+            "pos_y": 30
+          }
+        },
+        "hotspot_XhhXBw": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "pos_x": 50,
+            "pos_y": 50
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_twYHLG",
+        "hotspot_XhhXBw"
+      ],
+      "name": "t:sections.image_with_hotspots.presets.name",
+      "settings": {
+        "section_label": "Lightweight, stable, and responsive underfoot. Designed for movement that doesn’t need explaining.",
+        "heading": "Built to do more.",
+        "subheading": "",
+        "content_alignment": "center",
+        "image": "shopify://shop_images/WEB_TECH_MONACO.webp",
+        "image_ratio": "landscape-16x9",
+        "content_width": "page-width-full",
+        "hotspot_style": "minimal",
+        "hotspot_color": "light",
+        "hotspot_desktop_interaction": "hover",
+        "hotspot_animate": true,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -240,6 +287,7 @@
     "main",
     "image_banner_NdECBU",
     "rich_text_yLMGYp",
+    "image_with_hotspots_iGQgEQ",
     "collection_cards_4GqDfQ",
     "rich_text_WAjJJd"
   ]
