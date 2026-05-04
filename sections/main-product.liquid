@@ -735,15 +735,18 @@
               {% endif %}
               
               {%- when 'inventory' -%}
+              {%- if product.tags contains 'pre-listing' -%}
+                {%- comment -%} Hidden on pre-listing products. {%- endcomment -%}
+              {%- else -%}
 
-              <div class="product-inventory-container{% if block.settings.inventory-color-coded %} inventory-color-coded{% endif %} inventory-display-type-{{ block.settings.inventory_display }}" {{ block.shopify_attributes }}>            
+              <div class="product-inventory-container{% if block.settings.inventory-color-coded %} inventory-color-coded{% endif %} inventory-display-type-{{ block.settings.inventory_display }}" {{ block.shopify_attributes }}>
               <p class="product__inventory text-small no-js-hidden{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                               {{ block.shopify_attributes }}
                               id="Inventory-{{ section.id }}"
                               role="status"
                             >
               {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
-              
+
               {% if block.settings.inventory_display == 'quantity' %}
               <span class="inventory-display--quantity{% if product.selected_or_first_available_variant.inventory_quantity == 0 %} inventory-display--quantity-zero{% endif %}{% if product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold %} inventory-display--quantity-low{% endif %}"><span class="inventory-number">{{ product.selected_or_first_available_variant.inventory_quantity }}</span>&nbsp;{{- 'products.product.inventory_in_stock' | t -}}</span>
               {% endif %}
@@ -757,10 +760,10 @@
               {%- if product.selected_or_first_available_variant.inventory_quantity == 0 and product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
               <span class="inventory-display--message inventory-display--quantity-normal{% if block.settings.hide_if_in_stock %} inventory--hide-in-stock{% endif %}">{{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}</span>
               {%- endif -%}
-              
+
               {%- if product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold and block.settings.inventory_threshold > 0 -%}
               <span class="inventory-display--message inventory-display--quantity-low">{{- 'products.product.inventory_low_stock' | t -}}</span>
-              {%- endif -%}     
+              {%- endif -%}
 
               {%- if product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_threshold -%}
               <span class="inventory-display--message inventory-display--quantity-normal{% if block.settings.hide_if_in_stock %} inventory--hide-in-stock{% endif %}">{{- 'products.product.inventory_in_stock' | t -}}</span>
@@ -772,6 +775,7 @@
               </p>
               </div>
 
+              {%- endif -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="product-block-rating-wrapper">
@@ -1066,6 +1070,9 @@
             
 
               {%- when 'quantity_selector' -%}
+              {%- if product.tags contains 'pre-listing' -%}
+                {%- comment -%} Hidden on pre-listing products. {%- endcomment -%}
+              {%- else -%}
               <div
                 id="Quantity-Form-{{ section.id }}"
                 class="product-form__input product-form__quantity"
@@ -1292,7 +1299,9 @@
               </div>
               </div>
 
-            
+              {%- endif -%}
+
+
             {%- when 'popup' -%}
             <style>
               #ProductPopup-{{ block.id }} {
