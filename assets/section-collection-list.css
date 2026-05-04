@@ -243,6 +243,43 @@
   height: 90px;
 }
 
+.collection-typographic-card-inline-image.tci-image-ratio-landscape-16x9 {
+  width: 96px;
+  height: 54px;
+}
+
+.collection-typographic-card-inline-image.tci-image-ratio-landscape-16x9.tci-image-size-large {
+  width: 107px;
+  height: 60px;
+}
+
+.collection-typographic-card-inline-image.tci-image-ratio-landscape-16x9.tci-image-size-small {
+  width: 80px;
+  height: 45px;
+}
+
+.collection-typographic-card-inline-image.tci-image-ratio-adapt {
+  width: auto;
+  height: 80px;
+}
+
+.collection-typographic-card-inline-image.tci-image-ratio-adapt.tci-image-size-large {
+  width: auto;
+  height: 100px;
+}
+
+.collection-typographic-card-inline-image.tci-image-ratio-adapt.tci-image-size-small {
+  width: auto;
+  height: 60px;
+}
+
+.collection-typographic-card-inline-image.tci-image-ratio-adapt img {
+  position: static;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
 @media only screen and (min-width: 750px) {
   .collection-typographic-card-inline-image.tci-image-ratio-landscape.tci-image-size-large {
     width: 120px;
@@ -259,7 +296,14 @@
   .collection-typographic-card-inline-image.tci-image-ratio-portrait-4x6.tci-image-size-large {
     width: 120px;
     height: 180px;
-  }  
+  }
+  .collection-typographic-card-inline-image.tci-image-ratio-landscape-16x9.tci-image-size-large {
+    width: 144px;
+    height: 81px;
+  }
+  .collection-typographic-card-inline-image.tci-image-ratio-adapt.tci-image-size-large {
+    height: 130px;
+  }
 }
 
 
@@ -352,6 +396,22 @@
 .ctc-mobile-image-ratio-landscape .ctc-mobile-image {
   height: 0;
   padding-bottom: 66%;
+}
+
+.ctc-mobile-image-ratio-landscape-16x9 .ctc-mobile-image {
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.ctc-mobile-image-ratio-adapt .ctc-mobile-image {
+  height: auto;
+  padding-bottom: 0;
+}
+
+.ctc-mobile-image-ratio-adapt .ctc-mobile-image img {
+  position: static;
+  width: 100%;
+  height: auto;
 }
 
 .collection-list-teaser-image {
@@ -452,64 +512,125 @@
     width: 300px;
     height: 200px;
   }
-  
+
   .ctc-image-ratio-landscape--size-medium {
     width: 460px;
     height: 305px;
   }
-  
+
   .ctc-image-ratio-landscape--size-large {
     width: 600px;
     height: 400px;
   }
-  
+
+  /* Landscape 16:9 ratio */
+  .ctc-image-ratio-landscape-16x9--size-small {
+    width: 320px;
+    height: 180px;
+  }
+
+  .ctc-image-ratio-landscape-16x9--size-medium {
+    width: 480px;
+    height: 270px;
+  }
+
+  .ctc-image-ratio-landscape-16x9--size-large {
+    width: 640px;
+    height: 360px;
+  }
+
+  /* Adapt to image */
+  .ctc-image-ratio-adapt--size-small {
+    width: 240px;
+    height: auto;
+  }
+
+  .ctc-image-ratio-adapt--size-medium {
+    width: 360px;
+    height: auto;
+  }
+
+  .ctc-image-ratio-adapt--size-large {
+    width: 480px;
+    height: auto;
+  }
+
+  .collection-typographic-card-image[class*="ctc-image-ratio-adapt--size-"] img {
+    height: auto;
+    object-fit: contain;
+  }
+
   .ctl-ul-images-ratio-square--size-small {
     min-height: 240px;
   }
-  
+
   .ctl-ul-images-ratio-landscape--size-small {
     min-height: 200px;
   }
-  
+
   .ctl-ul-images-ratio-portrait--size-small {
     min-height: 300px;
   }
-  
+
   .ctl-ul-images-ratio-portrait-4x6--size-small {
     min-height: 400px;
   }
-  
+
+  .ctl-ul-images-ratio-landscape-16x9--size-small {
+    min-height: 180px;
+  }
+
+  .ctl-ul-images-ratio-adapt--size-small {
+    min-height: 240px;
+  }
+
   .ctl-ul-images-ratio-square--size-medium {
     min-height: 300px;
   }
-  
+
   .ctl-ul-images-ratio-landscape--size-medium {
     min-height: 340px;
   }
-  
+
   .ctl-ul-images-ratio-portrait--size-medium {
     min-height: 450px;
   }
-  
+
   .ctl-ul-images-ratio-portrait-4x6--size-medium {
     min-height: 450px;
   }
-  
+
+  .ctl-ul-images-ratio-landscape-16x9--size-medium {
+    min-height: 270px;
+  }
+
+  .ctl-ul-images-ratio-adapt--size-medium {
+    min-height: 340px;
+  }
+
   .ctl-ul-images-ratio-square--size-large {
     min-height: 400px;
   }
-  
+
   .ctl-ul-images-ratio-landscape--size-large {
     min-height: 400px;
   }
-  
+
   .ctl-ul-images-ratio-portrait--size-large {
     min-height: 500px;
   }
-  
+
   .ctl-ul-images-ratio-portrait-4x6--size-large {
     min-height: 600px;
-  }  
+  }
+
+  .ctl-ul-images-ratio-landscape-16x9--size-large {
+    min-height: 360px;
+  }
+
+  .ctl-ul-images-ratio-adapt--size-large {
+    min-height: 400px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -517,7 +638,13 @@
   .ctc-image-ratio-landscape--size-medium {
     width: 510px;
     height: 340px;
-  } 
+  }
+
+  /* Landscape 16:9 ratio */
+  .ctc-image-ratio-landscape-16x9--size-medium {
+    width: 533px;
+    height: 300px;
+  }
 }
 
 .collection-typographic-list-background-image {
