@@ -5,6 +5,12 @@
  * once basic navigation is confirmed working.
  */
 (function () {
+  // This script ships inline inside the swappable <main>, so it re-executes
+  // after every ProductPageSwap. Guard the document-level listener so click
+  // handlers don't stack up across swaps.
+  if (window.__genderToggleBound) return;
+  window.__genderToggleBound = true;
+
   document.addEventListener('click', function (e) {
     const pill = e.target.closest('[data-gender-swap-url]');
     if (!pill) return;
