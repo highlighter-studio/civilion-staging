@@ -207,7 +207,7 @@
         "type": "color",
         "id": "announcement_bg_col",
         "default": "#eeeeee",
-        "label": "t:settings_schema.colors.settings.colors_announcement_background.label",
+        "label": "t:settings_schema.colors.settings.colors_announcement_background.label"
       },
       {
         "type": "color",
@@ -1848,7 +1848,7 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
         "default": 0
-      },
+      }
     ]
   },
   {
@@ -2999,4 +2999,28 @@
       }
     ]
   }
+,
+{
+  "name": "Klaviyo (Pre-Launch)",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pre-Launch Notify Form"
+    },
+    {
+      "type": "paragraph",
+      "content": "Settings for the 'Notify me when available' form shown on pre-listing products. Both values are public — safe to expose in client JS. Find your public key under Klaviyo → Account → Settings → API Keys (the 6-character Public API Key)."
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_public_key",
+      "label": "Klaviyo public API key (company ID)"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_pre_launch_list_id",
+      "label": "Pre-launch list ID"
+    }
+  ]
+}
 ]
