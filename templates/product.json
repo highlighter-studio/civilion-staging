@@ -390,6 +390,49 @@
         "border_color": "dark"
       }
     },
+    "image_with_hotspots_3zFNxb": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "info_hotspot_nNzAtg": {
+          "type": "info_hotspot",
+          "settings": {
+            "pos_x": 20,
+            "pos_y": 70,
+            "image": "shopify://shop_images/tool.png",
+            "image_ratio": "square",
+            "heading": "Test Callout Heading",
+            "description": "<p>This is a test description, something short which adds just enough context.</p>",
+            "hotspot_link": "shopify://pages/contact",
+            "hotspot_link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "info_hotspot_nNzAtg"
+      ],
+      "name": "t:sections.image_with_hotspots.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "subheading": "",
+        "content_alignment": "center",
+        "image": "{{ product.featured_image }}",
+        "image_ratio": "landscape-16x9",
+        "content_width": "page-width-full",
+        "hotspot_style": "minimal",
+        "hotspot_color": "light",
+        "hotspot_desktop_interaction": "hover",
+        "hotspot_animate": true,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "multicolumn_WwfBp7": {
       "type": "multicolumn",
       "blocks": {
@@ -515,6 +558,7 @@
     "complementary-products",
     "rich_text_XwVKQK",
     "related-products",
+    "image_with_hotspots_3zFNxb",
     "multicolumn_WwfBp7",
     "section_text_ticker_n9GRxw"
   ]
