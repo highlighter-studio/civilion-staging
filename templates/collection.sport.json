@@ -62,7 +62,7 @@
         "manifesto_caption": {
           "type": "caption",
           "settings": {
-            "caption": "The Sport Collection",
+            "caption": "",
             "alignment": "center",
             "opacity": 70
           }
@@ -71,7 +71,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Less about breaking records. More about keeping standards.<br/>Designed for courts, courses, and the rituals around them.</p>",
-            "text_size": "text-large",
+            "text_size": "text-xl",
             "alignment": "center",
             "text_indent": "noindent"
           }
@@ -108,20 +108,20 @@
             "card_ratio_desktop_fullwidth": "landscape-21x9",
             "grid_rowspan": "1",
             "match_media_height": true,
-            "image": "shopify://shop_images/cv-tennis-placeholder.jpg",
+            "image": "shopify://shop_images/STUDIO_GOLF_OXFORD_5804.webp",
             "caption": "",
             "heading": "Built for the Court",
             "heading_size": "h2",
             "description": "Lightweight injection-moulded construction meets tournament-ready grip.",
-            "alignment": "center",
-            "text_position": "center",
+            "alignment": "left",
+            "text_position": "bottom",
             "text_vertical_spacing": 10,
-            "text_padding": 10,
+            "text_padding": 20,
             "url": "",
             "button_show": false,
             "button_label": "",
             "btn_style": "solid",
-            "text_color": "#ffffff",
+            "text_color": "#000000",
             "bg_color": "#000000"
           }
         },
@@ -182,30 +182,10 @@
     "editorial-gallery": {
       "type": "section-media-collage",
       "blocks": {
-        "gallery_img_1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4399_wide_copy.jpg",
-            "image_size": "full_width",
-            "image_ratio": "landscape-16x9",
-            "image_padding_mobile": 0,
-            "image_padding": 0,
-            "image_offset_vertical": 0,
-            "image_offset_horizontal": 0,
-            "overlay_heading": "",
-            "overlay_text": "",
-            "overlay_button_label": "",
-            "overlay_button_url": "",
-            "overlay_button_style": "button--solid",
-            "overlay_position": "bottom-left",
-            "overlay_scrim": "none",
-            "overlay_hover_only": false
-          }
-        },
         "gallery_img_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image": "shopify://shop_images/WEB_BANNER_HERO_SAILING_OXFORD.webp",
             "image_size": "half_width",
             "image_ratio": "portrait",
             "image_padding_mobile": 0,
@@ -225,7 +205,7 @@
         "image_3GiQnq": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image": "shopify://shop_images/WEB_BANNER_ZOOM_SAILING_OXFORD.webp",
             "image_size": "half_width",
             "image_ratio": "portrait",
             "image_padding_mobile": 0,
@@ -244,7 +224,6 @@
         }
       },
       "block_order": [
-        "gallery_img_1",
         "gallery_img_2",
         "image_3GiQnq"
       ],

@@ -184,13 +184,21 @@
         "gallery_img_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4399_wide_copy.jpg",
+            "image": "shopify://shop_images/WEB_LEISURE_WOMEN_OXFORD.webp",
             "image_size": "full_width",
             "image_ratio": "landscape-16x9",
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "gallery_img_2": {
@@ -202,7 +210,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         },
         "image_3GiQnq": {
@@ -214,7 +230,15 @@
             "image_padding_mobile": 0,
             "image_padding": 0,
             "image_offset_vertical": 0,
-            "image_offset_horizontal": 0
+            "image_offset_horizontal": 0,
+            "overlay_heading": "",
+            "overlay_text": "",
+            "overlay_button_label": "",
+            "overlay_button_url": "",
+            "overlay_button_style": "button--solid",
+            "overlay_position": "bottom-left",
+            "overlay_scrim": "none",
+            "overlay_hover_only": false
           }
         }
       },
