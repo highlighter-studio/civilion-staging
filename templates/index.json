@@ -250,7 +250,7 @@
         "show_first_image_mobile": true,
         "mobile_image_position": "last",
         "image_ratio": "adapt",
-        "image_size": "large",
+        "image_size": "xl",
         "btn_enable": false,
         "btn_txt": "",
         "btn_url": "",
