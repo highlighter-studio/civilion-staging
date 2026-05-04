@@ -74,7 +74,7 @@
         "caption_BgEAEk": {
           "type": "caption",
           "settings": {
-            "caption": "How you move matters.",
+            "caption": "",
             "alignment": "center",
             "opacity": 100
           }
@@ -82,7 +82,7 @@
         "text_FCNxYR": {
           "type": "text",
           "settings": {
-            "text": "<h2>Unrushed. Unmistakable.</h2>",
+            "text": "<h1>Unrushed. Unmistakable.</h1>",
             "text_size": "text-xxl",
             "alignment": "center",
             "text_indent": "noindent"
@@ -98,10 +98,10 @@
         "content_horizontal_position": "center",
         "bg_image_darken": 0,
         "bg_image_blur": 0,
-        "text_color": "fg-body",
-        "bg_color": "bg-body",
+        "text_color": "fg-03",
+        "bg_color": "bg-03",
         "padding_top": 120,
-        "padding_bottom": 40,
+        "padding_bottom": 60,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
