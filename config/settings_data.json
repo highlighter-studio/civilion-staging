@@ -155,6 +155,8 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_show_review_button": false,
+    "klaviyo_public_key": "UCbLQw",
+    "klaviyo_pre_launch_list_id": "SddAHM",
     "content_for_index": []
   },
   "installed_preset_name": "Luxe",
