@@ -315,7 +315,7 @@
         "arrow_style": "solid",
         "content_width": "page-width",
         "no_items": 8,
-        "mobile_grid": "1",
+        "mobile_grid": "2",
         "tablet_grid": "3",
         "dt_grid": "3",
         "card_image_display": "second_image_hover",
