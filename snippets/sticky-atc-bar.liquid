@@ -9,6 +9,10 @@
   - product_form_id: {String} id of the main product form (the bar's button submits this form)
 {% endcomment %}
 
+{%- if product.tags contains 'pre-listing' -%}
+  {%- comment -%} No sticky ATC for pre-listing products — PDP shows the notify form. {%- endcomment -%}
+{%- else -%}
+
 {%- liquid
   assign size_option = nil
   for option in product.options_with_values
@@ -125,3 +129,4 @@
 </sticky-atc-bar>
 
 <script src="{{ 'sticky-atc-bar.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
