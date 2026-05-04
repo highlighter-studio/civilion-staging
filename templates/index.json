@@ -232,8 +232,8 @@
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "header_alignment": "left",
-        "section_label": "",
-        "heading": "Collections",
+        "section_label": "Whats your silhouette?",
+        "heading": "The Models",
         "heading_size": "h2",
         "sub_heading": "",
         "link_style": "text",
