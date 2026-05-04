@@ -237,6 +237,14 @@
       "clear_filter": "Remove Filter"
     }
   },
+  "pre_listing": {
+    "coming_soon": "Coming Soon",
+    "launching_prefix": "Launching",
+    "notify_button": "Notify me when available",
+    "email_placeholder": "Email address",
+    "success_message": "✓ We'll email you when {{ product_title }} is available.",
+    "error_message": "Something went wrong. Please try again."
+  },
   "templates": {
     "home_page": {
       "home_page": "Home"
