@@ -87,28 +87,11 @@
             "alignment": "center",
             "text_indent": "noindent"
           }
-        },
-        "button_irMiCV": {
-          "type": "button",
-          "settings": {
-            "alignment": "center",
-            "btn_layout": "inline",
-            "btn_color_scheme": "default",
-            "btn_one_show": true,
-            "btn_one_txt": "Our Story",
-            "btn_one_link": "",
-            "btn_one_style": "button--solid",
-            "btn_two_show": false,
-            "btn_two_txt": "Button text",
-            "btn_two_link": "",
-            "btn_two_style": "button--outline"
-          }
         }
       },
       "block_order": [
         "caption_BgEAEk",
-        "text_FCNxYR",
-        "button_irMiCV"
+        "text_FCNxYR"
       ],
       "settings": {
         "content_width": "page-width-medium",
@@ -118,7 +101,7 @@
         "text_color": "fg-body",
         "bg_color": "bg-body",
         "padding_top": 120,
-        "padding_bottom": 80,
+        "padding_bottom": 40,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -153,7 +136,7 @@
         "image_37aFRR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ScottishOpenMcIlroy_Banner_W_copy.jpg",
+            "image": "shopify://shop_images/STUDIO_GOLF_OXFORD_5804.webp",
             "image_size": "half_width",
             "image_ratio": "square",
             "image_padding_mobile": 0,
@@ -173,7 +156,7 @@
         "image_CyMVEn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
+            "image": "shopify://shop_images/STUDIO_MONACO_LUNAR_9765_1x1_e320fad5-b3b8-4632-bbdd-c8c42e1c06fa.webp",
             "image_size": "half_width",
             "image_ratio": "square",
             "image_padding_mobile": 0,
@@ -206,13 +189,13 @@
         "header_style": "normal",
         "content_layout": "grid",
         "arrow_style": "solid-inverted",
-        "content_width": "page-width",
+        "content_width": "page-width-full",
         "grid_spacing": "no-spacing",
         "grid_columns_tablet": 2,
         "grid_columns_desktop": 2,
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "padding_top": 80,
+        "padding_top": 0,
         "padding_bottom": 80
       }
     },
