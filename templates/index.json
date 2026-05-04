@@ -236,7 +236,8 @@
         "featured_collection_mnCByw": {
           "type": "featured_collection",
           "settings": {
-            "collection": "chelsea"
+            "collection": "chelsea",
+            "image": "shopify://shop_images/Chelsea_White_Grey.png"
           }
         }
       },
