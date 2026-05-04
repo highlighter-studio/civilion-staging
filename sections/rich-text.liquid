@@ -198,6 +198,36 @@
             <{{ heading_html_tag }} class="{{ block.settings.heading_size }} align-{{ block.settings.alignment }}" {{ block.shopify_attributes }}>
               {{ block.settings.heading }}
             </{{ heading_html_tag }}>
+          {%- when 'brand_statement_pool' -%}
+            {%- assign statements = shop.metaobjects.brand_statement.values -%}
+            {%- if statements != blank and statements.size > 0 -%}
+              <div class="rich-text__brand-statement-pool" data-brand-statement-pool="{{ block.id }}" {{ block.shopify_attributes }}>
+                {%- for s in statements -%}
+                  <{{ heading_html_tag }} class="{{ block.settings.heading_size }} align-{{ block.settings.alignment }}" data-brand-statement{% unless forloop.first %} style="display: none;"{% endunless %}>
+                    {{ s.statement }}
+                  </{{ heading_html_tag }}>
+                {%- endfor -%}
+              </div>
+              {%- if statements.size > 1 -%}
+                <script>
+                  (function () {
+                    var pool = document.querySelector('[data-brand-statement-pool="{{ block.id }}"]');
+                    if (!pool || pool.dataset.brandStatementPicked === 'true') return;
+                    var items = pool.querySelectorAll('[data-brand-statement]');
+                    if (items.length < 2) return;
+                    var idx = Math.floor(Math.random() * items.length);
+                    for (var i = 0; i < items.length; i++) {
+                      items[i].style.display = i === idx ? '' : 'none';
+                    }
+                    pool.dataset.brandStatementPicked = 'true';
+                  })();
+                </script>
+              {%- endif -%}
+            {%- elsif request.design_mode -%}
+              <{{ heading_html_tag }} class="{{ block.settings.heading_size }} align-{{ block.settings.alignment }}" {{ block.shopify_attributes }}>
+                <em>Add entries in Content → Metaobjects → Brand statements</em>
+              </{{ heading_html_tag }}>
+            {%- endif -%}
           {%- when 'caption' -%}
             {% style %}
               .section-{{ section.id }} .caption {
@@ -505,6 +535,47 @@
       ]
     },
     {
+      "type": "brand_statement_pool",
+      "name": "Brand statement pool",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Renders one random entry from Content → Metaobjects → Brand statements. Re-rolls on each page load."
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.normal.label"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.all.heading_size.small.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.large.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.xl.label"
+            }
+          ],
+          "default": "h2",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "text_alignment",
+          "id": "alignment",
+          "default": "left",
+          "label": "t:sections.all.alignment.alignment_header"
+        }
+      ]
+    },
+    {
       "type": "image",
       "name": "t:sections.rich-text.blocks.image.name",
       "limit": 1,
@@ -513,7 +584,7 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.rich-text.blocks.image.settings.image.label"
-        },        
+        },
         {
           "type": "select",
           "id": "image_size",
