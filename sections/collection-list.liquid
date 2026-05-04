@@ -87,7 +87,10 @@
 <ul role="list" class="collection-typographic-list{% if section.settings.show_first_image %} collection-typographic-list-fiv{% endif %}{% if section.settings.list_borders %} cl-list-hoz-borders{% endif %}">
 {% assign inline_image_size = 160 %}
 {% if section.settings.image_size == 'large' %}
-{% assign inline_image_size = 240 %}  
+{% assign inline_image_size = 240 %}
+{% endif %}
+{% if section.settings.image_size == 'xl' %}
+{% assign inline_image_size = 320 %}
 {% endif %}
 {% for block in section.blocks %}
 <li class="ctl-list-item" {{ block.shopify_attributes }}>
@@ -127,14 +130,18 @@
 {% if section.settings.images_enable and section.settings.rollover_image_position != 'inline-justified' and section.settings.rollover_image_position != 'inline' and section.settings.rollover_image_position != 'inline-hover' and section.settings.rollover_image_position != 'inline-hover-justified' %}
 <div class="collection-list-teaser-image">
         {% assign rollover_image_size = 540 %}
-        
+
         {% if section.settings.image_size == 'medium' %}
         {% assign rollover_image_size = 800 %}
         {% endif %}
-        
+
         {% if section.settings.image_size == 'large' %}
         {% assign rollover_image_size = 900 %}
-        {% endif %}          
+        {% endif %}
+
+        {% if section.settings.image_size == 'xl' %}
+        {% assign rollover_image_size = 1200 %}
+        {% endif %}
           {% for block in section.blocks %}
         <div class="collection-typographic-card-image{% unless forloop.index == 1 and section.settings.show_first_image %} ci-hidden{% endunless %} collection-teaser-image-{{ forloop.index }} ctc-image-ratio-{{ section.settings.image_ratio }}--size-{{ section.settings.image_size }}">
           {% if block.settings.image %}
@@ -471,7 +478,7 @@
     "options": [
       {
         "value": "adapt",
-        "label": "t:sections.all.ratio.adapt"
+        "label": "t:sections.all.ratio.adapt_to_image"
       },
       {
         "value": "portrait",
@@ -512,6 +519,10 @@
       {
         "value": "large",
         "label": "t:sections.all.size.large"
+      },
+      {
+        "value": "xl",
+        "label": "t:sections.all.size.xl"
       }
     ],
     "default": "medium",
