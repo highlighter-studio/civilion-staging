@@ -315,9 +315,17 @@
         },
         "heading_ANbHVH": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Our ethos isn’t about a shoe; it’s about a journey. Every walk is a narrative, every step a stroke of genius.",
             "heading_size": "h3",
+            "alignment": "left"
+          }
+        },
+        "brand_statement_pool_Y6jRHV": {
+          "type": "brand_statement_pool",
+          "settings": {
+            "heading_size": "h2",
             "alignment": "left"
           }
         },
@@ -341,6 +349,7 @@
       "block_order": [
         "caption_37UyNn",
         "heading_ANbHVH",
+        "brand_statement_pool_Y6jRHV",
         "button_rANMTy"
       ],
       "custom_css": [
