@@ -26,32 +26,39 @@
         "heading_7PJGiq": {
           "type": "heading",
           "settings": {
-            "heading": "In a field of sheep, the bold prefer another path.",
-            "heading_size": "h0",
+            "heading": "Performance, Disquised.",
+            "heading_size": "h1",
             "txt_alignment": "left"
+          }
+        },
+        "text_YQUnfh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>What looks simple is doing more underneath. Built for actual use, not just easy wear.</p>",
+            "text_size": "text-std"
           }
         }
       },
       "block_order": [
-        "heading_7PJGiq"
+        "heading_7PJGiq",
+        "text_YQUnfh"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "banner_size": "banner-style-large",
         "banner_full_link": "",
-        "image": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
         "primary_image_size": "dt-full-bleed",
         "image_padding": 0,
-        "main_image_animation": "none",
+        "main_image_animation": "zoom-in",
         "image_blur": 0,
-        "primary_image_mobile_show": false,
-        "image_secondary": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
-        "secondary_image_size": "dt-half-center",
+        "primary_image_mobile_show": true,
+        "image_secondary": "shopify://shop_images/WEB_BANNER_HERO_SAILING_OXFORD.webp",
+        "secondary_image_size": "dt-full-bleed",
         "secondary_image_padding": 0,
         "secondary_image_animation": "none",
         "secondary_image_blur": 0,
         "secondary_image_mobile_show": true,
-        "txt_alignment": "center",
+        "txt_alignment": "left",
         "txt_position": "middle_left",
         "content_width": 50,
         "text_vertical_spacing": 10,
@@ -62,7 +69,7 @@
         "text_blend_effect": "none",
         "text_color": "fg-white",
         "bg_color": "rgba(0,0,0,0)",
-        "overlay_level": 0
+        "overlay_level": 5
       }
     },
     "rich_text_yLMGYp": {
