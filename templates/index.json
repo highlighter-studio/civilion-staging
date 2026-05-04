@@ -220,7 +220,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "chelsea",
-            "image": "shopify://shop_images/Chelsea_White_Grey.png"
+            "image": "shopify://shop_images/Chelsea_White_Grey.webp"
           }
         }
       },
