@@ -1,0 +1,60 @@
+{% comment %}
+  Renders the pre-listing UI: launch date (or "Coming Soon") + Klaviyo notify form.
+
+  Accepts:
+  - product: {Object} product object
+
+  Triggered by `product.tags contains 'pre-listing'`. Reads optional date from
+  `product.metafields.custom.launch_date`.
+
+  Usage:
+  {% render 'pre-listing-block', product: product %}
+{% endcomment %}
+
+<div class="pre-listing-block">
+  <p class="pre-listing-block__date">
+    {%- if product.metafields.custom.launch_date != blank -%}
+      {{ 'pre_listing.launching_prefix' | t }} {{ product.metafields.custom.launch_date | date: "%B %-d" }}
+    {%- else -%}
+      {{ 'pre_listing.coming_soon' | t }}
+    {%- endif -%}
+  </p>
+
+  <form
+    class="pre-listing-block__form"
+    data-pre-listing-form
+    data-product-id="{{ product.id }}"
+    data-product-title="{{ product.title | escape }}"
+    data-product-url="{{ shop.url }}{{ product.url }}"
+    data-product-image="{{ product.featured_image | image_url: width: 600 }}"
+    {%- if product.metafields.custom.launch_date != blank -%}
+      data-launch-date="{{ product.metafields.custom.launch_date | date: '%Y-%m-%d' }}"
+    {%- endif -%}
+    novalidate
+  >
+    <label class="visually-hidden" for="PreListingEmail-{{ product.id }}">
+      {{ 'pre_listing.email_placeholder' | t }}
+    </label>
+    <input
+      type="email"
+      id="PreListingEmail-{{ product.id }}"
+      name="email"
+      class="pre-listing-block__input"
+      placeholder="{{ 'pre_listing.email_placeholder' | t }}"
+      required
+    >
+    <button
+      type="submit"
+      class="pre-listing-block__submit button button--full-width button--primary"
+    >
+      {{ 'pre_listing.notify_button' | t }}
+    </button>
+    <p class="pre-listing-block__error" data-pre-listing-error hidden>
+      {{ 'pre_listing.error_message' | t }}
+    </p>
+  </form>
+
+  <p class="pre-listing-block__success" data-pre-listing-success hidden>
+    {{ 'pre_listing.success_message' | t: product_title: product.title }}
+  </p>
+</div>
