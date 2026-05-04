@@ -249,7 +249,7 @@
         "show_first_image": true,
         "show_first_image_mobile": true,
         "mobile_image_position": "last",
-        "image_ratio": "landscape",
+        "image_ratio": "adapt",
         "image_size": "large",
         "btn_enable": false,
         "btn_txt": "",
