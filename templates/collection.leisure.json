@@ -34,6 +34,7 @@
       ],
       "settings": {
         "banner_size": "banner-style-medium",
+        "video_url": "shopify://files/videos/Man playing pétanque in a French Riviera summer.mp4",
         "video_poster": "shopify://shop_images/IMG_5518_web_banner_M_copy.jpg",
         "overlay_level": 15,
         "video_size": "100",
